@@ -32,12 +32,5 @@ int die_roll()
 
 char coin_toss()
 {
-    if (rand() % 2 == 0)
-    {
-        return 'T';
-    }
-    else
-    {
-        return 'H';
-    }
+    return (rand() % 2 == 0 ? 'T' : 'H');
 }
