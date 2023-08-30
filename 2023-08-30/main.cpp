@@ -1,14 +1,14 @@
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 
 int die_roll();
 char coin_toss();
 
+
 int main()
 {
-    int seed;
-    std::cin >> seed;
-    srand(seed);
+    srand((unsigned int) time(NULL));
 
     for (int i = 0; i < 10; ++i)
     {
@@ -32,8 +32,7 @@ int die_roll()
 
 char coin_toss()
 {
-    int r = rand() % 2;
-    if (r == 0)
+    if (rand() % 2 == 0)
     {
         return 'T';
     }
