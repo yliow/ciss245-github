@@ -12,7 +12,11 @@ int main()
     std::cin >> seed;
     srand(seed);
 
-    std::cout << die_roll() << '\n';
+    for (int i = 0; i < 10; ++i)
+    {
+        std::cout << die_roll() << ' ';
+    }
+    std::cout << '\n';
     
     return 0;
 }
