@@ -44,12 +44,12 @@ char coin_toss()
 
 char rand_dir()
 {
-    int r = rand() % 4;
-    switch (r)
+    switch (rand() % 4)
     {
         case 0: return 'N';
         case 1: return 'S';
         case 2: return 'E';
         case 3: return 'W';
     }
+    return ' ';
 }
