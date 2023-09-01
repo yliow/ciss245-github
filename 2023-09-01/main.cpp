@@ -36,6 +36,19 @@ int linearsearch(int x[], int start, int end,
     return -1;
 }
 
+int max(int x[], int start, int end)
+{
+    int running_max = x[0];
+    for (int i = start + 1; i < end; ++i)
+    {
+        if (x[i] > running_max)
+        {
+            running_max = x[i];
+        }
+    }
+    return running_max;
+}
+
 int main()
 {
     srand(0);
@@ -47,6 +60,13 @@ int main()
     println(x, 0, 10);
     rand_array(x, 0, 10);
     println(x, 0, 10);
+
+    int target;
+    std::cin >> target;
+    std::cout << linearsearch(x, 0, 10, target)
+              << '\n';
+
+    std::cout << max(x, 0, 10) << '\n';
 
     // int i = 42;
     // change(i);
