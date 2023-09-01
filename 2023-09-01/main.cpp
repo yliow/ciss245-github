@@ -49,6 +49,22 @@ int max(int x[], int start, int end)
     return running_max;
 }
 
+void bubblesort(int x[], int start, int end)
+{
+    for (int i = end - 2; i >= start; --i)
+    {
+        for (int j = 0; j <= i; ++j)
+        {
+            if (x[j] > x[j + 1])
+            {
+                int t = x[j];
+                x[j] = x[j + 1];
+                x[j + 1] = t;
+            }
+        }
+    }
+}
+
 int main()
 {
     srand(0);
