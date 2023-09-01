@@ -31,9 +31,9 @@ int linearsearch(int x[], int start, int end,
 {
     for (int i = start; i < end; ++i)
     {
-        std::cout << x[i] << ' ';
+        if (x[i] == target) return i;
     }
-    std::cout << '\n';        
+    return -1;
 }
 
 int main()
