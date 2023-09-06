@@ -34,6 +34,15 @@ void init(int ca[], int n)
     ca[n] = 1;
 }
 
+void println(ca, n)
+{
+    for (int i = 0; i < 2 * n + 1; ++i)
+    {
+        std::cout << (ca[i] == 1 ? 'X' : ' ')
+    }
+    std::cout << '\n';
+}
+
 int main()
 {
     // int x[] = {1, 4, 5, 7, 9, 15, 19, 26};
@@ -45,6 +54,7 @@ int main()
     std::cin >> n;
 
     init(ca, n);
+    print(ca, n);
     
     return 0;
 }
