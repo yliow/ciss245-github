@@ -34,7 +34,7 @@ void init(int ca[], int n)
     ca[n] = 1;
 }
 
-void println(ca, n)
+void println(int ca[], int n)
 {
     for (int i = 0; i < 2 * n + 1; ++i)
     {
