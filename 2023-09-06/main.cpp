@@ -54,7 +54,7 @@ int main()
     std::cin >> n;
 
     init(ca, n);
-    print(ca, n);
+    println(ca, n);
     
     return 0;
 }
