@@ -28,9 +28,9 @@ void println(char chess[8][8])
     {
         for (int c = 0; c < 8; ++c)
         {
-            std::cout << chess[r][c];
+            std::cout << '|' << chess[r][c];
         }
-        std::cout << '\n';
+        std::cout << "|\n";
     }
 }
 
