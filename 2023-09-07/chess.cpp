@@ -6,8 +6,13 @@ void init(char chess[8][8])
     {
         for (int c = 0; c < 8; ++c)
         {
+            chess[r][c] = ' ';
         }
     }
+}
+
+void println(char chess[8][8])
+{
 }
 
 int main()
