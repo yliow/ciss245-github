@@ -32,6 +32,7 @@ void println(char chess[8][8])
             std::cout << '|' << chess[r][c];
         }
         std::cout << "|\n";
+        std::cout << "+-+-+-+-+-+-+-+-+\n";
     }
 }
 
