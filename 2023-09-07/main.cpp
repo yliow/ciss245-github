@@ -36,11 +36,12 @@ void init(int ca[], int n)
 
 void println(int ca[], int n)
 {
+    std::cout << '|';
     for (int i = 0; i < 2 * n + 1; ++i)
     {
         std::cout << (ca[i] == 1 ? 'X' : ' ');
     }
-    std::cout << '\n';
+    std::cout << "|\n";
 }
 
 int main()
@@ -99,9 +100,9 @@ int main()
             {
                 ca[j] = t[j];
             }
-            println(ca, n);
         }
-        
+        println(ca, n);    
     }
+    
     return 0;
 }
