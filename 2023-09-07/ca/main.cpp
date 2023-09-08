@@ -96,7 +96,13 @@ int main()
                 t[j] = 0;
             }
 
+            // ERROR
+            // for (int j = 0; j < 2 * n + 1; ++j)
+            // {
+            //     ca[j] = t[j];
+            //}            
         }
+        
         for (int j = 0; j < 2 * n + 1; ++j)
         {
             ca[j] = t[j];
