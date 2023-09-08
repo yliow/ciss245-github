@@ -1,6 +1,6 @@
 #include <iostream>
+#include "chess.h"
 
-void init(char chess[8][8]);
 void println(char chess[8][8]);
 void get_move(char chess[8][8], int & r0, int &c0, int &r1, int &c1);
 
