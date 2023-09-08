@@ -45,10 +45,8 @@ void get_move(char chess[8][8], char turn, int & r0, int &c0, int &r1, int &c1)
     println(chess);
     std::cout << turn << "'s turn\n"
               << "row, column to pick up: ";
-    int r0, c0;
     std::cin >> r0 >> c0;
     std::cout << "row, column to place: ";
-    int r1, c1;
     std::cin >> r1 >> c1;
 }
 
