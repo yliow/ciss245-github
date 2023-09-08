@@ -2,6 +2,20 @@
 
 #include "chess.h"
 
+void println(char chess[8][8])
+{
+    std::cout << "+-+-+-+-+-+-+-+-+\n";
+    for (int r = 0; r < 8; ++r)
+    {
+        for (int c = 0; c < 8; ++c)
+        {
+            std::cout << '|' << chess[r][c];
+        }
+        std::cout << "|\n";
+        std::cout << "+-+-+-+-+-+-+-+-+\n";
+    }
+}
+
 void init(char chess[8][8])
 {
     char pieces[] = "rnbqkbnr";

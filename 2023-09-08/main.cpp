@@ -2,22 +2,8 @@
 #include <iostream>
 #include "chess.h"
 
-void println(char chess[8][8]);
 void get_move(char chess[8][8], int & r0, int &c0, int &r1, int &c1);
 
-void println(char chess[8][8])
-{
-    std::cout << "+-+-+-+-+-+-+-+-+\n";
-    for (int r = 0; r < 8; ++r)
-    {
-        for (int c = 0; c < 8; ++c)
-        {
-            std::cout << '|' << chess[r][c];
-        }
-        std::cout << "|\n";
-        std::cout << "+-+-+-+-+-+-+-+-+\n";
-    }
-}
 
 void get_move(char chess[8][8], char turn, int & r0, int &c0, int &r1, int &c1)
 {
