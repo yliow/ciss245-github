@@ -1,5 +1,7 @@
 // file: chess.cpp
 
+#include "chess.h"
+
 void init(char chess[8][8])
 {
     char pieces[] = "rnbqkbnr";
