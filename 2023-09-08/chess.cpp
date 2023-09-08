@@ -1,5 +1,6 @@
 // file: chess.cpp
 
+#include <iostream>
 #include "chess.h"
 
 void println(char chess[8][8])
