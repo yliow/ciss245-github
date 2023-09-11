@@ -3,6 +3,16 @@
 #include <iostream>
 #include "chess.h"
 
+bool is_black_piece(char piece)
+{
+    return ('a' <= piece && piece <= 'z');
+}
+
+bool is_white_piece(char piece)
+{
+    return ('A' <= piece && piece <= 'Z');
+}
+
 void get_move(char chess[8][8], char turn,
               int & r0, int & c0, int & r1, int & c1)
 {
@@ -25,6 +35,21 @@ bool is_valid_move(char chess[8][8], char turn,
                    int & r0, int &c0, int &r1, int &c1)
 {
     char piece = chess[r0][c0];
+    if (piece == ' ')
+    {
+        return false;
+    }
+    else if (turn == 'W' && is_black_piece(piece))
+    {
+        return false;
+    }
+    else if (turn == 'B' && is_white_piece(piece))
+    {
+        return false;
+    }
+
+    if (piece == 'p') {}
+    
     return true;
 }
 
