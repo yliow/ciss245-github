@@ -47,11 +47,40 @@ bool is_valid_move(char chess[8][8], char turn,
     {
         return false;
     }
-
-    if (piece == 'p') {}
+    else if (turn == 'W' && piece == 'P'
+             && is_valid_white_pawn_move(chess, r0, c0, r1, c1))
+    {
+        return true;
+    }
     
     return true;
 }
+
+
+bool is_valid_white_pawn_move(char chess[8][8],
+                              int r0, int c0, int r1, int c1)
+{
+    if (r0 == 6) // i.e., initial row
+    {
+        if ((r1 == r0 - 1 ||
+             (r1 == r0 - 2 && chess[c0][r0 - 1] == ' '))
+            && (c0 == c1)
+            && chess[r1][c1] == ' '
+            )
+        {
+            return true;
+        }
+        else if (r1 == r0 - 1 &&
+                 (c1 == c0 - 1 && is_black_piece(chess[r1][c1]))
+                 ||
+                 (c1 == c0 + 1 && is_black_piece(chess[r1][c1])))
+        {
+            return true;
+        }
+    }
+}
+
+
 
 
 void println(char chess[8][8])
