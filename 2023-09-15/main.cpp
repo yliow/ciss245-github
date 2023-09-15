@@ -28,6 +28,8 @@ int main()
     int & b = a;
     const int & c = a;
     std::cout << a << ' ' << b << ' ' << c << '\n';
-
+    a = 1;
+    std::cout << a << ' ' << b << ' ' << c << '\n';
+    
     return 0;
 }
