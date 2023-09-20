@@ -1,4 +1,5 @@
 #include <iostream>
+#include "test.h"
 
 int main()
 {
@@ -24,12 +25,20 @@ int main()
     // c = 2;
     // std::cout << a << ' ' << b << ' ' << c << '\n';
     
-    int a = 0;
-    int & b = a;
-    const int & c = a;
-    std::cout << a << ' ' << b << ' ' << c << '\n';
-    a = 1;
-    std::cout << a << ' ' << b << ' ' << c << '\n';
+    // int a = 0;
+    // int & b = a;
+    // const int & c = a;
+    // std::cout << a << ' ' << b << ' ' << c << '\n';
+    // a = 1;
+    // std::cout << a << ' ' << b << ' ' << c << '\n';
+    // b = 2;
+    // std::cout << a << ' ' << b << ' ' << c << '\n';
+    // c = 3;
+    // std::cout << a << ' ' << b << ' ' << c << '\n';
+
+    std::cout << max(3, 5) << '\n';
+    // as good as
+    std::cout << (3 >= 5 ? 3 : 5) << '\n';
     
     return 0;
 }
