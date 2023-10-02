@@ -31,16 +31,32 @@ void print_array(int x[], int x_len)
     }
     std::cout << '}';
 }
+
+void push_back(int x[], int & x_len, int v)
+{
+    x[x_len] = v;
+    ++x_len;
+}
+
 int main()
 {
     int x = 0, y = 1;
     swap(&x, &y);
     std::cout << x << ' ' << y << '\n';
 
-    int x[10];
-    int x_len = 0;
+    int a[10];
+    int a_len = 0;
 
-    print_array(x, x_len);
-        
+    print_array(a, a_len);
+    std::cout << '\n';
+
+    a_len = 2;
+    print_array(a, a_len);
+    std::cout << '\n';
+
+    push_back(a, a_len, 42);
+    print_array(a, a_len);
+    std::cout << '\n';
+
     return 0;
 }
