@@ -38,6 +38,12 @@ void push_back(int x[], int & x_len, int v)
     ++x_len;
 }
 
+void push_back(int x[], int * x_len, int v)
+{
+    x[*x_len] = v;
+    ++(*x_len);
+}
+
 int main()
 {
     int x = 0, y = 1;
@@ -58,5 +64,25 @@ int main()
     print_array(a, a_len);
     std::cout << '\n';
 
+    push_back(a, a_len, 99);
+    print_array(a, a_len);
+    std::cout << '\n';
+
+    push_back(a, &a_len, 9999);
+    print_array(a, a_len);
+    std::cout << '\n';
+
+    int * p;
+    p = new int; // <-- new stuff
+    std::cin >> (*p);
+    std::cout << (*p) << '\n';
+    delete p;
+    p = NULL;
+    if (p != NULL)
+        std::cout << (*p) << '\n';
+
+    p = new int[10000000];
+    delete[] p;
+    
     return 0;
 }
