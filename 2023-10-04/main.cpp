@@ -13,11 +13,19 @@ void print(int x[], int x_len, int x_capacity)
 
 void insert(int x[], int & x_len, int x_capacity, int index, int value)
 {
-    for (int i = x_len - 1; i >= index; --i)
+    if (x_len == x_capacity)
     {
-        x[i + 1] = x[i];
+        std::cout << "overflow error ...  insert aborted\n";  
     }
-    x[index] = value;
+    else
+    {
+        for (int i = x_len - 1; i >= index; --i)
+        {
+            x[i + 1] = x[i];
+        }
+        x[index] = value;
+        ++x_len;
+    }
 }
 
 void insert(int x[], int * x_len, int x_capacity, int index, int value)
@@ -31,7 +39,10 @@ int main()
     int x_capacity = 8;
     print(x, x_len, x_capacity);
 
-    insert(x, x_len, x_capacity, 1, 99);
-    print(x, x_len, x_capacity);    
+    for (int value = 99; value < 105; ++value)
+    {
+        insert(x, x_len, x_capacity, 1, value);
+        print(x, x_len, x_capacity);
+    }
     return 0;
 }
