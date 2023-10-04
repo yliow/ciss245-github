@@ -13,7 +13,11 @@ void print(int x[], int x_len, int x_capacity)
 
 void insert(int x[], int & x_len, int x_capacity, int index, int value)
 {
-    
+    for (int i = x_len - 1; i >= index; --i)
+    {
+        x[i + 1] = x[i];
+    }
+    x[index] = value;
 }
 
 void insert(int x[], int * x_len, int x_capacity, int index, int value)
