@@ -11,20 +11,20 @@
 //     std::cout << sizeof(x) << '\n';
 // }
 
-void print(int x[])
+void print(int * start, int * end) // or begin and end
+// print *start, .., *(end - 1)
 {
-    int n = 5;
-    for (int i = 0; i < n; ++i)
+    for (int * p = start; p < end; ++p)
     {
-        std::cout << x[i] << ' ';
+        std::cout << (*p) << ' ';
     }
     std::cout << '\n';
 }
 
-void bubblesort(int x[])
+void bubblesort(int * start, int * end)
+// sort *start, .., *(end - 1)
 {
-    int n = 5;
-    for (int i = n - 2; i >= 0; ++i)
+    for (int i = n - 2; i >= 0; --i)
     {
         for (int j = 0; j <= i; ++j)
         {
@@ -47,7 +47,8 @@ int main()
     // f(x);
 
     int x[5] = {5, 3, 2, 4, 0};
-    bubblesort(x);
+    bubblesort(x + 1, 3);
+    print(x + 1, 3);
     
     return 0;
 }
