@@ -71,7 +71,17 @@ int main()
     int x[5] = {5, 3, 2, 4, 0};
     print(&x[0], &x[5]);
     bubblesort(&x[1], &x[4]);
-    //print(x + 1, 3);
+    print(&x[1], &x[4]);
+
+    int * p = binarysearch(&x[1], &x[4], 2);
+    std::cout << p << ' ' << *p << '\n';
+    
+    p = binarysearch(&x[1], &x[4], 3);
+    std::cout << p << ' ' << *p << '\n';
+    
+    p = binarysearch(&x[1], &x[4], 4);
+    std::cout << p << ' ' << *p << '\n';
+
     
     return 0;
 }
