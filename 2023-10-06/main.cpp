@@ -24,18 +24,40 @@ void print(int * start, int * end) // or begin and end
 void bubblesort(int * start, int * end)
 // sort *start, .., *(end - 1)
 {
-    for (int i = n - 2; i >= 0; --i)
+    for (int * q = end - 2; q >= start; --q)
     {
-        for (int j = 0; j <= i; ++j)
+        for (int * p = start; p <= q; ++p)
         {
-            if (x[j] > x[j + 1])
+            if (*p > *(p + 1))
             {
-                int t = x[j]; x[j] = x[j + 1]; x[j + 1] = t;
+                int t = *p; *p = *(p + 1); *(p + 1) = t;
             }
         }
     }
 }
 
+
+int binarysearch(int x[], int start, int end, int target)
+{
+    int left = start, right = end - 1;
+    while (left <= right)
+    {
+        int mid = (left + right);
+        if (x[mid] == target)
+        {
+            return mid;
+        }
+        else if (target < x[mid])
+        {
+            right = mid - 1;
+        }
+        else
+        {
+            left = mid + 1;
+        }
+    }
+    return -1;
+}
 
 int main()
 {
@@ -47,8 +69,9 @@ int main()
     // f(x);
 
     int x[5] = {5, 3, 2, 4, 0};
-    //bubblesort(x + 1, 3);
-    print(x + 1, 3);
+    print(&x[0], &x[5]);
+    bubblesort(&x[1], &x[4]);
+    //print(x + 1, 3);
     
     return 0;
 }
