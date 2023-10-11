@@ -1,18 +1,7 @@
 #include <iostream>
 
-
-// void f(int x[])
-//     //int * x)
-// {
-//     asdsAS
-//     std::cout << "in f ... " << x[0] << '\n';
-//     std::cout << "in f ... " << x << '\n';
-//     std::cout << "in f ... " << &x[0] << '\n';
-//     std::cout << sizeof(x) << '\n';
-// }
-
-void print(int * start, int * end) // or begin and end
 // print *start, .., *(end - 1)
+void print(int * start, int * end) // or begin and end
 {
     for (int * p = start; p < end; ++p)
     {
@@ -21,8 +10,8 @@ void print(int * start, int * end) // or begin and end
     std::cout << '\n';
 }
 
+// bubblesort *start, .., *(end - 1)
 void bubblesort(int * start, int * end)
-// sort *start, .., *(end - 1)
 {
     for (int * q = end - 2; q >= start; --q)
     {
@@ -36,6 +25,7 @@ void bubblesort(int * start, int * end)
     }
 }
 
+// binarysearch for target in *start, .., *(end - 1)
 int * binarysearch(int * start, int * end, int target)
 {
     int * left = start;
@@ -61,27 +51,20 @@ int * binarysearch(int * start, int * end, int target)
 
 int main()
 {
-    // int x[3] = {2, 3, 5};
-    // std::cout << x[0] << '\n';
-    // std::cout << x << '\n';
-    // std::cout << &x[0] << '\n';
-    // std::cout << sizeof(x) << '\n';
-    // f(x);
+    int n, start, end, target;
+    std::cin >> n >> start >> end >> target;
+    int * x = new int[n];
+    for (int i = 0; i < n; ++i)
+    {
+        x[i] = rand() % 10;
+    }
+    print(&x[0], &x[n]);
 
-    int x[5] = {5, 3, 2, 4, 0};
-    print(&x[0], &x[5]);
-    bubblesort(&x[1], &x[4]);
-    print(&x[1], &x[4]);
+    bubblesort(&x[start], &x[end]);
+    print(&x[0], &x[n]);
 
-    int * p = binarysearch(&x[1], &x[4], 2);
+    int * p = binarysearch(&x[start], &x[end], target);
     std::cout << p << ' ' << *p << '\n';
-    
-    p = binarysearch(&x[1], &x[4], 3);
-    std::cout << p << ' ' << *p << '\n';
-    
-    p = binarysearch(&x[1], &x[4], 4);
-    std::cout << p << ' ' << *p << '\n';
-
     
     return 0;
 }
