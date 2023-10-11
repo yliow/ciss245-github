@@ -37,6 +37,11 @@ int main()
 
     //std::cout << today.yyyy << '/' << today.mm << '/' << today.dd << '\n';
     std::cout << today << '\n';
+
+    Date tomorrow;
+    init(tomorrow, 0, 0, 0);
+    tomorrow = today;
+    std::cout << tomorrow << '\n';
     
     return 0;
 }
