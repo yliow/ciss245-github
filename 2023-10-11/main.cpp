@@ -9,13 +9,16 @@ struct Date
 
 std::ostream & operator<<(std::ostream & cout, const Date &);
 void init(Date & date, int hhhh, int mm, int dd);
+bool is_equal(const Date &, const Date &);
+bool operator==(const Date & d0, const Date & d1);
+Date operator+(const Date & d0, const Date & d1);
 
 // file: Date.cpp
 //#include "Date.h"
 
 std::ostream & operator<<(std::ostream & cout, const Date & date)
 {
-    cout << date.yyyy << '/' << date.mm << '/' << date.dd << '\n';
+    cout << date.yyyy << '/' << date.mm << '/' << date.dd;
     return cout;
 }
 
@@ -24,6 +27,23 @@ void init(Date & date, int yyyy, int mm, int dd)
     date.yyyy = yyyy;
     date.mm = mm;
     date.dd = dd;
+}
+
+bool is_equal(const Date & d0, const Date & d1)
+{
+    return (d0.yyyy == d1.yyyy && d0.mm == d1.mm && d0.dd == d1.dd);
+}
+
+bool operator==(const Date & d0, const Date & d1)
+{
+    return (d0.yyyy == d1.yyyy && d0.mm == d1.mm && d0.dd == d1.dd);
+}
+
+Date operator+(const Date & d0, const Date & d1)
+{
+    Date ret;
+    init(ret, d0.yyyy + d1.yyyy, d0.mm + d1.mm, d0.dd + d1.dd);
+    return ret;
 }
 
 
@@ -42,6 +62,12 @@ int main()
     init(tomorrow, 0, 0, 0);
     tomorrow = today;
     std::cout << tomorrow << '\n';
-    
+
+    std::cout << is_equal(tomorrow, today) << '\n';
+    std::cout << (tomorrow == today) << '\n'; 
+    Date day;
+    init(day, 0, 0, 1);
+    tomorrow = today + day; // today+day = operator+(today, day)
+    std::cout << tomorrow << '\n';
     return 0;
 }
