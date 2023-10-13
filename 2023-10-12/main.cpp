@@ -7,6 +7,17 @@ struct Date
     int yyyy, mm, dd;
 };
 
+struct Time
+{
+    int hours, minutes, seconds;
+};
+
+struct DateTime
+{
+    Date date;
+    Time time;
+};
+
 std::ostream & operator<<(std::ostream & cout, const Date &);
 void init(Date & date, int hhhh, int mm, int dd);
 // bool is_equal(const Date &, const Date &);
@@ -105,6 +116,9 @@ int main()
     {
         std::cout << r[i] << '\n';
     }
+
+    DateTime dt;
+    init(dt.date, 1000, 2, 3);
     
     return 0;
 }
