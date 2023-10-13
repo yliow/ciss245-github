@@ -18,6 +18,16 @@ int main()
     set_n(f0, 100);
     std::cout << f0 << '\n';
     std::cout << n(f0) << '\n';
+    //n(f0) = 999;
+
+    Fraction f2 = get_Fraction(1, 2);
+    Fraction f3 = get_Fraction(1, 3);
+    Fraction f4;
+    f4 = (f2 += f3);
+    std::cout << f2 << '\n';
+    std::cout << f4 << '\n';
+
+    f4 = f2 + f3;
     
     return 0;
 }

@@ -21,4 +21,7 @@ int n(const Fraction &);
 
 bool operator==(const Fraction &, const Fraction &);
 
+const Fraction & operator+=(Fraction & f, const Fraction & g);
+Fraction operator+(const Fraction & f, const Fraction & g);
+
 #endif

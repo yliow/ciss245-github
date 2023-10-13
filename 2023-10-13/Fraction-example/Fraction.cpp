@@ -47,3 +47,21 @@ bool operator==(const Fraction & f0, const Fraction & f1)
 {
     return (f0.n * f1.d == f0.d * f1.n);
 }
+
+
+const Fraction & operator+=(Fraction & f, const Fraction & g)
+{
+    f.n = f.n * g.d + f.d * g.n;
+    //f.n *= g.d;
+    //f.n += f.d * g.n;
+    f.d *= g.d;
+    return f;
+}
+
+Fraction operator+(const Fraction & f,
+                   const Fraction & g)
+{
+    Fraction ret = f;
+    ret += g;
+    return ret;
+}
