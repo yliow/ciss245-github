@@ -13,6 +13,7 @@ struct Fraction
 
 Fraction get_Fraction(int, int);
 std::ostream & operator<<(std::ostream & cout, const  Fraction &);
+
 bool operator==(const Fraction &, const Fraction &);
 
 #endif

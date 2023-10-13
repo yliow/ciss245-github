@@ -12,5 +12,6 @@ int main()
 
     std::cout << (get_Fraction(1, 2) == get_Fraction(2, 4))
               << '\n';
+    
     return 0;
 }
