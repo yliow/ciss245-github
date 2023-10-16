@@ -67,10 +67,18 @@ void println(Array< T > & a)
     std::cout << '{';
     for (int i = 0; i < a.size; ++i)
     {
-        std::cout < a.x[i] << ' '; 
+        std::cout << a.x[i] << ' '; 
     }
     std::cout << '}' << '\n';
 }
+
+template < typename T >
+void push_back(Array< T > & a, const T & v)
+{
+    a.x[a.size] = v;
+    ++a.size;
+}
+
 
 int main()
 {
@@ -85,5 +93,6 @@ int main()
 
     Array< int > arr;
     init(arr);
+    println(arr);
     return 0;
 }
