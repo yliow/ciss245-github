@@ -94,5 +94,12 @@ int main()
     Array< int > arr;
     init(arr);
     println(arr);
+    arr.push_back(5);
+    println(arr);
+    arr.push_back(3);
+    println(arr);
+    arr.push_back(10);
+    println(arr);
+    
     return 0;
 }
