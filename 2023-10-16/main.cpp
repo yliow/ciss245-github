@@ -94,11 +94,11 @@ int main()
     Array< int > arr;
     init(arr);
     println(arr);
-    arr.push_back(5);
+    push_back(arr, 5);
     println(arr);
-    arr.push_back(3);
+    push_back(arr, 3);
     println(arr);
-    arr.push_back(10);
+    push_back(arr, 10);
     println(arr);
     
     return 0;
