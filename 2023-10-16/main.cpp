@@ -83,7 +83,7 @@ int main()
 
     float a = avg< float, double >(3.4, 5.4);
 
-    Array< int > a;
-    init(a);
+    Array< int > arr;
+    init(arr);
     return 0;
 }
