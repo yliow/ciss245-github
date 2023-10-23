@@ -10,7 +10,7 @@ void Date::init(int yyyy, int mm, int dd)
     dd_ = dd;
 }
 
-void Date::println()
+void Date::println() const
 {
     std::cout << yyyy_ << '/' << mm_ << '/' << dd_
               << '\n';

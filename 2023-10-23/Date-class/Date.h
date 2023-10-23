@@ -4,11 +4,10 @@ class Date
 {
   public:
     void init(int yyyy, int mm, int dd);
-    void println();
+    void println() const;
+    void inc_day(int d);
     
   private:
     int yyyy_, mm_, dd_;
-    void inc_day(int d);
-
 };
 
