@@ -10,7 +10,7 @@ class Date
     void init(int yyyy, int mm, int dd);
     void println() const;
     void inc_day(int d);
-    
+    int get_year();
     //private:
     int mm_, dd_;
 

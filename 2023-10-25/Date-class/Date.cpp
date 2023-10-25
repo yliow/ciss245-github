@@ -38,3 +38,8 @@ std::ostream & operator<<(std::ostream & cout, const Date & d)
     return cout;
 }
     
+
+int Date::get_year()
+{
+    return yyyy_;
+}
