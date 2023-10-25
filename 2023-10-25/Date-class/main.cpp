@@ -10,8 +10,14 @@ int main()
     today.inc_day(1);
     today.println();
 
-    std::cout << today;
-    // same as operator<<(std::cout, today) 
+    std::cout << today << '\n';
+    // same as
+    // (std::cout << today) << '\n';
+    // same as
+    // (operator<<(std::cout, today) << '\n';
+    // operator<<((operator<<(std::cout, today), '\n')
+    //            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    //            MUST std::cout
     
     //std::cout << today.yyyy_ << '\n'; // ERROR!!!
 
