@@ -12,7 +12,10 @@ class Date
     void inc_day(int d);
     
     //private:
-    int yyyy_, mm_, dd_;
+    int mm_, dd_;
+
+private:
+    int yyyy_;
 };
 
 std::ostream & operator<<(std::ostream &, const Date &);
