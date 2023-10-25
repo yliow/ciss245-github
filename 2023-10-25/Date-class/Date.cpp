@@ -33,6 +33,7 @@ void Date::inc_day(int d)
 
 std::ostream & operator<<(std::ostream & cout, const Date & d)
 {
+    cout << "in operator<<(std::ostream&, const Date&)\n";
     cout << d.yyyy_ << '/' << d.mm_ << '/' << d.dd_;
     return cout;
 }
