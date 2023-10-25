@@ -34,12 +34,23 @@ void Date::inc_day(int d)
 std::ostream & operator<<(std::ostream & cout, const Date & d)
 {
     cout << "in operator<<(std::ostream&, const Date&)\n";
-    cout << d.yyyy_ << '/' << d.mm_ << '/' << d.dd_;
+    cout << d.get_year() << '/' << d.get_month()
+         << '/' << d.get_day();
     return cout;
 }
-    
 
-int Date::get_year()
+
+int Date::get_year() const
 {
     return yyyy_;
+}
+
+int Date::get_month() const
+{
+    return mm_;
+}
+
+int Date::get_day() const
+{
+    return dd_;
 }
