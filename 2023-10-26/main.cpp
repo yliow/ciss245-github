@@ -45,6 +45,7 @@ int main()
 {
     Array< int > a;
     Array< int > b(10);
+    std::cout << b << '\n';
     //Array< double > b;
     
     return 0;
