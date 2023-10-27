@@ -1,5 +1,8 @@
 // Date.h
 
+#ifndef DATE_H
+#define DATE_H
+
 #include <iostream>
 
 class Date
@@ -20,4 +23,6 @@ private:
 };
 
 std::ostream & operator<<(std::ostream &, const Date &);
-std::istream & operator>>(std::istream &, Date &)
+std::istream & operator>>(std::istream &, Date &);
+
+#endif
