@@ -12,7 +12,9 @@ class Rational
     Rational(int n, int d);
     Rational(const Rational &);
     int n() const;
+    int & n();
     int d() const;
+    int & d();
   private:
     int n_, d_;
 };
