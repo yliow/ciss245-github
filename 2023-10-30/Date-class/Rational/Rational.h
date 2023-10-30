@@ -15,6 +15,7 @@ class Rational
     int & n();
     int d() const;
     int & d();
+    const Rational & operator+=(const Rational &); /* const ... WRONG */
   private:
     int n_, d_;
 };

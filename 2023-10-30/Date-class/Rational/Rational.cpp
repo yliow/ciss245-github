@@ -47,3 +47,10 @@ std::istream & operator>>(std::istream & cin, Rational & r)
     r.d() = d;
     return cin;
 }
+
+const Rational & Rational::operator+=(const Rational & r)
+{
+    n_ = n_ * r.d_ + d_ * r.n_;
+    d_ = d_ * r.d_;
+    return (*this);
+}
