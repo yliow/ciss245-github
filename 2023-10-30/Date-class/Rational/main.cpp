@@ -3,4 +3,5 @@
 
 main()
 {
+    Rational r0(1, 2);
 }
