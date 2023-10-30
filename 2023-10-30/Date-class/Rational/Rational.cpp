@@ -45,4 +45,5 @@ std::istream & operator>>(std::istream & cin, Rational & r)
     cin >> n >> d;
     r.n() = n;
     r.d() = d;
+    return cin;
 }
