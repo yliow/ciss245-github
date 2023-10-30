@@ -1,5 +1,6 @@
 // file: Rational.cpp
 
+#include <iostream>
 #include "Rational.h"
 
 Rational::Rational()
