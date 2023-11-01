@@ -7,13 +7,15 @@
 
 class Date
 {
-  public:
-    Date();
+  public: 
+    Date();             // default constructor             
+    Date(const Date &); // copy constructor
     Date(int yyyy, int mm, int dd = 1);
     void init(int yyyy, int mm, int dd);
     void println() const;
     void inc_day(int d);
     int get_year() const;
+    int & get_year();
     int get_month() const;
     int get_day() const;
     

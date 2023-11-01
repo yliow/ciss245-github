@@ -35,6 +35,15 @@ int main()
     // Date::Date() is used to inialize all objects in array.
 
     std::cout << lastyear.get_year() << '\n';
-   
+    lastyear.get_year() = 2025; // same as lastyear.yyyy_ = 2025
+    std::cout << lastyear << '\n';
+
+    Date * p = new Date(8888, 12, 25);
+    std::cout << (*p) << '\n';
+    std::cout << p->get_year() << '\n';
+
+    Date same(lastyear);
+    std::cout << lastyear << ' ' << same << '\n';
+    
     return 0;
 }

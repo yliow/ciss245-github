@@ -12,6 +12,10 @@ Date::Date(int yyyy, int mm, int dd)
     : yyyy_(yyyy), mm_(mm), dd_(dd)
 {}
 
+Date::Date(const Date & date) // copy constructor
+    : yyyy_(date.yyyy_), mm_(date.mm_), dd_(date.dd_)
+{}
+
 void Date::init(int yyyy, int mm, int dd)
 {
     yyyy_ = yyyy;
@@ -51,7 +55,10 @@ int Date::get_year() const
 {
     return yyyy_;
 }
-
+int & Date::get_year()
+{
+    return yyyy_;
+}
 int Date::get_month() const
 {
     return mm_;
