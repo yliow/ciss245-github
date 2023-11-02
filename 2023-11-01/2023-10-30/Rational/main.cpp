@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Rational.h"
 
+// vec2d
+// IntPointer
 int main()
 {
     Rational r0(1, 2);
@@ -11,7 +13,7 @@ int main()
     Rational r3;
     //std::cin >> r3;
     std::cout << "r3: " << r3 << '\n';
-
+    
     Rational r4(1, 2);
     Rational r5(1, 3);
     Rational r6;
@@ -30,9 +32,10 @@ int main()
     r6 = r4 - r5; // r4 - r5 = r4.operator-(r5)
     // r4 - r5 ..... r4.__sub__(r5) python
     std::cout << r6 << '\n';
-
+    
     r4 = r5; // r4.operator=(r5)
 
+    std::cout << (r4 + 1) << '\n';
     // i = j = k;
     return 0;
-}
+} // r6.~Rational(), r5.~Rational(), .....

@@ -11,6 +11,7 @@ class Rational
     Rational();
     Rational(int n, int d);
     Rational(const Rational &);
+    ~Rational();
     int n() const /* means *this cannot be changed */;
     int & n();
     int d() const;

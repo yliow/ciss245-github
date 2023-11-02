@@ -83,4 +83,10 @@ const Rational & Rational::operator=(const Rational & r)
 {
     this->n_ = r.n_;
     this->d_ = r.d_;
+    return (*this);
+}
+
+Rational::~Rational()
+{
+    std::cout << "Rational::~Rational() ...\n";
 }
