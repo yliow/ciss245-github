@@ -10,6 +10,8 @@ class vec2d
   public:
     /*void*/ vec2d(double, double);
     double operator[](int) const;
+    double & operator[](int);
+    // get_x() .... set_y() ....
   private:
     double x_, y_;
 };

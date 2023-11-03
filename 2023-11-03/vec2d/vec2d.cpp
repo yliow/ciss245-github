@@ -12,6 +12,11 @@ double vec2d::operator[](int i) const
     return (i == 0 ? x_ : y_);
     //else .... throw an exception
 }
+double & vec2d::operator[](int i)
+{
+    return (i == 0 ? x_ : y_);
+    //else .... throw an exception
+}
   
 std::ostream & operator<<(std::ostream & cout, const vec2d & v)
 {
