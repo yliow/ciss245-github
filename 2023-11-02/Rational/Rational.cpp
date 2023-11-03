@@ -7,9 +7,9 @@ Rational::Rational()
     : n_(0), d_(1)
 {}
 
-Rational::Rational(int n)
-    : n_(n), d_(1)
-{}
+// Rational::Rational(int n)
+//     : n_(n), d_(1)
+// {}
 
 Rational::Rational(int n, int d)
     : n_(n), d_(d)
@@ -100,3 +100,8 @@ Rational::~Rational()
 //     return (*this) + Rational(i, 1);
 // }
     
+
+Rational operator+(int i, const Rational & r)
+{
+    return r + i;
+}

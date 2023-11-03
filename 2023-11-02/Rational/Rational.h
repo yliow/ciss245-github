@@ -9,7 +9,8 @@ class Rational
 {
   public:
     Rational();
-    Rational(int n, int d);
+    //Rational(int n);
+    Rational(int n, int d=1);
     Rational(const Rational &);
     ~Rational();
     int n() const /* means *this cannot be changed */;
@@ -28,5 +29,6 @@ class Rational
 
 std::ostream & operator<<(std::ostream & cout, const Rational &);
 std::istream & operator>>(std::istream & cin, Rational &);
+Rational operator+(int, const Rational &);
 
 #endif

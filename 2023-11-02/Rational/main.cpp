@@ -35,10 +35,13 @@ int main()
     
     r4 = r5; // r4.operator=(r5)
 
-    std::cout << Rational(3) << '\n':
+    std::cout << Rational(3) << '\n';
 
     std::cout << "r4:" << r4 << '\n';
     std::cout << (r4 + 1) << '\n';
+
+    std::cout << (1 + r4) << '\n';
+
     // i = j = k;
 
     // std::cout << (1 + r4) << '\n';
