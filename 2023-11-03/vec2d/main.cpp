@@ -16,7 +16,7 @@ int main()
             // 1. operator+=(v, u)
             // 2. v.operator+=(u)
     std::cout << v << '\n';
-    //std::cout << (v + u) << '\n';
+    std::cout << (v + u) << '\n';
         
     return 0;
 }
