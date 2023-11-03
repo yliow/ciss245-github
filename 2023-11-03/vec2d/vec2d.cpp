@@ -6,10 +6,17 @@
 vec2d::vec2d(double x, double y)
     : x_(x), y_(y)
 {}
+
+double vec2d::operator[](int i) const
+{
+    return (i == 0 ? x_ : y_);
+    //else .... throw an exception
+}
   
 std::ostream & operator<<(std::ostream & cout, const vec2d & v)
 {
-    cout << '<'
-         << '>';
+    cout << '<' << v[0] << ", " << v[1] << '>';
+    // v[0] same as v.operator[](0)
     return cout;
 }
+

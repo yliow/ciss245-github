@@ -9,6 +9,7 @@ class vec2d
 {
   public:
     /*void*/ vec2d(double, double);
+    double operator[](int) const;
   private:
     double x_, y_;
 };
