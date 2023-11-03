@@ -25,3 +25,9 @@ std::ostream & operator<<(std::ostream & cout, const vec2d & v)
     return cout;
 }
 
+const vec2d & vec2d::operator+=(const vec2d & v)
+{
+    this->x_ += v.x_;
+    this->y_ += v.y_;
+    return (*this);
+}

@@ -10,6 +10,13 @@ int main()
     v[0] = 4.3;
     v[1] = 1.7;
     std::cout << v << '\n';
-    
+
+    vec2d u(1, 2);
+    v += u; // compiler look for
+            // 1. operator+=(v, u)
+            // 2. v.operator+=(u)
+    std::cout << v << '\n';
+    //std::cout << (v + u) << '\n';
+        
     return 0;
 }

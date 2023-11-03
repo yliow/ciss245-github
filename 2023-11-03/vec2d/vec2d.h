@@ -12,6 +12,8 @@ class vec2d
     double operator[](int) const;
     double & operator[](int);
     // get_x() .... set_y() ....
+    const vec2d & operator+=(const vec2d &);
+    vec2d operator+(const vec2d &) const;
   private:
     double x_, y_;
 };
