@@ -8,6 +8,8 @@ class IntArray
   public:
     IntArray();
     IntArray(int);
+    int size() const;
+    int operator[](int) const;
   private:
     int x_[1024];
     int size_;
