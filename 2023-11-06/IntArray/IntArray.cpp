@@ -14,9 +14,22 @@ int IntArray::size() const
     return size_;
 }
 
+void IntArray::resize(int size)
+{
+    size_ = size;
+}
+
 int IntArray::operator[](int i) const
 {
-    return x_[i]
+    if (i < size_)
+        return x_[i];
+    else
+        return -9999; // later: throw an exception
+}
+
+int & IntArray::operator[](int i)
+{
+    return x_[i];
 }
 
 std::ostream & operator<<(std::ostream & cout, const IntArray & a)
@@ -24,7 +37,8 @@ std::ostream & operator<<(std::ostream & cout, const IntArray & a)
     cout << '{';
     for (int i = 0; i < a.size(); ++i)
     {
-        cout << a[i] << ", ";
+        cout << a[i];
+        if (i < a.size() - 1) cout << ", ";
     }
     cout << '}';
     return cout;

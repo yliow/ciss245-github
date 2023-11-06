@@ -10,6 +10,8 @@ class IntArray
     IntArray(int);
     int size() const;
     int operator[](int) const;
+    int & operator[](int);
+    void resize(int size);
   private:
     int x_[1024];
     int size_;

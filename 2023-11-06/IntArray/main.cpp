@@ -9,5 +9,14 @@ int main()
     IntArray b(5);
     std::cout << b << '\n';
 
+    std::cout << b[2] << '\n';
+    b[2] = 42;
+    std::cout << b << '\n';
+    
+    std::cout << b[100] << '\n';
+
+    b.resize(3);
+    std::cout << b << '\n';
+    
     return 0;
 }
