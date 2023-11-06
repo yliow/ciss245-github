@@ -1,0 +1,26 @@
+// file: vec2d.h
+
+#ifndef VEC2D_H
+#define VEC2D_H
+
+#include <iostream>
+
+class vec2d
+{
+  public:
+    /*void*/ vec2d(double, double);
+    double operator[](int) const;
+    double & operator[](int);
+    // get_x() .... set_y() ....
+    const vec2d & operator+=(const vec2d &);
+    vec2d operator+(const vec2d &) const;
+    const vec2d & operator*=(double);
+    vec2d operator*(double);
+  private:
+    double x_, y_;
+};
+
+std::ostream & operator<<(std::ostream&, const vec2d &);
+vec2d operator*(double, const vec2d &);
+
+#endif
