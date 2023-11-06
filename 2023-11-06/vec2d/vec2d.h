@@ -15,12 +15,14 @@ class vec2d
     const vec2d & operator+=(const vec2d &);
     vec2d operator+(const vec2d &) const;
     const vec2d & operator*=(double);
-    vec2d operator*(double);
+    vec2d operator*(double) const;
+    double len() const;
   private:
     double x_, y_;
 };
 
 std::ostream & operator<<(std::ostream&, const vec2d &);
 vec2d operator*(double, const vec2d &);
+double len(const vec2d & v);
 
 #endif

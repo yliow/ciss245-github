@@ -1,6 +1,7 @@
 // file: vec2d.cpp
 
 #include <iostream>
+#include <cmath>
 #include "vec2d.h"
 
 vec2d::vec2d(double x, double y)
@@ -44,12 +45,21 @@ const vec2d & vec2d::operator*=(double c)
     return (*this);
 }
 
-vec2d vec2d::operator*(double c)
+vec2d vec2d::operator*(double c) const
 {
     return (vec2d(*this) *= c);
 }
 
 vec2d operator*(double c, const vec2d & v)
 {
-    return v * c;
+    return v * c; // v.operator*(c)
+}
+
+double vec2d::len() const
+{
+    return sqrt(x_ * x_ + y_ * y_);
+}
+double len(const vec2d & v)
+{
+    return v.len();
 }

@@ -23,6 +23,8 @@ int main()
 
     std::cout << (u * 10) << '\n';
     std::cout << (10 * u) << '\n';
+    std::cout << u.len() << '\n';
+    std::cout << len(u) << '\n';
     
     return 0;
 }
