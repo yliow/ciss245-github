@@ -13,6 +13,8 @@ class IntArray
     int operator[](int) const;
     int & operator[](int);
     void push_back(int);
+    void bubblesort();
+    void selectionsort();
   private:
     int x_[5];
     int size_;
@@ -20,5 +22,6 @@ class IntArray
 };
 
 std::ostream & operator<<(std::ostream &, const IntArray &);
+void bubblesort(IntArray & a);
 
 #endif

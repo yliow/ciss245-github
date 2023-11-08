@@ -18,8 +18,18 @@ int main()
     b.resize(3);
     std::cout << b << '\n';
 
-    b.push_back(42);
+    b.push_back(10);
     std::cout << b << '\n';
     
+    b.push_back(7);
+    std::cout << b << '\n';
+    
+    b.push_back(3);
+    std::cout << b << '\n';
+
+    //bubblesort(a);
+    b.bubblesort();
+    std::cout << b << '\n';
+    //bubblesort(b);
     return 0;
 }
