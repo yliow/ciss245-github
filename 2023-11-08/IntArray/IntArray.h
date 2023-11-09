@@ -15,6 +15,7 @@ class IntArray
     void push_back(int);
     void bubblesort();
     void selectionsort();
+    void insertionsort();
   private:
     int x_[5];
     int size_;

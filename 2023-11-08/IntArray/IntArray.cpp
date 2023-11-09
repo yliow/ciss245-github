@@ -104,5 +104,6 @@ void IntArray::selectionsort()
             x[i] = x[min_index];
             x[min_index] = t;
         }
+        std::cout << (*this) << '\n';
     }
 }
