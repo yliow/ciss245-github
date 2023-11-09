@@ -31,17 +31,28 @@ int main()
     std::cout << "bubblesort on " << b << '\n';
     b.bubblesort();
     std::cout << b << '\n';
-    //bubblesort(b);
+    bubblesort(b);
 
-    // b[0] = 8;
-    // b[1] = 7;
-    // b[2] = 6;
-    // b[3] = 5;
-    // b[4] = 4;
-    // std::cout << b << '\n';
+    b[0] = 8;
+    b[1] = 7;
+    b[2] = 6;
+    b[3] = 5;
+    b[4] = 4;
+    std::cout << b << '\n';
 
-    // std::cout << "selectionsort on " << b << '\n';
-    // b.selectionsort();
+    std::cout << "selectionsort on " << b << '\n';
+    b.selectionsort();
+
+    std::cout << '\n';
     
+    b[0] = 8;
+    b[1] = 6;
+    b[2] = 7;
+    b[3] = 5;
+    b[4] = 4;
+    std::cout << "insertionsort on " << b << '\n';
+    b.insertionsort();
+    std::cout << b << '\n';
+
     return 0;
 }

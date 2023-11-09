@@ -107,3 +107,40 @@ void IntArray::selectionsort()
         std::cout << (*this) << '\n';
     }
 }
+
+void IntArray::insertionsort()
+{
+    /* // version using swap
+    int n = size_;
+    for (int i = 1; i < n; ++i)
+    {
+        int j = i;
+        while (j >= 1 && x_[j] < x_[j - 1])
+        {
+            int t = x_[j];
+            x_[j] = x_[j - 1];
+            x_[j - 1] = t;
+            --j;
+            std::cout << (*this) << '\n';
+        }
+    }
+    */
+
+    // version using move value instead of swap
+    int n = size_;
+    for (int i = 1; i < n; ++i)
+    {
+        int j = i;
+        int t = x_[j];
+        while (j >= 1 && t < x_[j - 1])
+        {
+            x_[j] = x_[j - 1];
+            --j;
+            std::cout << (*this) << ' ' << j << ' ' << t << '\n';
+        }
+        x_[j] = t;
+        std::cout << "pass is done " << (*this) << "\n";
+    }
+}
+
+
