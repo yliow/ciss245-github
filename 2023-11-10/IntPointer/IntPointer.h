@@ -7,7 +7,7 @@ class IntPointer
 {
   public:
     IntPointer(int);
-    ~IntPointer()
+    ~IntPointer();
     int * get_p() const;
   private:
     int * p_;

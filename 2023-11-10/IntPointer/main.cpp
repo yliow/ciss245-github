@@ -13,6 +13,8 @@ void g()
     IntPointer p(42);
     std::cout << p << '\n';
 
+    IntPointer * q = new IntPointer(55);
+    
     // // IntDynArray class
     // int s = 5;         
     // int * p1 = new int[5];          
