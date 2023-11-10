@@ -8,10 +8,23 @@ IntPointer::IntPointer(int x)
     *p_ = x;
 }
 
+IntPointer::IntPointer(const IntPointer & p)
+    : p_(new int)
+{
+    *p_ = *p.p_;
+}
+
+// FIRST PROBLEM
 IntPointer::~IntPointer()
 {
     std::cout << "IntPointer::~IntPointer() " << p_ << '\n';
     delete p_;
+}
+
+const IntPointer & IntPointer::operator=(const IntPointer & p)
+{
+    p_ = p.p_;
+    return (*this);
 }
 
 int * IntPointer::get_p() const

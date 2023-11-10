@@ -11,9 +11,16 @@ void g()
     // delete p0;  <---- always forget
 
     IntPointer p(42);
-    std::cout << p << '\n';
+    std::cout << "p: " << p << '\n'; 
 
-    IntPointer * q = new IntPointer(55);
+    IntPointer r(p); // before copy constructor -- double free
+    std::cout << "r: " << r << '\n';
+
+    IntPointer s(-1);
+    s = p;
+       
+    //IntPointer * q = new IntPointer(55);
+    //delete q;
     
     // // IntDynArray class
     // int s = 5;         

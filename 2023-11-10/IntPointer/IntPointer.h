@@ -7,8 +7,10 @@ class IntPointer
 {
   public:
     IntPointer(int);
+    IntPointer(const IntPointer &);
     ~IntPointer();
     int * get_p() const;
+    const IntPointer & operator=(const IntPointer &);
   private:
     int * p_;
 };
