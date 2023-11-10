@@ -18,6 +18,8 @@ void g()
 
     IntPointer s(-1);
     s = p;
+
+    std::cout << (*p) << '\n'; // monday
        
     //IntPointer * q = new IntPointer(55);
     //delete q;

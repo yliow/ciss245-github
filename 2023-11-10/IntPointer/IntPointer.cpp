@@ -23,7 +23,7 @@ IntPointer::~IntPointer()
 
 const IntPointer & IntPointer::operator=(const IntPointer & p)
 {
-    p_ = p.p_;
+    *p_ = *(p.p_);
     return (*this);
 }
 
