@@ -11,6 +11,8 @@ class IntPointer
     ~IntPointer();
     int * get_p() const;
     int dereference() const;
+    int operator*() const;
+    int & operator*();
     const IntPointer & operator=(const IntPointer &);
   private:
     int * p_;

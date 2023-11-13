@@ -45,3 +45,13 @@ int IntPointer::dereference() const
 {
     return *p_;
 }
+
+int IntPointer::operator*() const
+{
+    return *p_;
+}
+int & IntPointer::operator*()
+{
+    return *p_;
+}
+    
