@@ -7,7 +7,6 @@ class DynIntArray
 {
   public:
     DynIntArray(int);
-    int operator[](int) const;
     int size() const;
     int operator[](int) const;
   private:

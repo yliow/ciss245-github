@@ -28,7 +28,7 @@ std::ostream & operator<<(std::ostream & cout,
     cout << '{';
     for (int i = 0; i < a.size(); ++i)
     {
-        cout << a[i] << ", "
+        cout << a[i] << ", ";
     }
     cout << '}';
     return cout;
