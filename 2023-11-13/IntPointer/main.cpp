@@ -19,13 +19,14 @@ void g()
     IntPointer s(-1);
     s = p;
 
-    std::cout << "p dereference: " << p.dereference() << '\n'; // monday
+    //std::cout << "p dereference: " << p.dereference() << '\n'; // monday
     std::cout << "*p: " << *p << '\n'; // monday
     // *p same as p.operator*()
     //
     // p * q ----> p.operator*(q)
 
     *p = 0;
+    std::cout << "*p: " << *p << '\n'; // monday
     
     //std::cout << (*p) << '\n'; // monday
        

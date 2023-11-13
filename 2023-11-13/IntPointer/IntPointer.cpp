@@ -41,10 +41,10 @@ std::ostream & operator<<(std::ostream & cout,
     return cout;
 }
 
-int IntPointer::dereference() const
-{
-    return *p_;
-}
+// int IntPointer::dereference() const
+// {
+//     return *p_;
+// }
 
 int IntPointer::operator*() const
 {

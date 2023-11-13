@@ -10,7 +10,7 @@ class IntPointer
     IntPointer(const IntPointer &);
     ~IntPointer();
     int * get_p() const;
-    int dereference() const;
+    //int dereference() const;
     int operator*() const;
     int & operator*();
     const IntPointer & operator=(const IntPointer &);
