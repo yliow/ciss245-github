@@ -10,5 +10,8 @@ int main()
     
     DynIntArray b(a);
     std::cout << "b: " << b << '\n';
+
+    b = a;
+    
     return 0;
 }

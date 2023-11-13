@@ -12,6 +12,7 @@ class DynIntArray
     int size() const;
     int operator[](int) const;
     int & operator[](int);
+    const DynIntArray & operator=(const DynIntArray &)
   private:
     int * p_; // IntArray int x_[1024]
     int size_;

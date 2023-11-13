@@ -20,6 +20,23 @@ DynIntArray::DynIntArray(const DynIntArray & a)
     }
 }
 
+const DynIntArray & DynIntArray::operator=(const DynIntArray & a)
+{
+    if (this != &a)
+    {
+        delete [] p_;
+        size_ = a.size;
+        capacity_ = a.capacity_;
+        p_ = new int[a.capacity_];
+        for (int i = 0; i < a.size_; ++i)
+        {
+            p_[i] = a.p_[i];
+        }
+    }
+    return (*this);
+}
+
+
 int DynIntArray::size() const
 {
     return size_;
