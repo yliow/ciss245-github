@@ -9,3 +9,28 @@ DynIntArray::DynIntArray(int size)
         p_[i] = 0;
     }
 }
+
+int DynIntArray::size() const
+{
+    return size_;
+}
+
+
+int DynIntArray::operator[](int i) const
+{
+    return p_[i];
+}
+
+
+std::ostream & operator<<(std::ostream & cout,
+                          const DynIntArray & a)
+{
+    cout << '{';
+    for (int i = 0; i < a.size(); ++i)
+    {
+        cout << a[i] << ", "
+    }
+    cout << '}';
+    return cout;
+    
+}
