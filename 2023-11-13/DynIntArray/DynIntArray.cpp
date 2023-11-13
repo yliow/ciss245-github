@@ -25,7 +25,7 @@ const DynIntArray & DynIntArray::operator=(const DynIntArray & a)
     if (this != &a)
     {
         delete [] p_;
-        size_ = a.size;
+        size_ = a.size_;
         capacity_ = a.capacity_;
         p_ = new int[a.capacity_];
         for (int i = 0; i < a.size_; ++i)
