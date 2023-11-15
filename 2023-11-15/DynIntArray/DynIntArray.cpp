@@ -74,8 +74,24 @@ std::ostream & operator<<(std::ostream & cout,
 
 void DynIntArray::push_back(int v)
 {
-    p_[size_] = v;
-    ++size_;
+    if (size_ < capacity_)
+    {
+        p_[size_] = v;
+        ++size_;
+    }
+    else
+    {
+        int * q = new int[size_ + 1];
+        for (int i = 0; i < size_; ++i)
+        {
+            q[i] = p_[i];
+        }
+        q[size_ + 1] = v;
+        ++size_;
+        capacity_ = size_;
+        delete [] p_;
+        p_ = q;
+    }
 }
 
 int DynIntArray::capacity() const
