@@ -8,8 +8,13 @@ int main()
     std::cout << C::num_objects << '\n';
     C b(1);
     std::cout << C::num_objects << '\n';
-    C c(2);
-    std::cout << C::num_objects << '\n';    
 
+    if (1)
+    {
+        C c(2);
+        std::cout << C::num_objects << '\n';    
+    }
+    std::cout << C::num_objects << '\n';    
+    
     return 0;
 }
