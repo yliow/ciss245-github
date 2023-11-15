@@ -12,3 +12,9 @@ C::~C()
 }
 
 int C::num_objects(0);
+
+int C::get_num_objects()
+{
+    // there is no "this" pointer
+    return num_objects;
+}
