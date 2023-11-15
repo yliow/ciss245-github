@@ -14,5 +14,11 @@ int main()
     b = a;
     b.push_back(100);
     std::cout << "b: " << b << ' ' << b.capacity() << '\n';
+    b.push_back(101);
+    std::cout << "b: " << b << ' ' << b.capacity() << '\n';
+    b.push_back(102);
+    std::cout << "b: " << b << ' ' << b.capacity() << '\n';
+    b.push_back(103);
+    std::cout << "b: " << b << ' ' << b.capacity() << '\n';
     return 0;
 }
