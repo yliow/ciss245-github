@@ -76,6 +76,8 @@ int sum(int n)
     }
 }
 
+// compute n! recursively
+
 int main()
 {
     //f(5);
