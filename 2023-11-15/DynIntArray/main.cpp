@@ -2,6 +2,16 @@
 #include "DynIntArray.h"
 #include <vector>
 
+std::ostream & operator<<(std::ostream & cout,
+                          const std::vector< int > & v)
+{
+    for (int i = 0; i < v.size(); ++i)
+    {
+        std::cout << v[i] << ' ';
+    }
+    return cout;
+}
+
 int main()
 {
     DynIntArray a(5); // want array of size 5
@@ -27,5 +37,12 @@ int main()
     std::cout << "b: " << b << ' ' << b.capacity() << '\n';
     b.push_back(106);
     std::cout << "b: " << b << ' ' << b.capacity() << '\n';
+
+    std::vector< int > v(3);
+    v.resize(10000);
+    std::cout << "v:" << v << '\n';
+    v.push_back(1000);
+    std::cout << "v:" << v << '\n';
+    
     return 0;
 }
