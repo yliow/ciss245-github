@@ -77,11 +77,98 @@ int sum(int n)
 }
 
 // compute n! recursively
+int factorial(int n)
+{
+    if (n == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * factorial(n - 1);
+    }
+}
+
+int mypow(int a, int n)
+{
+    if (n == 0)
+    {
+        return 1;
+    }
+    else
+    {
+        return mypow(a, n - 1) * a;
+    }
+}
+
+int GCD(int a, int b)
+{
+    if (b == 0)
+    {
+        return a;
+    }
+    else
+    {
+        return GCD(b, a % b);
+    }
+}
+
+int C(int n, int r)
+{
+    if (r == 0 || n == r)
+    {
+        return 1;
+    }
+    else
+    {
+        return C(n - 1, r - 1) + C(n - 1, r);
+    }
+}
+
+int fib(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return fib(n - 1) + fib(n - 2);
+    }
+}
 
 int main()
 {
     //f(5);
-    int ret = sum(5);
-    std::cout << "final:" << ret << '\n';
+    // int ret = sum(5);
+    // std::cout << "final:" << ret << '\n';
+
+    // int ret = factorial(5);
+    // std::cout << "final:" << ret << '\n';
+
+    // int ret = mypow(2, 5);
+    // std::cout << "final:" << ret << '\n';
+
+    // for (int i = 1; i < 7; ++i)
+    // {
+    //     for (int j = 1; j < 7; ++j)
+    //     {
+    //         std::cout << i << ' ' << j << ' ' << GCD(i, j) << '\n';
+    //     }
+    // }
+
+    // for (int i = 0; i <= 5; ++i)
+    // {
+    //     for (int j = 0; j <= i; ++j)
+    //     {
+    //         std::cout << i << ' ' << j << ' ' << C(i, j) << '\n';
+    //     }
+    // }
+
+    for (int i = 0; i < 9; ++i)
+    {
+        std::cout << i << ' ' << fib(i) << '\n';
+    }
+        
     return 0;
 }
