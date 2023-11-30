@@ -79,6 +79,7 @@ void bubblesort_pass(int x[], int j, int i)
             x[j + 1] = t;
         }
         bubblesort_pass(x, j + 1, i);
+        println(x, i + 1);
     }
 }
 
@@ -105,6 +106,6 @@ int main()
     // }
 
     int x[] = {5, 3, 1, 6, 4, 2};
-    bubblesort_pass(x, 4);
+    bubblesort_pass(x, 0, 4);
     return 0;
 }
