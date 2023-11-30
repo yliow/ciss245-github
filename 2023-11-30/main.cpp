@@ -1,12 +1,82 @@
 #include <iostream>
 
-int max(int x[], n)
+/*
+  max({1, 3, 2}, 3)  <-----> ??       max ({1, 3}, 2)
+  3                                   3
+
+  max({1, 3, 7}, 3)  <-----> ??       max ({1, 3}, 2)
+  7                                   3
+
+  max of {1, 3, 7} is max of {1, 3} and 7
+
+  max 
+
+ */
+
+int max(int x[], int n)
 {
+    if (n == 0)
+    {
+        return -1;
+    }
+    else
+    {
+        int m = max(x, n - 1);
+        if (m > x[n]) return m;
+        else return x[n];
+    }
 }
 
+int fib(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return fib(n - 1) + fib(n - 2);
+    }
+}
+
+// memoization technique
+int table[1000];
+int fib2(int n)
+{
+    if (n == 0 || n == 1) return 1;
+    else
+    {
+        // if fib(n) is in table, use table.
+        // if not, compute it and store in table.
+        if (table[n] == 0)
+        {
+            table[n] = fib(n - 1) + fib(n - 2);
+        }
+        return table[n];
+    }
+}
 int main()
 {
-    int x[] = {3, 5, 2, 6, 7};
-    int m = max(x, 5);
-    std::cout << "m:" << m << '\n';
+    // int x[] = {3, 5, 2, 6, 7};
+    // int m = max(x, 5);
+    // std::cout << "m:" << m << '\n';
+
+    // recursive case for fibo
+    // for (int n = 0; n < 50; ++n)
+    // {
+    //     std::cout << n << " ... " << fib(n) << '\n';
+    // }
+
+    // recursive with table lookup (memorization) for fibo
+    for (int i = 0; i < 1000; ++i)
+    {
+        table[i] = 0; // to indicate not yet computed
+    }
+    for (int n = 0; n < 50; ++n)
+    {
+        std::cout << n << " ... " << fib2(n) << '\n';
+    }
+
+
+    return 0;
 }
