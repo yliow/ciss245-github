@@ -55,6 +55,17 @@ int fib2(int n)
         return table[n];
     }
 }
+
+void println(int x[], int n)
+{
+    for (int i = 0; i < n; ++i)
+    {
+        std::cout << x[i] << ' ';
+    }
+    std::cout << '\n';
+    return;
+}
+
 int main()
 {
     // int x[] = {3, 5, 2, 6, 7};
@@ -68,15 +79,16 @@ int main()
     // }
 
     // recursive with table lookup (memorization) for fibo
-    for (int i = 0; i < 1000; ++i)
-    {
-        table[i] = 0; // to indicate not yet computed
-    }
-    for (int n = 0; n < 50; ++n)
-    {
-        std::cout << n << " ... " << fib2(n) << '\n';
-    }
+    // for (int i = 0; i < 1000; ++i)
+    // {
+    //     table[i] = 0; // to indicate not yet computed
+    // }
+    // for (int n = 0; n < 50; ++n)
+    // {
+    //     std::cout << n << " ... " << fib2(n) << '\n';
+    // }
 
-
+    int x[] = {5, 3, 1, 6, 4, 2};
+    bubblesort_pass(x, 4);
     return 0;
 }
