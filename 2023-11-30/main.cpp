@@ -66,6 +66,22 @@ void println(int x[], int n)
     return;
 }
 
+void bubblesort_pass(int x[], int j, int i)
+{
+    if (j >= i) // base case
+    {}
+    else // recursive case
+    {
+        if (x[j] > x[j + 1])
+        {
+            int t = x[j];
+            x[j] = x[j + 1];
+            x[j + 1] = t;
+        }
+        bubblesort_pass(x, j + 1, i);
+    }
+}
+
 int main()
 {
     // int x[] = {3, 5, 2, 6, 7};
