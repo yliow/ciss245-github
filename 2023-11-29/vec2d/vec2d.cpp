@@ -10,12 +10,19 @@ vec2d::vec2d(double x, double y)
 
 double vec2d::operator[](int i) const
 {
-    return (i == 0 ? x_ : y_);
+    //return (i == 0 ? x_ : y_);
+    if (i == 0) return x_;
+    else if (i == 1) return y_;
+    else throw IndexException();
     //else .... throw an exception
 }
 double & vec2d::operator[](int i)
 {
-    return (i == 0 ? x_ : y_);
+    if (i == 0) return x_;
+    else if (i == 1) return y_;
+    else throw IndexException();
+
+    //return (i == 0 ? x_ : y_);
     //else .... throw an exception
 }
   

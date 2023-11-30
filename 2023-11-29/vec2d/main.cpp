@@ -4,6 +4,7 @@
 int errornumber = 0;
 // how to return error state?
 // maye if -1 is not a return value ... use -1 as error state????
+// or throw a value back
 double f(double x, double y, double z)
 {
     // if (z == 0)
@@ -14,12 +15,14 @@ double f(double x, double y, double z)
     // return x + y / z;
 
     if (z == 0) throw -1;
+    if (x == 1) throw 3.14;
     return x + y / z;
 }
 
 
 int main()
 {
+    /*
     vec2d v(5.5, -1.2);
     std::cout << v << '\n';
 
@@ -42,9 +45,34 @@ int main()
     std::cout << (10 * u) << '\n';
     std::cout << u.len() << '\n';
     std::cout << len(u) << '\n';
-
-    std::cout << f(1, 2, 3) << '\n';
-    std::cout << f(1, 2, 0) << '\n';
+    */
     
+    // std::cout << f(1, 2, 3) << '\n';
+
+    // try
+    // {
+    //     std::cout << f(1, 2, 0) << '\n';
+    // }
+    // catch (int e)
+    // {
+    //     std::cout << "i caught an int exception ... " << e << '\n';
+    // }
+    // catch (double e)
+    // {
+    //     std::cout << "i caught an double exception ... " << e << '\n';
+    // }
+
+    vec2d v(1.1, 2.2);
+    try
+    {
+        std::cout << v[0] << '\n';
+        std::cout << v[1] << '\n';
+        std::cout << v[2] << '\n';
+    }
+    catch (IndexException & e)
+    {
+        std::cout << "there's bug in your program ... correct\n";
+    }
+
     return 0;
 }

@@ -5,6 +5,11 @@
 
 #include <iostream>
 
+class IndexException
+{};
+class DivisionByZeroException
+{};
+
 class vec2d
 {
   public:
@@ -21,6 +26,8 @@ class vec2d
     double x_, y_;
 };
 
+// vector of 2 doubles ... vec2d
+// vector of 2 floats ...  vec2f
 std::ostream & operator<<(std::ostream&, const vec2d &);
 vec2d operator*(double, const vec2d &);
 double len(const vec2d & v);
