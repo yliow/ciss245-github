@@ -106,5 +106,6 @@ int main()
 
     int x[] = {5, 3, 1, 6, 4, 2};
     bubblesort_pass(x, 0, 4);
+    println(x, 0, 4);
     return 0;
 }
