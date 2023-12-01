@@ -88,21 +88,21 @@ int main()
     // int m = max(x, 5);
     // std::cout << "m:" << m << '\n';
 
-    // recursive case for fibo
-    // for (int n = 0; n < 50; ++n)
-    // {
-    //     std::cout << n << " ... " << fib(n) << '\n';
-    // }
+    recursive case for fibo
+    for (int n = 0; n < 50; ++n)
+    {
+        std::cout << n << " ... " << fib(n) << '\n';
+    }
 
-    // recursive with table lookup (memorization) for fibo
-    // for (int i = 0; i < 1000; ++i)
-    // {
-    //     table[i] = 0; // to indicate not yet computed
-    // }
-    // for (int n = 0; n < 50; ++n)
-    // {
-    //     std::cout << n << " ... " << fib2(n) << '\n';
-    // }
+    recursive with table lookup (memorization) for fibo
+    for (int i = 0; i < 50; ++i)
+    {
+        table[i] = 0; // to indicate not yet computed
+    }
+    for (int n = 0; n < 50; ++n)
+    {
+        std::cout << n << " ... " << fib2(n) << '\n';
+    }
 
     int x[] = {5, 3, 1, 6, 4, 2};
     bubblesort_pass(x, 0, 4);
