@@ -100,5 +100,7 @@ int main()
     std::cout << john << '\n';
     Woman jane(2, 2, 10);
     std::cout << jane << '\n';
+    Dog rex(1, 3, 6);
+    std::cout << rex << '\n';
     return 0;
 }
