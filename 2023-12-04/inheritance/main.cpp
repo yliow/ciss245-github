@@ -2,6 +2,7 @@
 
 class LivingThing
 {
+public:
     LivingThing(int id, int r, int c)
         : id_(id), r_(r), c_(c)
     {}
@@ -30,7 +31,7 @@ public:
     {}
     int get_occupation_id() const
     {
-        occupation_id_;
+        return occupation_id_;
     }
 private:
     int occupation_id_;
@@ -54,12 +55,12 @@ public:
     {}
     int get_occupation_id() const
     {
-        occupation_id_;
+        return occupation_id_;
     }
 private:
     int occupation_id_;
 };
-std::ostream & operator<<(std::ostream & cout, const Man & woman)
+std::ostream & operator<<(std::ostream & cout, const Woman & woman)
 {
     cout << "<Woman id:" << woman.get_id()
          << " r:" << woman.get_r()
@@ -70,7 +71,7 @@ std::ostream & operator<<(std::ostream & cout, const Man & woman)
 }
 
 
-class Dog
+class Dog: public LivingThing
 {
 public:
     Dog(int id, int r, int c)
@@ -78,7 +79,7 @@ public:
     {}
 private:
 };
-std::ostream & operator<<(std::ostream & cout, const Man & woman)
+std::ostream & operator<<(std::ostream & cout, const Dog & dog)
 {
     cout << "<Dog id:" << dog.get_id()
          << " r:" << dog.get_r()
@@ -89,12 +90,11 @@ std::ostream & operator<<(std::ostream & cout, const Man & woman)
 
 int main()
 {
-    Man john(3, 4, 7);
+    Man john(3, 4, 7, 0);
     std::cout << john << '\n';
-    Woman jane(2, 2, 10);
+    Woman jane(2, 2, 10, 0);
     std::cout << jane << '\n';
     Dog rex(1, 3, 6);
-    std::cout << rex    Woman jane(2, 2, 10);
-    std::cout << jane << '\n';
+    std::cout << rex << '\n';
     return 0;
 }
