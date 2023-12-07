@@ -44,9 +44,11 @@ int main()
     // y.print();
     // std::cout << '\n';
 
-    
+    Constant * p0 =  new Int(42);
+    p0->print(); std::cout << '\n';
 
+    Constant * p1 =  new Double(3.14);
+    p1->print(); std::cout << '\n';
 
-    
     return 0;
 }
