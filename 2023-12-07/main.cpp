@@ -44,11 +44,17 @@ int main()
     // y.print();
     // std::cout << '\n';
 
-    Constant * p0 =  new Int(42);
-    p0->print(); std::cout << '\n';
+    // Constant * p0 =  new Int(42);
+    // p0->print(); std::cout << '\n';
 
-    Constant * p1 =  new Double(3.14);
-    p1->print(); std::cout << '\n';
+    // Constant * p1 =  new Double(3.14);
+    // p1->print(); std::cout << '\n';
 
+    std::vector< Constant * > v;
+    Constant * p0 = new Int(42);
+    v.push_back(p0);
+    Constant * p1 = new Double(3.14);
+    v.push_back(p1);
+    
     return 0;
 }
