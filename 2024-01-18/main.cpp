@@ -2,11 +2,12 @@
 
 void max_subarray_sum(int x[], int n, int & max, int & max_i, int & max_j)
 {
+    max = 0;
     for (int i = 0; i < n; ++i) // starting index of subarray
     {
         for (int j = i + 1; j <= n; ++j) // ending index of subarray
         {
-            int s = 0;
+            int s = 0; // s = sum of x[i], ..., x[j - 1]
             for (int k = i; k < j; ++k)
             {
                 s += x[k];
