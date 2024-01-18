@@ -17,8 +17,8 @@ void max_subarray_sum(int x[], int n, int & max, int & max_i, int & max_j)
                 max_i = i;
                 max_j = j;
             }
-            std::cout << i << ' ' << j << ' ' << s << ' '
-                      << max << ' ' << max_i << ' ' << max_j << '\n';
+            // std::cout << i << ' ' << j << ' ' << s << ' '
+            //           << max << ' ' << max_i << ' ' << max_j << '\n';
         }
     }
 }
