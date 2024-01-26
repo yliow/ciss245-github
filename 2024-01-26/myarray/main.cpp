@@ -6,12 +6,13 @@ int main()
     int x[1000] = {};
     int x_size = 0;
     myarray_init(x, x_size); // set x_size to 0
-    x[0] = 42;
-    x[1] = 99;
-    x[2] = -55;
-    x_size = 3;
     myarray_println(x, x_size); // print {}
-    // myarray_pushback(x, x_size, 42);
+
+    for (int i = 42; i < 50; ++i)
+    {
+        myarray_pushback(x, x_size, i);
+        myarray_println(x, x_size); 
+    }
     // myarray_println(x, x_size); // print {42}
     // myarray_pushback(x, x_size, 3);
     // myarray_println(x, x_size); // print {42, 3}
