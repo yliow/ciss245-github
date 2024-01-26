@@ -3,5 +3,7 @@
 #define MYARRAY_H
 
 void myarray_init(int x[], int & x_size);
+void myarray_println(int x[], int x_size);
+
 
 #endif

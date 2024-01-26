@@ -6,6 +6,10 @@ int main()
     int x[1000] = {};
     int x_size = 0;
     myarray_init(x, x_size); // set x_size to 0
+    x[0] = 42;
+    x[1] = 99;
+    x_size = 2;
+    myarray_println(x, x_size); // print {}
     // myarray_pushback(x, x_size, 42);
     // myarray_println(x, x_size); // print {42}
     // myarray_pushback(x, x_size, 3);
