@@ -2,6 +2,6 @@
 #ifndef MYARRAY_H
 #define MYARRAY_H
 
-myarray_init(int x[], int x_size);
+void myarray_init(int x[], int & x_size);
 
 #endif
