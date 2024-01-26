@@ -13,7 +13,11 @@ void myarray_println(int x[], int x_size)
     std::cout << '{';
     for (int i = 0; i < x_size; ++i)
     {
-        std::cout << x[i] << ", ";
+        std::cout << x[i];
+        if (i < x_size - 1)
+        {
+            std::cout << ", ";
+        }
     }
     std::cout << "}\n";
 }

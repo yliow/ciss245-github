@@ -8,7 +8,8 @@ int main()
     myarray_init(x, x_size); // set x_size to 0
     x[0] = 42;
     x[1] = 99;
-    x_size = 2;
+    x[2] = -55;
+    x_size = 3;
     myarray_println(x, x_size); // print {}
     // myarray_pushback(x, x_size, 42);
     // myarray_println(x, x_size); // print {42}
