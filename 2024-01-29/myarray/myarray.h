@@ -4,6 +4,7 @@
 
 void myarray_init(int x[], int & x_size);
 void myarray_println(int x[], int x_size);
-void myarray_pushback(int x[], int & x_size, int v);
+void myarray_pushback(int x[], int & x_size, int x_capacity,
+                      int v);
 
 #endif
