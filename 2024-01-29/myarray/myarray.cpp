@@ -3,12 +3,12 @@
 #include <iostream>
 #include "myarray.h"
 
-void myarray_init(int x[], int & x_size)
+void myarray_init(int x[], int & x_size, int x_capacity)
 {
     x_size = 0;
 }
 
-void myarray_println(int x[], int x_size)
+void myarray_println(int x[], int x_size, int x_capacity)
 {
     std::cout << '{';
     for (int i = 0; i < x_size; ++i)
