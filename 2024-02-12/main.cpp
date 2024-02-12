@@ -26,15 +26,22 @@ void inc_ss(Time * t)
     t->ss += 1;
 }
 
+// todo
 void operator+=(Time & t, int dss)
 {
     t.ss += dss;
 }
 
-// std::cin is from std::istream
-void operator<<(std::ostream & cout, const Time & t)
+void operator++(Time & t)
 {
-    cout << t.hh << ':' << t.mm << ':' << t.ss;        
+    t.ss += 1;
+}
+
+// std::cin is from std::istream
+std::ostream & operator<<(std::ostream & cout, const Time & t)
+{
+    cout << t.hh << ':' << t.mm << ':' << t.ss;
+    return cout;
 }
 
 int main()
@@ -51,8 +58,15 @@ int main()
     for (int i = 0; i < 10; ++i)
     {
         now += 1;
-        std::cout << now; // operator<<(std::cout, now)
-        std::cout << '\n';
+        std::cout << now << '\n'; // operator<<(std::cout, now)
     }
+
+    std::cout << "test ++\n";
+    ++now;
+    std::cout << now << '\n';
+
+    //Time onehour; onehour.hh = 1; onehour.mm = 0;  onehour.ss = 0;
+    //now += onehour; // operator+=(Time &, const Time &);
+    
     return 0;
 }
