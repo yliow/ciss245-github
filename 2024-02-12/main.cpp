@@ -31,6 +31,12 @@ void operator+=(Time & t, int dss)
     t.ss += dss;
 }
 
+// std::cin is from std::istream
+void operator<<(std::ostream & cout, const Time & t)
+{
+    cout << t.hh << ':' << t.mm << ':' << t.ss;        
+}
+
 int main()
 {
     Time now;
@@ -45,7 +51,7 @@ int main()
     for (int i = 0; i < 10; ++i)
     {
         now += 1;
-        std::cout << now;
+        std::cout << now; // operator<<(std::cout, now)
         std::cout << '\n';
     }
     return 0;
