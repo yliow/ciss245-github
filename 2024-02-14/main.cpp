@@ -34,9 +34,14 @@ void inc_ss(Time * t)
 }
 
 // todo
-void operator+=(Time & t, int dss)
+// void operator+=(Time & t, int dss)
+// {
+//     t.ss += dss;
+// }
+Time operator+=(Time & t, int dss)
 {
-    t.ss += dss;
+     t.ss += dss;
+     return t;
 }
 
 void operator++(Time & t)
@@ -76,5 +81,10 @@ int main()
 
     Time tmr = {13, 15, 30};
     std::cout << tmr << '\n';
+    Time nextyr;
+    nextyr = tmr;
+    std::cout << nextyr << '\n';
+
+    tmr = (nextyr += 1);
     return 0;
 }
