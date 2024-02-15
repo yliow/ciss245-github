@@ -31,6 +31,6 @@ void run(Alien & alien)
 int main()
 {
     Alien alien0;
-    init(alien, 10, 5, 1, 2, 50, 100);
+    init(alien0, 10, 5, 1, 2, 50, 100);
     run(alien);
 }
