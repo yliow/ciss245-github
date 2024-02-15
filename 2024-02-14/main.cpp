@@ -38,10 +38,16 @@ void inc_ss(Time * t)
 // {
 //     t.ss += dss;
 // }
-Time operator+=(Time & t, int dss)
+Time & operator+=(Time & t, int dss)
 {
      t.ss += dss;
      return t;
+}
+// pointer version of above
+Time * operator+=(Time * t, Time * dt)
+{
+    (*t).ss += dss;
+    return t;
 }
 
 void operator++(Time & t)
@@ -86,5 +92,13 @@ int main()
     std::cout << nextyr << '\n';
 
     tmr = (nextyr += 1);
+    std::cout << nextyr << '\n';
+    std::cout << tmr << '\n';
+
+    (nextyr += 1) += 1;
+    std::cout << nextyr << '\n';
+
+    (&nextyr) += 1;
+
     return 0;
 }
