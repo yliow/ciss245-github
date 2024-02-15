@@ -16,7 +16,7 @@ struct Alien
 void init(Alien & alien, int px, int py, int vx, int vy, int energy, int points)
 {
     alien.p.x = px;
-    alien.p.x = px;
+    alien.p.y = py;
     alien.v.x = vx;
     alien.v.y = vy;
     alien.energy = energy;
@@ -27,10 +27,20 @@ void run(Alien & alien)
     alien.p.x += alien.v.x;
     alien.p.y += alien.v.y;
 }
+void println(const Alien & alien)
+{
+    std::cout << "<Alien " << &alien << ' '
+              << "p.x: " << alien.p.x << ' '
+              << "p.y: " << alien.p.y << ' '
+              << "v.x: " << alien.v.x << ' '
+              << "v.y: " << alien.v.y << ' '
+              << "enegy: " << alien.energy << ' '
+              << "points: " << alien.points << ">\n";
+}
 
 int main()
 {
     Alien alien0;
     init(alien0, 10, 5, 1, 2, 50, 100);
-    run(alien);
+    run(alien0);
 }
