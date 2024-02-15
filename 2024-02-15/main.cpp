@@ -4,6 +4,11 @@ struct vec2i
 {
     int x, y;
 };
+void operator+=(vec2i & v0, vec2i & v1)
+{
+    v0.x += v1.x;
+    v0.y += v1.y;
+}
 
 struct Alien
 {
@@ -24,8 +29,7 @@ void init(Alien & alien, int px, int py, int vx, int vy, int energy, int points)
 }
 void run(Alien & alien)
 {
-    alien.p.x += alien.v.x;
-    alien.p.y += alien.v.y;
+    alien.p += alien.v;
 }
 void println(const Alien & alien)
 {
