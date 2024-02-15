@@ -42,5 +42,9 @@ int main()
 {
     Alien alien0;
     init(alien0, 10, 5, 1, 2, 50, 100);
+    println(alien0);
     run(alien0);
+    println(alien0);
+
+    return 0;
 }
