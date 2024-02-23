@@ -106,17 +106,16 @@ int * binarysearch(int * start, int * end, int target)
     return NULL;
 }
 
-void println(int x)
+template < typename T >
+void println(T x)
 {
     std::cout << x << '\n'; 
 }
-void println(double x)
+
+template < typename T >
+T addOne(T x)
 {
-    std::cout << x << '\n'; 
-}
-void println(char x)
-{
-    std::cout << x << '\n'; 
+    return x + 1;
 }
 
 int main()
@@ -129,9 +128,13 @@ int main()
 
     //  bubblesort(x + 2, x + 6); // only sort 2, 4, 8, 6
 
-    println(1);
+    println(1); // call println with T = int
     println(3.14);
     println('c');
+
+    std::cout << addOne< int >(42) << '\n';
+    std::cout << addOne< double >(3.14) << '\n';
+    std::cout << addOne< char >('c') << '\n';
     
     return 0;
 }
