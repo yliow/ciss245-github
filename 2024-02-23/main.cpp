@@ -1,6 +1,15 @@
 #include <iostream>
 
 template < typename T >
+void swap(T & a, T & b)
+{
+    T t = a;
+    a = b;
+    b = t;
+}
+
+
+template < typename T >
 void println(T * start, T * end)
 {
     // print *start, ..., *(end - 1)
@@ -122,29 +131,36 @@ T addOne(T x)
 }
 
 template < typename T >
-void swap(T & a, T & b)
-{
-    T t = a;
-    a = b;
-    b = t;
-}
-
-template < typename T >
 struct Point
 {
     T x, y;
 };
 
+template < typename T >
+std::ostream & operator<<(std::ostream & cout, const Point< T > & p)
+{
+    cout << p.x << ' ' << p.y;
+    return cout;
+}
+
+template < typename T >
+Point< T > operator+(const Point< T > & p, const Point< T > & q)
+{
+    Point< T > ret = {p.x + q.x, p.y + q.y};
+    return ret;
+}
 
 int main()
 {
-//    int x[] = {5, 3, 50, -5, 42, -19, 7};
+    int x[] = {5, 3, 50, -5, 42, -19, 7};
     //bubblesort(x, 2, 6); // only sort 2, 4, 8, 6
     //println(&x[0], &x[7]);
     //bubblesort(&x[0], &x[7]);
     //println(&x[0], &x[7]);
 
-    //  bubblesort(x + 2, x + 6); // only sort 2, 4, 8, 6
+    bubblesort(x + 2, x + 6); // only sort 2, 4, 8, 6
+    int * i = binarysearch(x + 2, x + 6, -5);
+    std::cout << "i:" << i << ' ' << *i << '\n';
 
     println(1); // call println with T = int
     println(3.14);
@@ -154,8 +170,11 @@ int main()
     std::cout << addOne(3.14) << '\n';
     std::cout << addOne('c') << '\n';
 
-    Point< double > p;
+    Point< double > p = {1.1, 2.2};
     Point< float > q;
+    Point< double > p1 = {1.2, 3.4};
+    Point< double > p2 = p + p1;
+    std::cout << "p2: " << p2 << '\n';
     
     return 0;
 }
