@@ -132,9 +132,9 @@ int main()
     println(3.14);
     println('c');
 
-    std::cout << addOne< int >(42) << '\n';
-    std::cout << addOne< double >(3.14) << '\n';
-    std::cout << addOne< char >('c') << '\n';
+    std::cout << addOne(42) << '\n';
+    std::cout << addOne(3.14) << '\n';
+    std::cout << addOne('c') << '\n';
     
     return 0;
 }
