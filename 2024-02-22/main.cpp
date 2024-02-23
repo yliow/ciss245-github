@@ -36,6 +36,7 @@ void bubblesort(int x[], int start, int end)
             {
                 int t = x[j]; x[j] = x[j + 1]; x[j + 1] = t;
             }
+            std::cout << i << ' ' << j << ": ";
             println(&x[0], &x[7]);
         }
     }
@@ -44,15 +45,28 @@ void bubblesort(int x[], int start, int end)
 void bubblesort(int * start, int * end)
 {
     // sort *start, ..., *(end - 1) using bubblesort
+    for (int * p = end - 2; p >= start; --p)
+    {
+        for (int * q = start; q <= p; ++q)
+        {
+            if (*q > *(q + 1))
+            {
+                int t = *q; *q = *(q + 1); *(q + 1) = t;
+            }
+            println(start, end);
+        }
+    }
 }
 
 int main()
 {
-    int x[] = {5, 3, 2, 4, 8, 6, 7};
-    bubblesort(x, 2, 6); // only sort 2, 4, 8, 6
+    int x[] = {5, 3, 50, -5, 42, -19, 7};
+    //bubblesort(x, 2, 6); // only sort 2, 4, 8, 6
     //println(&x[0], &x[7]);
     //bubblesort(&x[0], &x[7]);
     //println(&x[0], &x[7]);
 
+    bubblesort(x + 2, x + 6); // only sort 2, 4, 8, 6
+    
     return 0;
 }
