@@ -79,6 +79,7 @@ int binarysearch(int x[], int start, int end, int target)
             lower = mid + 1;
         }
     }
+    return -1;
 }
 
 int main()
