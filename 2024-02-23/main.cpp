@@ -88,7 +88,7 @@ int * binarysearch(int * start, int * end, int target)
     int * upper = end - 1;
     while (lower <= upper)
     {
-        //mid = (lower + upper) / 2; // BAD
+        //int * mid = (lower + upper) / 2; // BAD
         int * mid = lower + (upper - lower) / 2;
         if (*mid == target)
         {
@@ -106,15 +106,24 @@ int * binarysearch(int * start, int * end, int target)
     return NULL;
 }
 
+void println(int x)
+{
+    std::cout << x << '\n'; 
+}
+
 int main()
 {
-    int x[] = {5, 3, 50, -5, 42, -19, 7};
+//    int x[] = {5, 3, 50, -5, 42, -19, 7};
     //bubblesort(x, 2, 6); // only sort 2, 4, 8, 6
     //println(&x[0], &x[7]);
     //bubblesort(&x[0], &x[7]);
     //println(&x[0], &x[7]);
 
-    bubblesort(x + 2, x + 6); // only sort 2, 4, 8, 6
+    //  bubblesort(x + 2, x + 6); // only sort 2, 4, 8, 6
+
+    println(1);
+    println(3.14);
+    println('c');
     
     return 0;
 }
