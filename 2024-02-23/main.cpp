@@ -1,16 +1,18 @@
 #include <iostream>
 
-void println(int * start, int * end)
+template < typename T >
+void println(T * start, T * end)
 {
     // print *start, ..., *(end - 1)
-    for (int * p = start; p < end; ++p)
+    for (T * p = start; p < end; ++p)
     {
         std::cout << (*p) << ' ';
     }
     std::cout << '\n';
 }
 
-void bubblesort(int x[], int start, int end)
+template < typename T >
+void bubblesort(T x[], int start, int end)
 {
     // sort x[start], ..., x[end - 1] using bubblesort
     // for the orig bubblesort from x[0] to x[N - 1], the
@@ -34,7 +36,7 @@ void bubblesort(int x[], int start, int end)
         {
             if (x[j] > x[j + 1])
             {
-                int t = x[j]; x[j] = x[j + 1]; x[j + 1] = t;
+                swap(x[j], x[j + 1]);
             }
             std::cout << i << ' ' << j << ": ";
             println(&x[0], &x[7]);
@@ -42,16 +44,17 @@ void bubblesort(int x[], int start, int end)
     }
 }
 
-void bubblesort(int * start, int * end)
+template < typename T > 
+void bubblesort(T * start, T * end)
 {
     // sort *start, ..., *(end - 1) using bubblesort
-    for (int * p = end - 2; p >= start; --p)
+    for (T * p = end - 2; p >= start; --p)
     {
-        for (int * q = start; q <= p; ++q)
+        for (T * q = start; q <= p; ++q)
         {
             if (*q > *(q + 1))
             {
-                int t = *q; *q = *(q + 1); *(q + 1) = t;
+                swap(*q, *(q + 1));
             }
             println(start, end);
         }
@@ -118,6 +121,21 @@ T addOne(T x)
     return x + 1;
 }
 
+template < typename T >
+void swap(T & a, T & b)
+{
+    T t = a;
+    a = b;
+    b = t;
+}
+
+template < typename T >
+struct Point
+{
+    T x, y;
+};
+
+
 int main()
 {
 //    int x[] = {5, 3, 50, -5, 42, -19, 7};
@@ -135,6 +153,9 @@ int main()
     std::cout << addOne(42) << '\n';
     std::cout << addOne(3.14) << '\n';
     std::cout << addOne('c') << '\n';
+
+    Point< double > p;
+    Point< float > q;
     
     return 0;
 }
