@@ -58,14 +58,14 @@ void bubblesort(int * start, int * end)
     }
 }
 
-void binarysearch(int x[], int start, int end, int target)
+int binarysearch(int x[], int start, int end, int target)
 {
     int lower = start;
     int upper = end - 1;
     while (lower <= upper)
     {
         //mid = (lower + upper) / 2; // BAD
-        mid = lower + (upper - lower) / 2;
+        int mid = lower + (upper - lower) / 2;
         if (x[mid] == target)
         {
             return mid;
