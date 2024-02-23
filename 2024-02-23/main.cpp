@@ -82,6 +82,30 @@ int binarysearch(int x[], int start, int end, int target)
     return -1;
 }
 
+int * binarysearch(int * start, int * end, int target)
+{
+    int * lower = start;
+    int * upper = end - 1;
+    while (lower <= upper)
+    {
+        //mid = (lower + upper) / 2; // BAD
+        int * mid = lower + (upper - lower) / 2;
+        if (*mid == target)
+        {
+            return mid;
+        }
+        else if (target < *mid)
+        {
+            upper = mid - 1;
+        }
+        else
+        {
+            lower = mid + 1;
+        }
+    }
+    return NULL;
+}
+
 int main()
 {
     int x[] = {5, 3, 50, -5, 42, -19, 7};
