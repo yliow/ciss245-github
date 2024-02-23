@@ -110,6 +110,14 @@ void println(int x)
 {
     std::cout << x << '\n'; 
 }
+void println(double x)
+{
+    std::cout << x << '\n'; 
+}
+void println(char x)
+{
+    std::cout << x << '\n'; 
+}
 
 int main()
 {
