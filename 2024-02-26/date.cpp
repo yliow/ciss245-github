@@ -19,3 +19,18 @@ void println(const Date & date)
     print(date);
     std::cout << '\n';
 }
+
+void add_y(Date & date, int y)
+{
+    date.yyyy_ += y;
+}
+
+void add_m(Date & date, int m)
+{
+    date.mm_ += m;
+}
+
+void add_d(Date & date, int d)
+{
+    date.dd_ += d;
+}

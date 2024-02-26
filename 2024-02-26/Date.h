@@ -13,5 +13,8 @@ struct Date
 void init(Date &, int, int, int);
 void print(const Date &);
 void println(const Date &);
+void add_y(Date &, int);
+void add_m(Date &, int);
+void add_d(Date &, int);
 
 #endif
