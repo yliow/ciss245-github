@@ -5,14 +5,16 @@
 int main()
 {
     Date today;
-    init(today, 2024, 2, 26);
+    today.init(2024, 2, 26);
     Date * p = new Date;
-    init(*p, 2024, 2, 26);
+    p->init(2024, 2, 26);
 
-    println(today);
-    add_y(today, 1); println(today);
-    add_m(today, 2); println(today);
-    add_d(today, 3); println(today);
+    today.print();
+    today.add_y(1); today.print();
+    today.add_m(2); today.print();
+    today.add_d(3); today.print();
+
+    std::cout << today.yyyy_ << '\n';
 
     return 0;
 }

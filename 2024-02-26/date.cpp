@@ -3,34 +3,29 @@
 #include <iostream>
 #include "Date.h"
 
-void init(Date & date, int yyyy, int mm, int dd)
+void Date::init(int yyyy, int mm, int dd)
 {
-    date.yyyy_ = yyyy;
-    date.mm_ = mm;
-    date.dd_ = dd;
+    yyyy_ = yyyy;
+    mm_ = mm;
+    dd_ = dd;
 }
 
-void print(const Date & date)
+void Date::print()
 {
-    std::cout << date.yyyy_ << '-' << date.mm_ << '-' << date.dd_;
-}
-void println(const Date & date)
-{
-    print(date);
-    std::cout << '\n';
+    std::cout << yyyy_ << '-' << mm_ << '-' << dd_ << '\n';
 }
 
-void add_y(Date & date, int y)
+void Date::add_y(int y)
 {
-    date.yyyy_ += y;
+    yyyy_ += y;
 }
 
-void add_m(Date & date, int m)
+void Date::add_m(int m)
 {
-    date.mm_ += m;
+    mm_ += m;
 }
 
-void add_d(Date & date, int d)
+void Date::add_d(int d)
 {
-    date.dd_ += d;
+    dd_ += d;
 }

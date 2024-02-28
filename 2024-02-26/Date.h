@@ -3,18 +3,20 @@
 #ifndef DATE_H
 #define DATE_H
 
-struct Date
+class Date
 {
-    int yyyy_;
+  public:
+    void init(int, int, int);
+    void add_y(int);
+    void add_m(int);
+    void add_d(int);
+    void print();
+
+  private:
     int mm_;
     int dd_;
+    int yyyy_;
 };
 
-void init(Date &, int, int, int);
-void print(const Date &);
-void println(const Date &);
-void add_y(Date &, int);
-void add_m(Date &, int);
-void add_d(Date &, int);
 
 #endif
