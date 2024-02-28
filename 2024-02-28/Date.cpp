@@ -32,6 +32,10 @@ void Date::add_d(int d)
 
 void Date::add_m_d(int m, int d)
 {
-    mm_ += m;
-    dd_ += d;
+    //mm_ += m;
+    //dd_ += d;
+
+    // another way:
+    add_m(m);
+    add_d(d);
 }
