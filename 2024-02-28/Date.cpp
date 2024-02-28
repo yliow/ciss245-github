@@ -43,6 +43,10 @@ void Date::add_m_d(int m, int d)
 void Date::add_y_m_d(int y, int m, int d)
 {
     add_y(y);
-    add_m(m);
-    add_d(d);
+    add_m_d(m, d);
+}
+
+void Date::add_date(const Date & date)
+{
+    add_y_m_d(date.yyyy_, date.mm_, date.dd_);
 }

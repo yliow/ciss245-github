@@ -18,7 +18,11 @@ int main()
     today.print();
     today.add_y_m_d(10, 3, 2);
     today.print();
-
+    Date delta;
+    delta.init(7, 8, 9);
+    today.add_date(delta);
+    today.print();
+    
     // ERROR: Date::yyyy_ is private !!!
     //std::cout << today.yyyy_ << '\n';
 
