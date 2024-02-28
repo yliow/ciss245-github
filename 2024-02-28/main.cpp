@@ -22,6 +22,11 @@ int main()
     delta.init(7, 8, 9);
     today.add_date(delta);
     today.print();
+
+    today.init(12, 12, 13);
+    Date today2;
+    today2.init(12, 12, 13);
+    std::cout << today.equals(today2) << '\n';
     
     // ERROR: Date::yyyy_ is private !!!
     //std::cout << today.yyyy_ << '\n';

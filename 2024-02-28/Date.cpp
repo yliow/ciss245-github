@@ -50,3 +50,10 @@ void Date::add_date(const Date & date)
 {
     add_y_m_d(date.yyyy_, date.mm_, date.dd_);
 }
+
+bool Date::equals(const Date & date)
+{
+    return (yyyy_ == date.yyyy_ &&
+        mm_ == date.mm_ &&
+        dd_ == date.dd_);
+}

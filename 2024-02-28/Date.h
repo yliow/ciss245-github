@@ -15,6 +15,7 @@ class Date
     void add_y_m_d(int, int, int);
     void add_date(const Date &);
     void print();
+    bool equals(const Date &);
     
   private:
     int mm_;
