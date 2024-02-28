@@ -8,6 +8,8 @@ class Date
   public:
     // member functions = methods
     void init(int, int, int);
+    Date(int, int, int);
+    Date();
     void add_y(int);
     void add_m(int);
     void add_d(int);
@@ -16,6 +18,7 @@ class Date
     void add_date(const Date &);
     void print();
     bool equals(const Date &);
+    bool operator==(const Date &);
     
   private:
     int mm_;

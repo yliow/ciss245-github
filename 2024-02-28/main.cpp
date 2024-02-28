@@ -24,9 +24,9 @@ int main()
     today.print();
 
     today.init(12, 12, 13);
-    Date today2;
-    today2.init(12, 12, 13);
+    Date today2(12, 12, 13);
     std::cout << today.equals(today2) << '\n';
+    std::cout << (today == today2) << '\n';
     
     // ERROR: Date::yyyy_ is private !!!
     //std::cout << today.yyyy_ << '\n';

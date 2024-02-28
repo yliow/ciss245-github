@@ -3,6 +3,13 @@
 #include <iostream>
 #include "Date.h"
 
+Date::Date()
+{}
+    
+Date::Date(int yyyy, int mm, int dd)
+    : yyyy_(yyyy), mm_(mm), dd_(dd)
+{}
+    
 void Date::init(int yyyy, int mm, int dd)
 {
     yyyy_ = yyyy;
@@ -56,4 +63,8 @@ bool Date::equals(const Date & date)
     return (yyyy_ == date.yyyy_ &&
         mm_ == date.mm_ &&
         dd_ == date.dd_);
+}
+bool Date::operator==(const Date & date)
+{
+    return equals(date);
 }
