@@ -4,7 +4,7 @@
 
 int main()
 {
-    Date today;
+    Date today; // today is an object of type Date
     today.init(2024, 2, 26);
     Date * p = new Date;
     p->init(2024, 2, 26);
@@ -15,6 +15,8 @@ int main()
     today.add_d(3); today.print();
     today.print();
     today.add_m_d(5, 6);
+    today.print();
+    today.add_y_m_d(10, 3, 2);
     today.print();
 
     // ERROR: Date::yyyy_ is private !!!

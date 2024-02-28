@@ -39,3 +39,10 @@ void Date::add_m_d(int m, int d)
     add_m(m);
     add_d(d);
 }
+
+void Date::add_y_m_d(int y, int m, int d)
+{
+    add_y(y);
+    add_m(m);
+    add_d(d);
+}
