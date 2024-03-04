@@ -4,19 +4,24 @@
 #include "Date.h"
 
 Date::Date() // default constructor
+    : yyyy_(1970), mm_(1), dd_(1)
 {
-    std::cout << "Date::Date() ...\n";
+//    std::cout << "Date::Date() ...\n";
 }
     
 Date::Date(int yyyy, int mm, int dd)
     : yyyy_(yyyy), mm_(mm), dd_(dd)
 {
-    std::cout << "Date::Date(int,int,int) "
-              << yyyy << ' '
-              << mm << ' '
-              << dd << "...\n";
+    // std::cout << "Date::Date(int,int,int) "
+    //           << yyyy << ' '
+    //           << mm << ' '
+    //           << dd << "...\n";
 }
-    
+
+Date::Date(const Date & date)
+    : yyyy_(date.yyyy_), mm_(date.mm_), dd_(date.dd_)
+{}
+
 void Date::init(int yyyy, int mm, int dd)
 {
     yyyy_ = yyyy;

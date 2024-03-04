@@ -9,7 +9,8 @@ class Date
     // member functions = methods
     void init(int, int, int);
     Date(int, int, int);
-    Date();
+    Date(); // default constructor
+    Date(const Date &); // copy constructor
     void add_y(int);
     void add_m(int);
     void add_d(int);

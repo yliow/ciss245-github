@@ -31,5 +31,11 @@ int main()
     // ERROR: Date::yyyy_ is private !!!
     //std::cout << today.yyyy_ << '\n';
 
+    Date today3 = Date(12, 12, 15);
+    Date * q = new Date(12, 12, 15);
+
+    Date today4(today);
+    Date today5 = today;
+
     return 0;
 }
