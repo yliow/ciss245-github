@@ -37,8 +37,11 @@ int main()
     Date today4(today);
     Date today5 = today;
 
-    std::cout << "today:" << today << '\n';
-    std::cout << "today3:" << today3 << '\n';
+    today3.add_y(2000);
+    std::cout << "today:"; today.print(); 
+    std::cout << "today3:"; today3.print();
     Date today6 = today.max_year(today3);
+    std::cout << "today6:"; today6.print(); 
+ 
     return 0;
 }

@@ -89,7 +89,7 @@ bool Date::operator==(const Date & date) const
     return equals(date);
 }
 
-Date Date::max_year(const Date & date) const
+const Date & Date::max_year(const Date & date) const
 {
     // the "this" pointer is automatically passed in
     // for you.
@@ -97,11 +97,11 @@ Date Date::max_year(const Date & date) const
     // invoking this method.
     if (yyyy_ < date.yyyy_)
     {
-        return Date(date);
+        return date;
     }
     else
     {
-        return Date(*this);
+        return (*this);
     }
 }
     

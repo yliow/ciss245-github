@@ -21,7 +21,7 @@ class Date
     void print() const;
     bool equals(const Date &) const;
     bool operator==(const Date &) const;
-    Date max_year(const Date &) const;
+    const Date & max_year(const Date &) const;
     
   private:
     int mm_;
