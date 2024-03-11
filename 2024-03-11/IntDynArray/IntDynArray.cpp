@@ -10,12 +10,18 @@ int IntDynArray::size() const
     return size_;
 }
 
+int IntDynArray::operator[](int i) const
+{
+    return p_[i];
+}
+
 std::ostream & operator<<(std::ostream & cout,
                           const IntDynArray & x)
 {
     cout << '{';
     for (int i = 0; i < x.size(); ++i)
     {
+        cout << x[i]; // x[i] calls x.operator[](i)
     }
     cout << '}';
     return cout;

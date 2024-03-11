@@ -6,6 +6,7 @@ class IntDynArray
   public:
     IntDynArray(int);
     int size() const;
+    int operator[](int) const;
   private:
     int * p_;
     int size_;
