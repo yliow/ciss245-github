@@ -1,5 +1,9 @@
 #include "Rational.h"
 
+Rational::Rational(int n)
+    : n_(n), d_(1)
+{}
+
 Rational::Rational(int n, int d)
     : n_(n), d_(d)
 {}
@@ -44,4 +48,14 @@ Rational Rational::operator+(const Rational & r) const
 {
     //Rational ret(*this);
     return (Rational(*this) += r);
+}
+
+Rational & Rational::operator+=(int i)
+{
+    return ((*this) += Rational(i, 1));
+}
+
+Rational Rational::operator+(int i)
+{
+    return (Rational(*this) += Rational(i, 1));
 }

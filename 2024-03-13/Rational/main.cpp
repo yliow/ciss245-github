@@ -41,6 +41,12 @@ int main()
     i = 1;
     ((i += j) += j) += j;
     std::cout << "i:" << i << '\n';
-    
+
+    r1 = Rational(1, 2);
+    std::cout << (r1 += 1) << '\n';
+
+    r1 = Rational(1, 2);
+    std::cout << (r1 + 1) << '\n';
+
     return 0;
 }
