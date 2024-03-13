@@ -15,8 +15,8 @@ class Rational
     int get_d() const;
     Rational & operator+=(const Rational &);
     Rational operator+(const Rational &) const;
-    Rational & operator+=(int i);
-    Rational operator+(int i);
+    //Rational & operator+=(int i);
+    //Rational operator+(int i);
   private:
     int n_;
     int d_;

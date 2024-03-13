@@ -50,12 +50,12 @@ Rational Rational::operator+(const Rational & r) const
     return (Rational(*this) += r);
 }
 
-Rational & Rational::operator+=(int i)
-{
-    return ((*this) += Rational(i, 1));
-}
+// Rational & Rational::operator+=(int i)
+// {
+//     return ((*this) += Rational(i, 1));
+// }
 
-Rational Rational::operator+(int i)
-{
-    return (Rational(*this) += Rational(i, 1));
-}
+// Rational Rational::operator+(int i)
+// {
+//     return (Rational(*this) += Rational(i, 1));
+// }
