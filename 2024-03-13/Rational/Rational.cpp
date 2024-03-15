@@ -59,3 +59,9 @@ Rational Rational::operator+(const Rational & r) const
 // {
 //     return (Rational(*this) += Rational(i, 1));
 // }
+
+Rational operator+(int i, const Rational & r)
+{
+    return r + i; // i.e., r.operator+(i),
+                  // i.e., r.operator+(Rational(i))
+}

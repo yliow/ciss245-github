@@ -48,5 +48,8 @@ int main()
     r1 = Rational(1, 2);
     std::cout << (r1 + 1) << '\n';
 
+    r1 = Rational(1, 2);
+    std::cout << (1 + r1) << '\n';
+
     return 0;
 }

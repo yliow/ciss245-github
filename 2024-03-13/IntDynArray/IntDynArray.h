@@ -7,6 +7,7 @@ class IntDynArray
     IntDynArray(int);
     int size() const;
     int operator[](int) const;
+    void push_back(int);
   private:
     int * p_;
     int size_;
