@@ -5,14 +5,11 @@ int main()
 {
     IntDynArray x(5); // cap = 5, size = 0
     std::cout << x << '\n';
-    x.push_back(42);
-    std::cout << x << '\n';
-    x.push_back(41);
-    std::cout << x << '\n';
-    x.push_back(42);
-    std::cout << x << '\n';
-    x.push_back(44);
-    std::cout << x << '\n';
+    for (int i = 42; i < 50; ++i)        
+    {
+        x.push_back(i);
+        std::cout << x << '\n';
+    }
     
     return 0;
 }

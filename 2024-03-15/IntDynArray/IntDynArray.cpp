@@ -48,6 +48,17 @@ int IntDynArray::operator[](int i) const
 
 void IntDynArray::push_back(int e)
 {
+    if (size_ == capacity_)
+    {
+        int * q = new int[size_ + 1];
+        for (int i = 0; i < size_; ++i)
+        {
+            q[i] = p_[i]; 
+        }
+        delete [] p_;
+        p_ = q;
+        capacity_ = size_ + 1;
+    }
     p_[size_++] = e;
 }
 
