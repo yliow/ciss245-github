@@ -1,6 +1,6 @@
 #include <iostream>
 
-int fib(int n)
+long long int fib(int n, long long int table[])
 {
     if (n == 0 || n == 1)
     {
@@ -8,15 +8,20 @@ int fib(int n)
     }
     else
     {
-        return fib(n - 1) + fib(n - 2);
+        if (table[n] == 0)
+        {
+            table[n] = fib(n - 1, table) + fib(n - 2, table);
+        }
+        return table[n];
     }
 }
 
 int main()
 {
-    for (int i = 0; i < 10; ++i)
+    long long int table[1000] = {1, 1};
+    for (int i = 0; i < 100; ++i)
     {
-        std::cout << i << ' ' << fib(i) << '\n';
+        std::cout << i << ' ' << fib(i, table) << '\n';
     }
 
     return 0;
