@@ -26,6 +26,7 @@ template < typename T >
 std::ostream & operator<<(std::ostream & cout,
                           const vec2< T > & v)
 {
+    cout << '<' << v[0] << ", " << v[1] << '>';
     return cout;
 }
 #endif
