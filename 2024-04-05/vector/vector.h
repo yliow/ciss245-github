@@ -27,6 +27,10 @@ class vector
     {
         return p_[i];
     }
+    void push_back(const T & e)
+    {
+        p_[size_++] = e;
+    }
     /* vector(const vector< T >& v) */
     /* { */
     /*     ... */

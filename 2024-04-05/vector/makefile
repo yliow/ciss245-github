@@ -1,39 +1,6 @@
-# Makefile for main
-# Y. Liow
-#------------------------------------------------------------------------------
-# Macros
-#------------------------------------------------------------------------------
-CXX       = g++
-CXXFLAGS  = -c -std=c++2a -fmax-errors=3 -Wall -Wextra -Wpedantic \
-	    -Wconversion
-LINK      = g++
-LINKFLAGS = 
-OBJS      = main.o
-EXE       = main.exe
-
-#------------------------------------------------------------------------------
-# Executable
-#------------------------------------------------------------------------------
-$(EXE):	$(OBJS)
-	$(LINK) $(OBJS) -o $(EXE) $(LINKFLAGS)
-
-asan: $(OBJS)
-	$(LINK) $(OBJS) -o $(EXE) $(LINKFLAGS) -g -fsanitize=address
-#------------------------------------------------------------------------------
-# Object files
-#------------------------------------------------------------------------------
-main.o:	main.cpp vector.h
-	$(CXX) $(CXXFLAGS) main.cpp -c -o main.o
-
-#------------------------------------------------------------------------------
-# Utilities
-#------------------------------------------------------------------------------
-clean:
-	rm -rf $(OBJS) $(EXE)
+a.out:
+	g++ *.cpp -std=c++2a -fmax-errors=3 -Wall -Wextra -Wpedantic -Wconversion -g -fsanitize=address
 c:
-	rm -rf $(OBJS) $(EXE)
-
-run:
-	ASAN_OPTIONS=detect_leaks=1 ./$(EXE)
+	rm -f a.out
 r:
-	ASAN_OPTIONS=detect_leaks=1 ./$(EXE)
+	ASAN_OPTIONS=detect_leaks=1 ./a.out
