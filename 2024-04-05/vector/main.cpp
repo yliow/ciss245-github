@@ -4,7 +4,7 @@
 int main()
 {
     vector< int > v(3);
-    // std::cout << v << '\n';
+    std::cout << v << '\n';
 
     // for (int i = 42; i < 44; ++i)
     // {
