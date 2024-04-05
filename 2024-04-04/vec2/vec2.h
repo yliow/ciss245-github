@@ -22,6 +22,7 @@ class vec2
     T x_, y_;
 };
 
+
 template < typename T >
 std::ostream & operator<<(std::ostream & cout,
                           const vec2< T > & v)
