@@ -3,6 +3,8 @@
 
 class Numeric
 {
+public:
+    virtual void print() const = 0;
 };
 
 class Int: public Numeric
@@ -11,7 +13,7 @@ public:
     Int(int i)
         : value_(i)
     {}
-    void print() const
+    virtual void print() const
     {
         std::cout << "<Int " << value_ << '>' << '\n';
     }
@@ -30,7 +32,7 @@ public:
     Double(double i)
         : value_(i)
     {}
-    void print() const
+    virtual void print() const
     {
         std::cout << "<Double " << value_ << '>' << '\n';
     }
@@ -44,17 +46,32 @@ std::ostream & operator<<(std::ostream & cout, const Double & i)
     return cout;
 }
 
+class Rational: public Numeric
+{
+public:
+    Rational(int n, int d)
+        : n_(n), d_(d)
+    {}
+    virtual void print() const
+    {
+        std::cout << "<Rational " << n_ << '/' << d_ << '>' << '\n';
+    }
+    int n_, d_;
+};
+
 int main()
 {
-    Int i(42);
-    std::cout << i << '\n';
-    Double j(3.14);
-    std::cout << j << '\n';
+    // Int i(42);
+    // std::cout << i << '\n';
+    // Double j(3.14);
+    // std::cout << j << '\n';
 
     std::vector< Numeric * > x;
     x.push_back(new Int(42));
     x.push_back(new Double(2.718));
-    for (int i = 0; i < 2; ++i)
+    x.push_back(new Rational(1, 2));
+
+    for (size_t i = 0; i < x.size(); ++i)
     {
         x[i]->print();
     }
