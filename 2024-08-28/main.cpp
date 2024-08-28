@@ -5,6 +5,7 @@
 
 int die_roll();
 char coin_toss();
+char rand_dir();
 
 
 int main()
@@ -17,9 +18,15 @@ int main()
     // }
     // std::cout << '\n';
 
+    // for (int i = 0; i < 10; ++i)
+    // {
+    //     std::cout << coin_toss() << ' ';
+    // }
+    // std::cout << '\n';
+    
     for (int i = 0; i < 10; ++i)
     {
-        std::cout << coin_toss() << ' ';
+        std::cout << rand_dir() << ' ';
     }
     std::cout << '\n';
 
@@ -29,17 +36,33 @@ int main()
 
 char coin_toss()
 {
-    int i = rand() % 2;
-    if (i == 0)
-    {
-        return 'H';
-    }
-    else
-    {
-        return 'T';
-    }
+    // switch (rand() % 2)
+    // {
+    //     case 0:
+    //         return 'H';
+    //     case 1:
+    //         return 'T';
+    // }
+    return (rand() % 2 == 0 ? 'H' : 'T');
 }
 
+char rand_dir()
+{
+    // switch (rand() % 4)
+    // {
+    //     case 0:
+    //         return 'N';
+    //     case 1:
+    //         return 'S';
+    //     case 2:
+    //         return 'E';
+    //     case 3:
+    //         return 'W';
+    // }
+    // return '?';
+    char dirs[] = {'N', 'S', 'E', 'W'};
+    return dirs[rand() % 4];
+}
 
 int die_roll()
 {
