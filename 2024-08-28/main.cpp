@@ -24,12 +24,33 @@ int main()
     // }
     // std::cout << '\n';
     
-    for (int i = 0; i < 10; ++i)
+    // for (int i = 0; i < 10; ++i)
+    // {
+    //     std::cout << rand_dir() << ' ';
+    // }
+    // std::cout << '\n';
+
+    // 3 consecutive heads
+    int count = 0; // int consecutive_heads = 0;
+    while (1)
     {
-        std::cout << rand_dir() << ' ';
+        char c = coin_toss();
+        std::cout << c << ' ';
+        if (c == 'T')
+        {
+            count = 0;
+        }
+        else
+        {
+            ++count;
+        }
+        if (count == 3)
+        {
+            break;
+        }
     }
     std::cout << '\n';
-
+    
     return 0;
 }
 
