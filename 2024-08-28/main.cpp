@@ -4,6 +4,7 @@
 
 
 int die_roll();
+char coin_toss();
 
 
 int main()
@@ -28,6 +29,15 @@ int main()
 
 char coin_toss()
 {
+    int i = rand() % 2;
+    if (i == 0)
+    {
+        return 'H';
+    }
+    else
+    {
+        return 'T';
+    }
 }
 
 
