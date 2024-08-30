@@ -24,7 +24,14 @@
 //     ++x;
 // }
 
-void swap(int x, int y)
+// void swap(int x, int y)
+// {
+//     int t = x;
+//     x = y;
+//     y = t;
+// }
+
+void swap(int & x, int & y)
 {
     int t = x;
     x = y;
