@@ -98,6 +98,7 @@ int main()
                  yn, yd,
                  zn, zd);
     print_fraction(xn, xd);
+    std::cout << '\n';
     
     return 0;
 }
