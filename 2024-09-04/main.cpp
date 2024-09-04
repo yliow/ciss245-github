@@ -39,8 +39,16 @@
 // }
 
 
+int gcd(int a, int b)
+{
+    return 1;
+}
+    
 void print_fraction(int n, int d)
 {
+    int g = gcd(n, d);
+    n = n / g;
+    d = d / g;
     std::cout << n << '/' << d;
 }
 
