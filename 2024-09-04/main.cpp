@@ -97,7 +97,7 @@ int main()
     add_fraction(xn, xd,
                  yn, yd,
                  zn, zd);
-    print_fraction(xn, xd);
+    print_fraction(zn, zd);
     std::cout << '\n';
     
     return 0;
