@@ -94,6 +94,10 @@ int main()
     std::cout << '\n';
 
     std::cin >> xn >> xd >> yn >> yd;
-
+    add_fraction(xn, xd,
+                 yn, yd,
+                 zn, zd);
+    print_fraction(xn, xd);
+    
     return 0;
 }
