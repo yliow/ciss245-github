@@ -93,7 +93,7 @@ int main()
     print_fraction(zn, zd);
     std::cout << '\n';
 
-        
+    std::cin >> xn >> xd >> yn >> yd;
 
     return 0;
 }
