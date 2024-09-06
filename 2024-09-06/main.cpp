@@ -14,6 +14,7 @@ int main()
     std::cout << linearsearch(x, 0, 2, 7) << '\n';
 
     std::cout << max(x, 0, 5) << '\n';
+    std::cout << max(x, 0, 3) << '\n';
     
     return 0;
 }
