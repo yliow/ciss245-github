@@ -1,7 +1,5 @@
 #include <iostream>
-
-void print_array(int x[], int start, int end);
-int linearsearch(int x[], int start, int end, int target);
+#include "Array.h"
 
 int main()
 {
@@ -10,29 +8,13 @@ int main()
     print_array(x, 0, 3);
     print_array(x, 1, 4);
     print_array(x, 1, 8);
- 
+
     std::cout << linearsearch(x, 0, 3, 2) << '\n';
+    std::cout << linearsearch(x, 0, 5, 7) << '\n';
+    std::cout << linearsearch(x, 0, 2, 7) << '\n';
+
+    std::cout << max(x, 0, 5) << '\n';
     
     return 0;
 }
 
-int linearsearch(int x[], int start, int end, int target)
-{
-    for (int i = start; i < end; ++i)
-    {
-        if (x[i] == target)
-        {
-            return i;
-        }
-    }
-    return -1;
-}
-
-void print_array(int x[], int start, int end)
-{
-    for (int i = start; i < end; ++i)
-    {
-        std::cout << x[i] << ' ';
-    }
-    std::cout << '\n';
-}
