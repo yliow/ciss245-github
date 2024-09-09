@@ -30,9 +30,21 @@ int linearsearch(int x[], int start, int end, int target)
 
 void print_array(int x[], int start, int end)
 {
+    std::cout << '{';
     for (int i = start; i < end; ++i)
     {
-        std::cout << x[i] << ' ';
+        std::cout << x[i];
+        if (i < end - 1) std::cout << ", ";
     }
-    std::cout << '\n';
+    std::cout << '}' << '\n';
 }
+
+void push_back(int x[], int & n, int capacity, int v)
+{
+    if (n < capacity)
+    {
+        x[n] = v;
+        ++n;
+    }
+}
+
