@@ -23,22 +23,22 @@ int main()
     push_back(y, y_size, y_capacity, 3);
     print_array(y, 0, y_size);
 
-    push_back(y, y_size, 4);
+    push_back(y, y_size, y_capacity, 4);
     print_array(y, 0, y_size);
 
-    push_back(y, y_size, 0);
+    push_back(y, y_size, y_capacity, 0);
     print_array(y, 0, y_size);
     
-    push_back(y, y_size, 1);
+    push_back(y, y_size, y_capacity, 1);
     print_array(y, 0, y_size);
 
-    push_back(y, y_size, 42);
+    push_back(y, y_size, y_capacity, 42);
     print_array(y, 0, y_size);
 
-    push_back(y, y_size, 43);
+    push_back(y, y_size, y_capacity, 43);
     print_array(y, 0, y_size);
     
-    push_back(y, y_size, 44);
+    push_back(y, y_size, y_capacity, 44);
     print_array(y, 0, y_size);
 
     return 0;
