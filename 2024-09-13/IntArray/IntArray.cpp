@@ -27,7 +27,7 @@ void array_init(int x[], int & x_len, int v, int n)
 }
 
 
-void arraY_bubblesort(int x[], int n)
+void array_bubblesort(int x[], int n)
 {
     for (int i = n - 2; i >= 0; --i)
     {
@@ -39,7 +39,32 @@ void arraY_bubblesort(int x[], int n)
                 x[j] = x[j + 1];
                 x[j + 1] = t;
             }
+            //array_print(x, n);
         }
     }
 }
+
+int array_binarysearch(int x[], int n, int target)
+{
+    int lower = 0;
+    int upper = n - 1;
+    while (lower <= upper)
+    {
+        int mid = (lower + upper) / 2;
+        if (x[mid] == target)
+        {
+            return mid;
+        }
+        else if (x[mid] > target)
+        {
+            upper = mid - 1;
+        }
+        else
+        {
+            lower = mid + 1;
+        }
+    }
+    return -1;
+}
+
 
