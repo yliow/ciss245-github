@@ -1,3 +1,4 @@
+#include <iostream>
 #include "mystring.h"
 
 int mystrlen(char x[])
