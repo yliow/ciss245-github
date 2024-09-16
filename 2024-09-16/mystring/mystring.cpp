@@ -17,10 +17,14 @@ void mystrcpy(char x[], char y[])
     while (x[i] != '\0')
     {
         std::cout << "before ... "
-                  << i << ' ' << x[i] << ' ' << y[i] << '\n';
+                  << i << ' '
+                  << x[i] << ' ' << int(x[i]) << ' '
+                  << y[i] << ' ' << int(y[i]) << '\n';
         x[i] = y[i];
         std::cout << "after ... "
-                  << i << ' ' << x[i] << ' ' << y[i] << '\n';
+                  << i << ' '
+                  << x[i] << ' ' << int(x[i]) << ' '
+                  << y[i] << ' ' << int(y[i]) << '\n';
         
         ++i;
     }
