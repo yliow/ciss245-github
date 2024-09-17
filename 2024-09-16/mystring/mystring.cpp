@@ -32,7 +32,7 @@ void mystrcpy(char x[], char y[])
     // FIRST CORRECTION
     /*
     int i = 0;
-    while (y[i] != '\0')
+    while (y[i] != '\0') // <<<< CHANGE x TO y
     {
         std::cout << "before ... "
                   << i << ' '
@@ -65,6 +65,6 @@ void mystrcpy(char x[], char y[])
         
         ++i;
     }
-    x[i] = '\0';
+    x[i] = '\0'; // <<<< ADD '\0' TO x AFTER THE COPY OPERATION
     */
 }
