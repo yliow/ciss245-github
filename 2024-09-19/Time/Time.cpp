@@ -1,3 +1,5 @@
+#include <iostream>
+#include <iomanip>
 #include "Time.h"
 
 void Time_print(const Time & t)
