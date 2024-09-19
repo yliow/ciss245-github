@@ -9,5 +9,6 @@ struct Time
 };
 
 void Time_print(const Time & t);
+void Time_addonesec(Time & t);
 
 #endif

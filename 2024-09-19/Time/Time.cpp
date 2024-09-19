@@ -11,3 +11,8 @@ void Time_print(const Time & t)
               << std::setw(2) << std::setfill('0') << t.sec
               << '\n';
 }
+
+void Time_addonesec(Time & t)
+{
+    ++t.sec;
+}
