@@ -25,3 +25,10 @@ std::ostream & operator<<(std::ostream & cout, const Fraction & f)
     return cout;
 }
 
+std::istream & operator>>(std::istream & cin, Fraction & f)
+{
+    cin >> f.n >> f.d;
+    return cin;
+}
+
+

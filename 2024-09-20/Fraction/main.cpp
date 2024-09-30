@@ -15,6 +15,12 @@ int main()
 
     std::cout << (f0 == f0) << ' ' << (f0 == f1) << '\n';
 
+    std::cin >> f0; // this is operator>>(std::cin, f0)
+    std::cout << "f0: " << f0 << '\n';
+
+
+
+    // pointer chapter
     int x = 42;
     std::cout << x << ' ' << (unsigned long long)(&x) << '\n';
 

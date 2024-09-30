@@ -13,5 +13,6 @@ Fraction operator+(const Fraction &, const Fraction &);
 Fraction & operator+=(Fraction &, const Fraction &);
 bool operator==(const Fraction &, const Fraction &);
 std::ostream & operator<<(std::ostream &, const Fraction &);
+std::istream & operator>>(std::istream &, Fraction &);
 
 #endif
