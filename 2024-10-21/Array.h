@@ -40,11 +40,13 @@ std::ostream & operator<<(std::ostream & cout,
     cout << '{';
     for (int i = 0; i < a.size; ++i)
     {
-        cout << (a.p)[i] << ' ';
+        cout << (a.p)[i];
+        if (i < a.size - 1)
+        {
+            cout << ", ";
+        }
     }
-
     cout << "} ";
-
     cout << "size:" << a.size << ' '
          << "capacity:" << a.capacity << '>';
     return cout;
