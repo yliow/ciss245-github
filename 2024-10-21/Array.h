@@ -1,6 +1,8 @@
 #ifndef ARRAY_H
 #define ARRAY_H
 
+#include <iostream>
+
 template < typename T >
 struct Array
 {
@@ -26,6 +28,33 @@ void swap(T & x, T & y)
     x = y;
     y = t;
     return;
+}
+
+template < typename T >
+std::ostream & operator<<(std::ostream & cout,
+                          const Array< T > & a)
+{
+    cout << "<Array " << a.p << ' ';
+
+    // print array that a.p points to ...
+    cout << '{';
+    for (int i = 0; i < a.size; ++i)
+    {
+        cout << (a.p)[i] << ' ';
+    }
+
+    cout << "} ";
+
+    cout << "size:" << a.size << ' '
+         << "capacity:" << a.capacity << '>';
+    return cout;
+}
+
+template < typename T >
+void push_back(Array< T > & a, T v)
+{
+    (a.p)[a.size] = v;
+    ++a.size;
 }
 
 #endif
