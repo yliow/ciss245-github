@@ -9,5 +9,6 @@ struct Date
 };
 
 void init(Date & date, int yyyy, int mm, int dd);
+void print(const Date & date);
 
 #endif
