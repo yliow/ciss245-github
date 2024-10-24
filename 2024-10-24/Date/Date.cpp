@@ -15,6 +15,12 @@ void Date::print()
     std::cout << yyyy_ << '-' << mm_ << '-' << dd_ << '\n';
 }
 
+std::ostream& operator<<(std::ostream & cout, const Date & date)
+{
+    cout << date.yyyy_;
+}
+
+
 void Date::add_y(int y)
 {
     yyyy_ += y;

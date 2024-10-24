@@ -18,4 +18,6 @@ class Date
     int dd_;
 };
 
+std::ostream& operator<<(std::ostream &, const Date &);
+
 #endif
