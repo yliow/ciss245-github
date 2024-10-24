@@ -21,6 +21,12 @@ int main()
     std::cout << arr << '\n';
     push_back(arr, 1);
     std::cout << arr << '\n';
+    push_back(arr, 3);
+    std::cout << arr << '\n';
+    push_back(arr, 6);
+    std::cout << arr << '\n';
+    push_back(arr, 99999);
+    std::cout << arr << '\n';
 
 
     

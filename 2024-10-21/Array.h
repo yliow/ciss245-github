@@ -13,7 +13,7 @@ struct Array
 
 
 template < typename T >
-void init(Array< T > & a, int capacity)
+void init(Array< T > & a, int capacity);
 {
     a.p = new T[capacity];
     a.size = 0;
@@ -55,8 +55,24 @@ std::ostream & operator<<(std::ostream & cout,
 template < typename T >
 void push_back(Array< T > & a, T v)
 {
-    (a.p)[a.size] = v;
-    ++a.size;
+    if (a.size < a.capacity)
+    {
+        (a.p)[a.size] = v;
+        ++a.size;
+    }
+    else
+    {
+        T * q = new T[a.size + 1];
+        for (int i = 0; i < a.size; ++i)
+        {
+            q[i] = (a.p)[i];
+        }
+        q[a.size] = v;
+        delete [] a.p;
+        a.p = q;
+        a.size = a.size + 1;
+        a.capacity = a.size;
+    }
 }
 
 #endif
