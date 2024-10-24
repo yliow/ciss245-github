@@ -12,6 +12,8 @@ class Date
     void add_m(int);
     void add_d(int);
     void add_y_m_d(int, int, int);
+    int get_year();
+        
   private:
     int yyyy_;
     int mm_;
