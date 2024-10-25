@@ -3,6 +3,9 @@
 #include <iostream>
 #include "Date.h"
 
+Date::Date()
+{}
+
 Date::Date(int y, int m, int d)
     : yyyy_(y), mm_(m), dd_(d)
 {

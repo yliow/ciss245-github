@@ -17,5 +17,8 @@ int main()
     Date date1 = Date(1970, 2, 2);
     //date1.init(1970, 2, 2);
 
+    Date date2;
+    date2.init(1900, 1, 1);
+
     return 0;
 }
