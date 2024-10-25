@@ -15,7 +15,7 @@ void Date::print()
     std::cout << yyyy_ << '-' << mm_ << '-' << dd_ << '\n';
 }
 
-int Date::get_year() const
+int Date::get_year()
 {
     return yyyy_;
 }
