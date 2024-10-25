@@ -6,6 +6,7 @@
 class Date
 {
   public:
+    Date(int, int, int); // real name is Date::Date
     void init(int, int, int);
     void print() const;
     void add_y(int);

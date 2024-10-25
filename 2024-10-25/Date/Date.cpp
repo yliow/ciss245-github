@@ -3,6 +3,13 @@
 #include <iostream>
 #include "Date.h"
 
+Date::Date(int y, int m, int d)
+    : yyyy_(y), mm_(m), dd_(d)
+{
+    //std::cout << "Date::Date with " << y << ' ' << m << ' '
+    //          << d << '\n';
+}
+
 void Date::init(int y, int m, int d)
 {
     yyyy_ = y;
