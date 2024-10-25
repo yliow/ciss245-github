@@ -12,7 +12,9 @@ class Date
     void add_m(int);
     void add_d(int);
     void add_y_m_d(int, int, int);
-    int get_year();
+    int get_year() const;
+    int get_month() const;
+    int get_day() const;
         
   private:
     int yyyy_;

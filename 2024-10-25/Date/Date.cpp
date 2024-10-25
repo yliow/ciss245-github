@@ -15,14 +15,26 @@ void Date::print()
     std::cout << yyyy_ << '-' << mm_ << '-' << dd_ << '\n';
 }
 
-int Date::get_year()
+int Date::get_year() const
 {
     return yyyy_;
 }
 
+int Date::get_month() const
+{
+    return mm_;
+}
+
+int Date::get_day() const
+{
+    return dd_;
+}
+
 std::ostream& operator<<(std::ostream & cout, const Date & date)
 {
-    cout << date.get_year();
+    cout << date.get_year() << '-'
+         << date.get_month() << '-'
+         << date.get_day();
     return cout;
 }
 

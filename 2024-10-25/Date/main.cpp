@@ -5,7 +5,7 @@ int main()
 {
     Date date0; // has yyyy_, mm_, dd_
     date0.init(2024, 10, 24); // <--- WRONG
-    date0.print();
+    //date0.print();
 
     std::cout << date0 << '\n';
     
@@ -14,7 +14,6 @@ int main()
     date0.add_d(-3);
     date0.add_y_m_d(1, -2, 3);
 
-    std::cout << date0.get_year() << '\n';
     Date date1;
     date1.init(1970, 2, 2);
 
