@@ -7,7 +7,7 @@ class Date
 {
   public:
     void init(int, int, int);
-    void print();
+    void print() const;
     void add_y(int);
     void add_m(int);
     void add_d(int);
@@ -22,6 +22,6 @@ class Date
     int dd_;
 };
 
-std::ostream& operator<<(std::ostream &, const Date &);
+std::ostream & operator<<(std::ostream &, const Date &);
 
 #endif
