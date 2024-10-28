@@ -1,7 +1,10 @@
 // Date.cpp
-
 #include <iostream>
 #include "Date.h"
+
+//Date::Date(const Date & date)
+//    : yyyy_(date.yyyy_), mm_(date.mm_), dd_(date.dd_)
+//{}
 
 Date::Date()
     : yyyy_(1970), mm_(1), dd_(1)

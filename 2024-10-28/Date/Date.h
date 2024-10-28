@@ -8,6 +8,7 @@ class Date
   public:
     Date();
     Date(int, int, int); // real name is Date::Date
+    //Date(const Date &);
     void init(int, int, int);
     void print() const;
     void add_y(int);

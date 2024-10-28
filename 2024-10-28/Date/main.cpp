@@ -25,5 +25,9 @@ int main()
                date2.get_day());
     std::cout << "date3:" << date3 << '\n';
 
+    Date date4(date2);
+    std::cout << "date4:" << date4 << '\n';
+    
+
     return 0;
 }
