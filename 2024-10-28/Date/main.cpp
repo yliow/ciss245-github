@@ -36,6 +36,7 @@ int main()
 
     Date * p = new Date(9999, 1, 1);
     std::cout << (*p) << '\n';
+    delete p;
 
     f();
     
