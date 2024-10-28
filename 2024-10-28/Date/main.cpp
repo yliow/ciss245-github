@@ -1,6 +1,12 @@
 #include <iostream>
 #include "Date.h"
 
+void f()
+{
+    Date t(8888, 8, 8);
+    std::cout << "t:" << t << '\n';
+}
+
 int main()
 {
     Date date0(2024, 10, 24); // has yyyy_, mm_, dd_
@@ -27,7 +33,11 @@ int main()
 
     Date date4(date2);
     std::cout << "date4:" << date4 << '\n';
-    
 
+    Date * p = new Date(9999, 1, 1);
+    std::cout << (*p) << '\n';
+
+    f();
+    
     return 0;
 }

@@ -70,8 +70,11 @@ void Date::add_d(int d)
 
 void Date::add_y_m_d(int y, int m, int d)
 {
-    yyyy_ += y;
-    mm_ += m;
-    dd_ += d;
+    //yyyy_ += y;
+    add_y(y);
+    //mm_ += m;
+    add_m(m);
+    //dd_ += d;
+    add_d(d);
 }
 

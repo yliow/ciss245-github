@@ -9,6 +9,11 @@ class Date
     Date();
     Date(int, int, int); // real name is Date::Date
     //Date(const Date &);
+    ~Date()
+    {
+        std::cout << "Date::~Date() is called "
+                  << yyyy_ << ' ' << mm_ << ' ' << dd_ << '\n';
+    }
     void init(int, int, int);
     void print() const;
     void add_y(int);
