@@ -33,6 +33,7 @@ void Rational::operator+=(const Rational & r)
 {
     n_ = n_ * r.d_ + r.n_ * d_;
     d_ *= r.d_;
+    return;
 }
 
 
