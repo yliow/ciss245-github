@@ -17,5 +17,8 @@ int main()
     f1 += f2;
     std::cout << "f1:" << f1 << '\n';
 
+    std::cout << "&f1:" << &f1 << '\n';
+    f1.m();
+
     return 0;
 }

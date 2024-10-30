@@ -36,5 +36,6 @@ void Rational::operator+=(const Rational & r)
     return;
 }
 
-
-
+void Rational::m()
+{
+}

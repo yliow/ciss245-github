@@ -10,6 +10,7 @@ class Rational
     int get_n() const;
     int get_d() const;
     void operator+=(const Rational &);
+    void m();
   private:
     int n_, d_;
 };
