@@ -14,11 +14,17 @@ int main()
     Rational f3(f2);
     std::cout << "f3:" << f3 << '\n';
 
-    f1 += f2;
+    f3 = (f1 += f2);
     std::cout << "f1:" << f1 << '\n';
+    std::cout << "f3:" << f3 << '\n';
 
     std::cout << "&f1:" << &f1 << '\n';
     f1.m();
 
+    std::cout << "f1:" << f1 << '\n';
+    std::cout << "f2:" << f2 << '\n';
+    f3 = f1 + f2; // f1.operator+(f2)
+    std::cout << "f3:" << f3 << '\n';
+    
     return 0;
 }

@@ -29,13 +29,19 @@ int Rational::get_d() const
     return d_;        
 }
 
-void Rational::operator+=(const Rational & r)
+Rational & Rational::operator+=(const Rational & r)
 {
     n_ = n_ * r.d_ + r.n_ * d_;
     d_ *= r.d_;
-    return;
+    return (*this); // not this which is Rational *
 }
 
 void Rational::m()
 {
+    std::cout << "Rational::m() ... " << this << '\n';
+}
+
+Rational Rational::operator+(const Rational & r) const
+{
+    return (Rational(*this) += r);
 }

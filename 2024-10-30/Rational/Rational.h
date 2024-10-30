@@ -9,7 +9,8 @@ class Rational
     //Rational(const Rational &);
     int get_n() const;
     int get_d() const;
-    void operator+=(const Rational &);
+    Rational & operator+=(const Rational &);
+    Rational operator+(const Rational &) const;
     void m();
   private:
     int n_, d_;
