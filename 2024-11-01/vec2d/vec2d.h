@@ -5,6 +5,7 @@ class vec2d
 {
   public:
     vec2d(double, double);
+    double operator[](int) const;
   private:
     double x_, y_;
 };
