@@ -13,6 +13,8 @@ int main()
     std::cout << "a: " << a << '\n';
     a.push_back(8);
     std::cout << "a: " << a << '\n';
+    a.push_back(9);
+    std::cout << "a: " << a << '\n';
     
     return 0;
 }
