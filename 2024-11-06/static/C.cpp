@@ -1,7 +1,15 @@
 #include "C.h"
 
-C::C(int x, int y)
-    : x_(x), y_(y)
+int C::y_(0);
+// or int C::y_ = 0;
+
+int C::get_y()
+{
+    return y_;
+}
+
+C::C(int x)
+    : x_(x)
 {}
 
 std::ostream & operator<<(std::ostream & cout, const C & c)
