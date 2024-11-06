@@ -11,7 +11,7 @@ class C
     int y() const;
     
     static int y_;
-    int get_y();
+    static int get_y();
   private:
     int x_;
     // int y_;
