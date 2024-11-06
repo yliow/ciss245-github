@@ -20,7 +20,8 @@ std::ostream & operator<<(std::ostream & cout, const IntArray & a)
     cout << '{';
     for (int i = 0; i < a.size(); ++i)
     {
-        cout << a[i] << ", ";
+        cout << a[i];
+        if (i < a.size() - 1) cout << ", ";
     }
     cout << '}';
     return cout;
