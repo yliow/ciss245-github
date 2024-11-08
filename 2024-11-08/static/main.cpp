@@ -4,8 +4,12 @@
 int main()
 {
     std::cout << "C::num_objects_:" << C::get_num_objects() << '\n';
-    C a(1);
-    std::cout << "a:" << a << '\n';
+    if (1)
+    {
+        C a(1);
+        std::cout << "a:" << a << '\n';
+        std::cout << "C::num_objects_:" << C::get_num_objects() << '\n';
+    }
     std::cout << "C::num_objects_:" << C::get_num_objects() << '\n';
 
     C b(3);

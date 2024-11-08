@@ -22,6 +22,12 @@ C::C(int x)
     ++num_objects_;
 }
 
+C::~C()
+{
+    std::cout << "C::~C() ...\n";
+    --num_objects_;
+}
+
 std::ostream & operator<<(std::ostream & cout, const C & c)
 {
     cout << "<C x:" << c.x() << ", y:" << c.y() << '>';

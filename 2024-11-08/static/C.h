@@ -7,6 +7,7 @@ class C
 {
   public:
     C(int);
+    ~C();
     int x() const;
     int y() const;
     
