@@ -11,6 +11,7 @@ int main()
     delete p;
 
     IntPointer P(42); // allocate memory for P.p_ to pointer to; set it to 42
-    std::cout << P.dereference() << '\n';
+    std::cout << "P.dereference(): " << P.dereference() << '\n';
+    //P.deallocate();
     return 0;
 }
