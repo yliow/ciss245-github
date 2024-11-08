@@ -12,7 +12,10 @@ int IntArray::size() const
 
 int IntArray::operator[](int i) const
 {
-    return x_[i];
+    if (i < capacity_)
+        return x_[i];
+    else
+        return -9999999;
 }
 
 std::ostream & operator<<(std::ostream & cout, const IntArray & a)
@@ -29,6 +32,9 @@ std::ostream & operator<<(std::ostream & cout, const IntArray & a)
 
 void IntArray::push_back(int v)
 {
-    x_[size_] = v;
-    ++size_;
+    if (size_ < capacity_)
+    {
+        x_[size_] = v;
+        ++size_;
+    }
 }

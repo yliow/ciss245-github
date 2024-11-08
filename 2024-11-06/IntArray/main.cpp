@@ -15,6 +15,9 @@ int main()
     std::cout << "a: " << a << '\n';
     a.push_back(9);
     std::cout << "a: " << a << '\n';
+    a.push_back(10);
+    std::cout << "a: " << a << '\n';
+    std::cout << a[5] << '\n';
     
     return 0;
 }
