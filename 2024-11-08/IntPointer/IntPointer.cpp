@@ -7,11 +7,13 @@ IntPointer::IntPointer(int i)
     *p_ = i;
 }
 
+/*
 IntPointer::~IntPointer()
 {
     std::cout << "IntPointer::~IntPointer() ... \n";
     delete p_;
 }
+*/
 
 void IntPointer::deallocate()
 {

@@ -5,7 +5,7 @@ class IntPointer
 {
   public:
     IntPointer(int);
-    ~IntPointer();
+    //~IntPointer()
     int dereference() const;
     void deallocate();
   private:
