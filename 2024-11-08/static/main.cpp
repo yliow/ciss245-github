@@ -8,8 +8,8 @@ int main()
     C b(3);
     std::cout << "b:" << b << '\n';
 
-    std::cout << C::y_ << '\n';
-    std::cout << C::get_y() << '\n';
+    //std::cout << C::y_ << '\n';
+    std::cout << "C::y_:" << C::get_y() << '\n';
     
     return 0;
 }

@@ -10,10 +10,13 @@ class C
     int x() const;
     int y() const;
     
-    static int y_;
+    
     static int get_y();
+    static int get_num_objects();
   private:
     int x_;
+    static int y_;
+    static int num_objects_;
     // int y_;
 };
 
