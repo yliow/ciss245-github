@@ -18,7 +18,9 @@ int C::get_num_objects()
 
 C::C(int x)
     : x_(x)
-{}
+{
+    ++num_objects_;
+}
 
 std::ostream & operator<<(std::ostream & cout, const C & c)
 {
