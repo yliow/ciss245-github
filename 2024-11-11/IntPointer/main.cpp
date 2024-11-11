@@ -14,6 +14,12 @@ void f()
                       // set it to 42
     std::cout << "P.dereference(): " << P.dereference() << '\n';
     //P.deallocate();
+
+    IntPointer Q(P); // or IntPointer Q = P; ... calling copy
+                     // constructor
+
+    Q = P; // Q.operator=(P)
+    
 }
 
 

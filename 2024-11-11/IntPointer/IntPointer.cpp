@@ -7,6 +7,12 @@ IntPointer::IntPointer(int i)
     *p_ = i;
 }
 
+IntPointer::IntPointer(const IntPointer & P)
+    : p_(new int)
+{
+    *p_ = *(P.p_);
+}
+
 IntPointer::~IntPointer()
 {
     std::cout << "IntPointer::~IntPointer() ... \n";
