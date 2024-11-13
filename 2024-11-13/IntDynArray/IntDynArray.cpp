@@ -5,6 +5,11 @@ IntDynArray::IntDynArray(int capacity)
     : p_(new int[capacity]), size_(0), capacity_(capacity)
 {}
 
+IntDynArray::~IntDynArray()
+{
+    delete[] p_;
+}
+
 void IntDynArray::push_back(int e)
 {
     if (size_ == capacity_)

@@ -7,6 +7,7 @@ class IntDynArray
 {
   public:
     IntDynArray(int);
+    ~IntDynArray();
     void push_back(int);
     int size() const;
     int capacity() const;
