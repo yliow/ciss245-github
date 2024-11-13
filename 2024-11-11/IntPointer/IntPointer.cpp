@@ -27,3 +27,27 @@ int IntPointer::dereference() const
 {
     return *p_;
 }
+
+int & IntPointer::dereference() 
+{
+    return *p_;
+}
+
+
+int IntPointer::operator*() const
+{
+    return *p_;
+}
+
+int & IntPointer::operator*() 
+{
+    return *p_;
+}
+
+
+void IntPointer::operator=(const IntPointer & P)
+{
+    // PROBLEM
+    // p_ = P.p_;
+    *p_ = *(P.p_);
+}

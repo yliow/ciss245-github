@@ -7,8 +7,15 @@ class IntPointer
     IntPointer(int);
     IntPointer(const IntPointer &);
     ~IntPointer();
+    
     int dereference() const;
+    int & dereference();
+    int operator*() const;
+    int & operator*();
+
     void deallocate();
+    
+    void operator=(const IntPointer &);
   private:
     int * p_;
 };

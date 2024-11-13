@@ -12,8 +12,11 @@ void f()
 
     IntPointer P(42); // allocate memory for P.p_ to pointer to;
                       // set it to 42
-    std::cout << "P.dereference(): " << P.dereference() << '\n';
+    std::cout << "*P: " << (*P) << '\n';
+    //P.dereference() = 41;
+    *P = 41; // *P is the same as P.operator*()
     //P.deallocate();
+    std::cout << P.dereference() << '\n';
 
     IntPointer Q(P); // or IntPointer Q = P; ... calling copy
                      // constructor
