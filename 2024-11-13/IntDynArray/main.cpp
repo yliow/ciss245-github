@@ -7,7 +7,7 @@ int main()
     std::cout << a << '\n';
     for (int i = 0; i < 10; ++i)
     {
-        //a.push_back(i);
+        a.push_back(i);
         std::cout << a << '\n';
     }
 
