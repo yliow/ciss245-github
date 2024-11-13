@@ -7,6 +7,7 @@ void f()
     {
         IntDynArray b(10);
         IntDynArray c(b);
+        c = b; // same as c.operator=(b)
     }
         
     IntDynArray a(5);// 5 means in constructor, initially allocate 5 integers

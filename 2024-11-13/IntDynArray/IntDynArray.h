@@ -8,6 +8,8 @@ class IntDynArray
   public:
     IntDynArray(int);
     ~IntDynArray();
+    IntDynArray(const IntDynArray &);
+    void operator=(const IntDynarray &)
     void push_back(int);
     int size() const;
     int capacity() const;

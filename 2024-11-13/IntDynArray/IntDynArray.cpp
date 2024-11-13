@@ -5,9 +5,8 @@ IntDynArray::IntDynArray(int capacity)
     : p_(new int[capacity]), size_(0), capacity_(capacity)
 {}
 
-
 IntDynArray::IntDynArray(const IntDynArray & a)
-    : p_(a.capacity_), size_(a.size_), capacity_(a.capacity_)
+    : p_(new int[a.capacity_]), size_(a.size_), capacity_(a.capacity_)
 {
     for (int i = 0; i < a.size_; ++i)
     {
@@ -19,6 +18,18 @@ IntDynArray::IntDynArray(const IntDynArray & a)
 IntDynArray::~IntDynArray()
 {
     delete[] p_;
+}
+
+void IntDynArray::operator=(const IntDynarray & a)
+{
+    delete[] p_;
+    p_ = new int[a.capacity_];
+    for (int i = 0; i < a.size_; ++i)
+    {
+        p_[i] = a.p_[i];
+    }
+    size_ = a.size_;
+    capacity_ = a.capacity_;
 }
 
 void IntDynArray::push_back(int e)
