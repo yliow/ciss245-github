@@ -6,6 +6,7 @@ void f()
     if (1)
     {
         IntDynArray b(10);
+        IntDynArray c(b);
     }
         
     IntDynArray a(5);// 5 means in constructor, initially allocate 5 integers
