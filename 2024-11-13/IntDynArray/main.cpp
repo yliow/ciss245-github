@@ -1,7 +1,7 @@
 #include <iostream>
 #include "IntDynArray.h"
 
-int main()
+void f()
 {
     IntDynArray a(5);// 5 means in constructor, initially allocate 5 integers
     std::cout << a << '\n';
@@ -10,6 +10,10 @@ int main()
         a.push_back(i);
         std::cout << a << '\n';
     }
+}
 
+int main()
+{
+    f();
     return 0;
 }
