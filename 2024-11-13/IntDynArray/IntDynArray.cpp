@@ -5,6 +5,17 @@ IntDynArray::IntDynArray(int capacity)
     : p_(new int[capacity]), size_(0), capacity_(capacity)
 {}
 
+
+IntDynArray::IntDynArray(const IntDynArray & a)
+    : p_(a.capacity_), size_(a.size_), capacity_(a.capacity_)
+{
+    for (int i = 0; i < a.size_; ++i)
+    {
+        p_[i] = a.p_[i];
+    }
+}
+
+
 IntDynArray::~IntDynArray()
 {
     delete[] p_;
