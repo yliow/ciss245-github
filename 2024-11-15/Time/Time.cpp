@@ -5,17 +5,17 @@ Time::Time(int hh, int mm, int ss)
     : hh_(hh), mm_(mm), ss_(ss)
 {}
 
-int Time:hh() const
+int Time::hh() const
 {
     return hh_;
 }
 
-int Time:mm() const
+int Time::mm() const
 {
     return mm_;
 }
 
-int Time:ss() const
+int Time::ss() const
 {
     return ss_;
 }
