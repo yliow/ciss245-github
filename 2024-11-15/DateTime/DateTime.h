@@ -9,6 +9,9 @@ class DateTime
 {
   public:
     DateTime(int, int, int, int, int, int);
+    Date get_date() const;
+    Time get_time() const;
+    
   private:
     Date date_;
     Time time_;
