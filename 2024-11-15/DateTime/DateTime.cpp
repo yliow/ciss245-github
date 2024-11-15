@@ -3,7 +3,7 @@
 
 DateTime::DateTime(int yyyy, int month, int dd,
                    int hh, int min, int ss)
-    : date_(yyyy, monthm dd), time_(hh, min, ss)
+    : date_(yyyy, month, dd), time_(hh, min, ss)
 {}
 
 Date DateTime::get_date() const
