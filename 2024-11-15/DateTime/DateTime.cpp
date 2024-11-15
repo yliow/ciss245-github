@@ -6,6 +6,11 @@ DateTime::DateTime(int yyyy, int month, int dd,
     : date_(yyyy, month, dd), time_(hh, min, ss)
 {}
 
+int DateTime::yyyy() const
+{
+    return date_.get_year();
+}
+    
 Date DateTime::get_date() const
 {
     return date_;
