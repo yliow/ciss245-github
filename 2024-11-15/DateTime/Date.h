@@ -11,8 +11,8 @@ class Date
     //Date(const Date &);
     ~Date()
     {
-        std::cout << "Date::~Date() is called "
-                  << yyyy_ << ' ' << mm_ << ' ' << dd_ << '\n';
+        //std::cout << "Date::~Date() is called "
+        //          << yyyy_ << ' ' << mm_ << ' ' << dd_ << '\n';
     }
     void init(int, int, int);
     void print() const;
