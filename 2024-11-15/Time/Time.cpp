@@ -20,7 +20,7 @@ int Time:ss() const
     return ss_;
 }
 
-std::ostream & operator<<(std:ostream & cout, const Time & time)
+std::ostream & operator<<(std::ostream & cout, const Time & time)
 {
     cout << time.hh() << ':' << time.mm() << ':' << time.ss();
     return cout;

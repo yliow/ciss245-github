@@ -13,6 +13,6 @@ class Time
     int hh_, mm_, ss_;
 };
 
-std::ostream & operator<<(std:ostream &, const Time &);
+std::ostream & operator<<(std::ostream &, const Time &);
 
 #endif
