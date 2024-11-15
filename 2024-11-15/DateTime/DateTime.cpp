@@ -11,7 +11,7 @@ Date DateTime::get_date() const
     return date_;
 }
 
-Time DateTie::get_time() const
+Time DateTime::get_time() const
 {
     return time_;
 }
