@@ -1,38 +1,18 @@
 #include <iostream>
-
-class IndexError
-{};
-
-class vec2d
-{
-public:
-    vec2d(double, double);
-    double operator[](int) const;
-private:
-    double x_, y_;
-};
-
-vec2d::vec2d(double x, double y)
-    : x_(x), y_(y)
-{}
-
-double vec2d::operator[](int i) const
-{
-    if (i == 0) return x_;
-    else if (i == 1) return y_;
-    throw IndexError();
-}
-
-std::ostream & operator<<(std::ostream & cout, const vec2d & v)
-{
-    cout << '<' << v[0] << ", " << v[1] << '>';
-    return cout;
-}
+#include "vec2.h"
 
 int main()
 {
-    vec2d v(1.1, 2.2);
+    vec2< double > v(1.1, 2.2);
+    vec2< double > u(1.1, 1.2);
     std::cout << "v:" << v << '\n';
+    std::cout << "u:" << u << '\n';
+    std::cout << "v + u:" << v + u << '\n';
 
+    vec2< float > a(0.5f, 0.6f);
+    vec2< float > b(1.5f, 1.6f);
+    std::cout << "a:" << a << '\n';
+    std::cout << "b:" << b << '\n';
+    std::cout << "a + b:" << a + b << '\n';
     return 0;
 }
