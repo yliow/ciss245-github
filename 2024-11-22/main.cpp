@@ -37,7 +37,8 @@ private:
 double vec2d::operator[](int i)
 {
     if (i == 0) return x_;
-    else return y_;
+    else if (i == 1) return y_;
+    else throw IndexError();
 }
 
 int main()
@@ -57,8 +58,16 @@ int main()
     }
 
     vec2d v(1, 2);
-    std::cout << v[0] << '\n';
-    std::cout << v[1] << '\n';
-    std::cout << v[2] << '\n';
+    try
+    {
+        std::cout << v[0] << '\n';
+        std::cout << v[1] << '\n';
+        std::cout << v[2] << '\n';
+    }
+    catch (IndexError & e)
+    {
+        std::cout << "there's an index error ... check your program\n";
+    }
+    
     return 0;
 }
