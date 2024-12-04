@@ -50,14 +50,23 @@ int sum1(int n)
     return ret;
 }
 
+int p(int n)
+{
+    if (n == 0) return 1;
+    else return p(n - 1) * n;
+}
+
 int main()
 {
     //std::cout << f(4) << '\n';
     //std::cout << g(3) << '\n';
-    for (int n = 0; n < 10; ++n)
-    {
-        std::cout << sum0(n) << ' ';
-        std::cout << sum1(n) << '\n';
-    }
+    // for (int n = 0; n < 10; ++n)
+    // {
+    //     std::cout << sum0(n) << ' ';
+    //     std::cout << sum1(n) << '\n';
+    // }
+
+    std::cout << p(4) << '\n';
+    
     return 0;
 }
