@@ -48,13 +48,69 @@ int prod(int x[], int n)
 
 int binsrch(int x[], int lower, int upper, int target)
 {
-    int mid = lower + (upper - lower) / 2;
-    if (x[mid] == target) return mid;
-    else if (target < x[mid]) return binsrch(x, lower, mid - 1, target);
-    else return binsrch(x, mid + 1, upper, target);
+    if (lower > upper)
+    {
+        return -1;
+    }
+    else
+    {
+        int mid = lower + (upper - lower) / 2;
+        if (x[mid] == target) return mid;
+        else if (target < x[mid]) return binsrch(x, lower, mid - 1, target);
+        else return binsrch(x, mid + 1, upper, target);
+    }
 }
 
 
+int * binsrch(int * lower, int * upper, int target)
+{
+    if (lower > upper)
+    {
+        return NULL;
+    }
+    else
+    {
+        int * mid = lower + (upper - lower) / 2;
+        if (*mid == target) return mid;
+        else if (target < *mid) return binsrch(lower, mid - 1, target);
+        else return binsrch(mid + 1, upper, target);
+    }
+}
+
+void bubblesort_pass(int * start, int * end)
+{
+    if (start + 1 >= end)
+    {}
+    else // recursive case
+    {
+        // swap 1st 2 values if necessary
+        if (*start > *(start + 1))
+        {
+            int t = *start;
+            *start = *(start + 1);
+            *(start + 1) = t;
+        }
+        // recurse
+        bubblesort_pass(start + 1, end);
+    }
+}
+
+
+// sort *start, *(start + 1), ..., *(end - 1)
+void bubblesort(int * start, int * end)
+{
+    if (start + 1 >= end)
+    {
+        // base case (i.e. at most 1 value to sort
+    }
+    else
+    {
+        // recusive case
+        bubblesort_pass(start, end);
+        bubblesort(start, end - 1);
+    }
+}
+    
 int main()
 {
     // int table[1000] = {0};
@@ -64,6 +120,6 @@ int main()
     // }
 
     int x = {5, 3, 1, 2, 4};
-    
+    bubblesort(&x[0], &x[5]);
     return 0;
 }
