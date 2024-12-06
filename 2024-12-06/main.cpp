@@ -3,7 +3,7 @@
 class LivingThing
 {
 public:
-    void talk()
+    virtual void talk()
     {
         std::cout << "LivingThing::talk() ... i'm a human being\n";
     }
@@ -14,7 +14,7 @@ private:
 class Human: public LivingThing
 {
 public:
-    void talk()
+    virtual void talk()
     {
         std::cout << "Human::talk() ... i'm a human\n";
     }
@@ -42,6 +42,7 @@ int main()
     // or LivingThing * p = new Human;
 
     john.talk();
+    p->talk();
     
     return 0;
 }
