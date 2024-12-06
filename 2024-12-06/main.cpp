@@ -3,6 +3,10 @@
 class LivingThing
 {
 public:
+    void talk()
+    {
+        std::cout << "LivingThing::talk() ... i'm a human being\n";
+    }
     int id_;
 private:
 };
