@@ -4,8 +4,8 @@ void addfraction(int a0, int b0,
                  int a1, int b1,
                  int & a2, int & b2)
 {
-    a2 = 0;
-    b2 = 0;
+    a2 = a0 * b1 + b0 * a1;
+    b2 = b0 * b1;
     return;
 }
 
