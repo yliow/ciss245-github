@@ -1,6 +1,5 @@
 #include <iostream>
-
-int max(int x, int y);
+#include "mymath.h"
 
 int main()
 {
