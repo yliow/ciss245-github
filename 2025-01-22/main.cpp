@@ -38,7 +38,7 @@ int main()
     Fraction h;
     h = f + g; // same as operator+(f, g)
     //print(h);
-    std::cout << h; // same as operator<<( std::cout, h )
+    std::cout << h << '\n'; // same as operator<<( std::cout, h )
     
     return 0;
     
