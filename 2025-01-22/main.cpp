@@ -20,9 +20,10 @@ void print(const Fraction & f)
     std::cout << f.n << '/' << f.d << '\n';
 }
 
-void operator<<(std::ostream & cout, const Fraction & f)
+std::ostream & operator<<(std::ostream & cout, const Fraction & f)
 {
     cout << f.n << '/' << f.d;
+    return cout;
 }
 
 int main()
