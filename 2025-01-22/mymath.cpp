@@ -14,3 +14,14 @@ int max(int x, int y)
     }
 }
 
+int min(int x, int y, int z)
+{
+    if (x <= y)
+    {
+        if (x <= z)
+        {
+            return x;
+        }
+    }
+    return 0;
+}
