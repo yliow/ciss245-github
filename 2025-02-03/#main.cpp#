@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main()
+{
+    int * p = new int;
+    *p = 42;
+    delete p;
+
+    p = new int[1000];
+}
