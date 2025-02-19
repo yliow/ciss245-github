@@ -50,7 +50,7 @@ int main()
     std::cout << "v: " << v << '\n';
 
     vec2f u = get_vec2f(2.1f, 3.5f);
-    std::cout << "u: " << v << '\n';
+    std::cout << "u: " << u << '\n';
 
     return 0;
 }
