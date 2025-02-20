@@ -15,9 +15,10 @@ void print(const Date & date)
               << date.dd_ << '\n';
 }
 
-// void add_y(Date &, int)
-// {
-// }
+void add_y(Date & date, int dy)
+{
+    date.yyyy_ += dy;
+}
 
 // void add_m(Date &, int)
 // {

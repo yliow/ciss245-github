@@ -9,6 +9,10 @@ int main()
     
     init(yesterday, 2025, 2, 19);
     print(yesterday);
+
+    std::cout << "inc today's yr by 1 ...\n";
+    add_y(today, 1);
+    print(today);
     
     return 0;
 }
