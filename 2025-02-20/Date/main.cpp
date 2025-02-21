@@ -13,12 +13,15 @@ int main()
     std::cout << "inc today's yr by 1 ...\n";
     today.add_y(1);
     today.print();
-    std::cout << today.yyyy_ << '\n';
+    //std::cout << today.yyyy_ << '\n';
 
     std::cout << "inc yesterday's m and d by 2 and 3 ...\n";
     yesterday.add_m(2);
     yesterday.add_d(3);
     yesterday.print();
+
+    today.add_m_d(5, 6);
+    today.print();
     
     return 0;
 }

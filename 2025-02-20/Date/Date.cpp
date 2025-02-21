@@ -29,3 +29,9 @@ void Date::add_d(int dd)
 {
     dd_ += dd;
 }
+
+void Date::add_m_d(int dm, int dd)
+{
+    add_m(dm);
+    add_d(dd);
+}
