@@ -13,6 +13,7 @@ class Date
     void add_d(int);
     void add_m_d(int, int);
     bool equal(const Date &) const;
+    bool operator==(const Date &) const;
   private:
     int yyyy_, mm_, dd_;
 };

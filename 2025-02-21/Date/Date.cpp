@@ -22,6 +22,12 @@ bool Date::equal(const Date & date) const
             && mm_ == date.mm_
             && dd_ == date.dd_);
 }
+bool Date::operator==(const Date & date) const
+{
+    return (yyyy_ == date.yyyy_
+            && mm_ == date.mm_
+            && dd_ == date.dd_);
+}
 
 void Date::print() const
 {

@@ -34,6 +34,14 @@ int main()
     {
         std::cout << "not equal\n";
     }
+    if (today == yesterday) // today.operator==(yesterday)
+    {
+        std::cout << "equal\n";
+    }
+    else
+    {
+        std::cout << "not equal\n";
+    }
     
     return 0;
 }
