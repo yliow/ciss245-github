@@ -3,7 +3,8 @@
 
 int main()
 {
-    Date today, yesterday;
+    Date today(2025, 2, 20); // calls Date::Date(int,int,int)
+    Date yesterday;
     today.init(2025, 2, 20);
     today.print();
     

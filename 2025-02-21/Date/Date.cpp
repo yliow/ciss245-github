@@ -1,8 +1,11 @@
 #include <iostream>
 #include "Date.h"
 
+Date::Date()
+{}
+
 Date::Date(int y, int m, int d)
-    : yyyy_(yyyy), mm_(mm), dd_(dd)
+    : yyyy_(y), mm_(m), dd_(d)
 {}
 
 void Date::init(int y, int m, int d)

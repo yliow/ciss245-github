@@ -4,6 +4,7 @@
 class Date
 {
   public:
+    Date();
     Date(int, int, int);
     void init(int, int, int);
     void print();
