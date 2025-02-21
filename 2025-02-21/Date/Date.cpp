@@ -8,14 +8,22 @@ Date::Date(int y, int m, int d)
     : yyyy_(y), mm_(m), dd_(d)
 {}
 
-void Date::init(int y, int m, int d)
+// WRONG!!!!!
+// void Date::init(int y, int m, int d)
+// {
+//     yyyy_ = y;
+//     mm_ = m;
+//     dd_ = d;
+// }
+
+bool Date::equal(const Date & date) const
 {
-    yyyy_ = y;
-    mm_ = m;
-    dd_ = d;
+    return (yyyy_ == date.yyyy_
+            && mm_ == date.mm_
+            && dd_ == date.dd_);
 }
 
-void Date::print()
+void Date::print() const
 {
     std::cout << yyyy_ << '/'
               << mm_ << '/'

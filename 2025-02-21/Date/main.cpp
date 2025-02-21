@@ -4,11 +4,13 @@
 int main()
 {
     Date today(2025, 2, 20); // calls Date::Date(int,int,int)
-    Date yesterday;
-    today.init(2025, 2, 20);
+    Date yesterday = Date(2025, 2, 19);
+    Date * nextyear = new Date(2026, 2, 20);
+    // Date lastmonth(); <<<< DONT DO THIS!!!
+    //today.init(2025, 2, 20);
     today.print();
     
-    yesterday.init(2025, 2, 19);
+    //yesterday.init(2025, 2, 19);
     yesterday.print();
 
     std::cout << "inc today's yr by 1 ...\n";
@@ -23,6 +25,15 @@ int main()
 
     today.add_m_d(5, 6);
     today.print();
+
+    if (today.equal(yesterday))
+    {
+        std::cout << "equal\n";
+    }
+    else
+    {
+        std::cout << "not equal\n";
+    }
     
     return 0;
 }
