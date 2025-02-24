@@ -16,9 +16,9 @@ class Date
     void add_m_d(int, int);
     bool equal(const Date &) const;
     bool operator==(const Date &) const;
-    int get_year();
-    int get_month();
-    int get_day();
+    int get_year() const;
+    int get_month() const;
+    int get_day() const;
 private:
     int yyyy_, mm_, dd_;
 };

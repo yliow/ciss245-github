@@ -57,17 +57,17 @@ void Date::add_m_d(int dm, int dd)
     add_d(dd);
 }
 
-int Date::get_year()
+int Date::get_year() const
 {
     return yyyy_;
 }
 
-int Date::get_month()
+int Date::get_month() const
 {
     return mm_;
 }
 
-int Date::get_day()
+int Date::get_day() const
 {
     return dd_;
 }
