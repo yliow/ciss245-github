@@ -80,10 +80,12 @@ std::ostream & operator<<(std::ostream & cout, const Date & date)
     return cout;
 }
 
-void Date::operator=(const Date & date)
+Date Date::operator=(const Date & date)
 {
     std::cout << "Date::operator=(const Date &) ...\n";
+    std::cout << "this: " << this << '\n';
     yyyy_ = date.yyyy_;
     mm_ = date.mm_;
     dd_ = date.dd_;
+    return (*this);
 }

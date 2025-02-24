@@ -19,7 +19,7 @@ class Date
     int get_year() const;
     int get_month() const;
     int get_day() const;
-    void operator=(const Date &);
+    Date operator=(const Date &);
 private:
     int yyyy_, mm_, dd_;
 };

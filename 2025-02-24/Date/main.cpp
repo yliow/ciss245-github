@@ -51,13 +51,15 @@ int main()
         std::cout << "not equal\n";
     }
 
-    yesterday = today;
+    std::cout << &yesterday << '\n';
+    Date nextmonth(2026, 2, 24);
+    nextmonth = yesterday = today;
     // same as
     // yesterday.operator=(today);
     std::cout << yesterday << '\n';
 
-    int i, j, k;
-    i = j = k = 42;
-    std::cout << i << ' ' << j << ' ' << k << '\n';
+    // int i, j, k;
+    // i = j = k = 42;
+    // std::cout << i << ' ' << j << ' ' << k << '\n';
     return 0;
 }
