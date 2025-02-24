@@ -79,3 +79,10 @@ std::ostream & operator<<(std::ostream & cout, const Date & date)
          << date.get_day();
     return cout;
 }
+
+void Date::operator=(const Date & date)
+{
+    yyyy_ = date.yyyy_;
+    mm_ = date.mm_;
+    dd_ = date.dd_;
+}
