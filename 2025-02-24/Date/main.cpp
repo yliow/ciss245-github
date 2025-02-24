@@ -55,6 +55,9 @@ int main()
     // same as
     // yesterday.operator=(today);
     std::cout << yesterday << '\n';
-    
+
+    int i, j, k;
+    i = j = k = 42;
+    std::cout << i << ' ' << j << ' ' << k << '\n';
     return 0;
 }
