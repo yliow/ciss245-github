@@ -50,6 +50,9 @@ int main()
     {
         std::cout << "not equal\n";
     }
+
+    yesterday = today;
+    std::cout << yesterday << '\n';
     
     return 0;
 }
