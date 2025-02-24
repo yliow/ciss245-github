@@ -82,6 +82,7 @@ std::ostream & operator<<(std::ostream & cout, const Date & date)
 
 void Date::operator=(const Date & date)
 {
+    std::cout << "Date::operator=(const Date &) ...\n";
     yyyy_ = date.yyyy_;
     mm_ = date.mm_;
     dd_ = date.dd_;
