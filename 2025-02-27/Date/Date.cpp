@@ -19,9 +19,10 @@ Date::Date(int y, int m, int d)
     std::cout << "Date::Date(int, int, int) ...\n";
 }
 
-void Date::set_year(int y)
+Date & Date::set_year(int y)
 {
     yyyy_ = y;
+    return (*this);
 }
 
 void Date::set_month(int m)

@@ -71,8 +71,8 @@ int main()
     // i = j = k = 42;
     // std::cout << i << ' ' << j << ' ' << k << '\n';
 
-    today.set_year(3000);
-    today.set_month(12);
+    (today.set_year(3000)).set_month(12);
+    //today.set_month(12);
     std::cout << today << '\n';
     return 0;
 }
