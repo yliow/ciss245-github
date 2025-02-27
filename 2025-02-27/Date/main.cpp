@@ -84,6 +84,7 @@ int main()
 
     Date * p = new Date(5000, 1, 1);
     std::cout << p << ' ' << (*p) << '\n';
-    
+    p->set_year(6000); // don't: (*p).set_year(6000)
+    std::cout << p << ' ' << (*p) << '\n';
     return 0;
 }
