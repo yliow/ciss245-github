@@ -19,6 +19,8 @@ class Date
     bool operator==(const Date &) const;
     int get_year() const;
     Date & set_year(int);
+    int year() const;
+    int & year();
     int get_month() const;
     Date & set_month(int);
     int get_day() const;

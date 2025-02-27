@@ -25,6 +25,16 @@ Date & Date::set_year(int y)
     return (*this);
 }
 
+int Date::year() const
+{
+    return yyyy_;
+}
+int & Date::year()
+{
+    return yyyy_;
+}
+
+
 Date & Date::set_month(int m)
 {
     mm_ = m;

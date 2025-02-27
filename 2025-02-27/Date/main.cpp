@@ -74,5 +74,12 @@ int main()
     (today.set_year(3000)).set_month(12);
     //today.set_month(12);
     std::cout << today << '\n';
+
+    //std::cout << today.get_year() << '\n';
+    //today.set_year(4000);
+
+    std::cout << today.year() << '\n';
+    today.year() = 5000;
+    
     return 0;
 }
