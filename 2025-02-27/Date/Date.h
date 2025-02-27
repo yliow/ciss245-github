@@ -20,7 +20,7 @@ class Date
     int get_year() const;
     Date & set_year(int);
     int get_month() const;
-    void set_month(int);
+    Date & set_month(int);
     int get_day() const;
     const Date & operator=(const Date &);
 private:

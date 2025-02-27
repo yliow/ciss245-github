@@ -25,9 +25,10 @@ Date & Date::set_year(int y)
     return (*this);
 }
 
-void Date::set_month(int m)
+Date & Date::set_month(int m)
 {
     mm_ = m;
+    return (*this);
 }
 
 // WRONG!!!!!
