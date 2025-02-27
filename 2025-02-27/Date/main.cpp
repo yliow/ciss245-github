@@ -80,6 +80,10 @@ int main()
 
     std::cout << today.year() << '\n';
     today.year() = 5000;
+
+
+    Date * p = new Date(5000, 1, 1);
+    std::cout << p << ' ' << (*p) << '\n';
     
     return 0;
 }
