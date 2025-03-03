@@ -11,8 +11,10 @@ class vec2d
     double get_y() const;
     double operator[](int) const;
     double & operator[](int);
-    void operator*=(double);
+    vec2d & operator*=(double);
     vec2d operator*(double);
+    vec2d & operator+=(const vec2d &);
+    vec2d operator+(const vec2d &) const;
   private:
     double x_, y_;
 };
