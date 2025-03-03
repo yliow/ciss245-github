@@ -29,6 +29,13 @@ int & Rational::d()
     return d_;
 }
 
+Rational & Rational::operator+=(const Rational & r)
+{
+    n_ = n_ * r.d_ + d_ * r.n_;
+    d_ = d_ * r.d_;
+    return (*this);
+}
+
 std::ostream & operator<<(std::ostream & cout, const Rational & r)
 {
     cout << r.n() << '/' << r.d();

@@ -12,5 +12,7 @@ int main()
     Rational r1;
     std::cout << r1 << '\n';
 
+    r1 += r0;
+
     return 0;
 }
