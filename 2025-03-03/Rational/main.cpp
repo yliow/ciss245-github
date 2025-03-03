@@ -9,5 +9,8 @@ int main()
     // std::cout << r0.n();
     // r0.n() = 5;
 
+    Rational r1;
+    std::cout << r1 << '\n';
+
     return 0;
 }

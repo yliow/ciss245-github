@@ -6,6 +6,7 @@
 class Rational
 {
   public:
+    Rational();
     Rational(int, int);
     int n() const;
     int & n();
