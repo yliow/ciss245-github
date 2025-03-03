@@ -20,7 +20,7 @@ int Rational::d() const
     return d_;
 }
 
-int & Rational d();
+int & Rational::d()
 {
     return d_;
 }
