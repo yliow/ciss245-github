@@ -36,6 +36,11 @@ Rational & Rational::operator+=(const Rational & r)
     return (*this);
 }
 
+Rational Rational::operator+(const Rational & r) const
+{
+    return (Rational(*this) += r);
+}
+
 std::ostream & operator<<(std::ostream & cout, const Rational & r)
 {
     cout << r.n() << '/' << r.d();

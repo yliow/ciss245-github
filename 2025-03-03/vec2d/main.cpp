@@ -23,6 +23,9 @@ int main()
 
     vec2d w;
     std::cout << "w:" << w << '\n';
-    
+
+    std::cout << "v:" << v << '\n';
+    std::cout << "2 * v:" << 2 * v // same as operator*(2, v)
+              << '\n';             // or 2.operator*(v) 
     return 0;
 }

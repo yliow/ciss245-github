@@ -14,5 +14,7 @@ int main()
 
     r1 += r0;
 
+    std::cout << (r1 + r0) << '\n';
+
     return 0;
 }

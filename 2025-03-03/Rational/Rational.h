@@ -13,6 +13,7 @@ class Rational
     int d() const;
     int & d();
     Rational & operator+=(const Rational &);
+    Rational operator+(const Rational &) const;
   private:
     int n_, d_;
 };

@@ -21,5 +21,6 @@ class vec2d
 };
 
 std::ostream & operator<<(std::ostream &, const vec2d &);
+vec2d operator*(double, const vec2d &);
 
 #endif

@@ -62,3 +62,8 @@ std::ostream & operator<<(std::ostream & cout, const vec2d & v)
     cout << '<' << v.get_x() << ", " << v.get_y() << '>';
     return cout;
 }
+
+vec2d operator*(double c, const vec2d & v)
+{
+    return v * c; // i.e. v.operator*(c);
+}
