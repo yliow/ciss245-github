@@ -18,8 +18,11 @@ int main()
     //std::cout << p.dereference() << '\n';
     std::cout << (*p) // *p same as p.operator*
               << '\n';
+    
     //*p = 42;
     //std::cout << (*p) << '\n';
-    
+    *p = 42;
+    std::cout << (*p) << '\n';
+
     return 0;
 }

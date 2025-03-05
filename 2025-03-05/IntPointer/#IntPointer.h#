@@ -7,7 +7,7 @@ class IntPointer
     IntPointer();
     //int dereference() const;
     int operator*() const;
-    int & operator*() const;
+    int & operator*();
   private:
     int * p_;
 };
