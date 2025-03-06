@@ -17,11 +17,12 @@ int main()
     // a.push_back(15);
     // a.push_back(16); // a <----> {3, 2, 4, 10, 15} ... 16 does NOT go into array
 
-    // std::cout << a[0] << '\n'; // print 3
+    std::cout << a[0] << '\n'; // print 3
+                               // a[0] same as a.operator[](0)
     // a[0] = 42; // a <-----> {42, 2, 4, 10, 15}
 
     // a.pop_back(); // a <-----> {42, 2, 4, 10}
-    // std::cout << a.size() // prints 4
+    std::cout << a.size() // prints 4
     
     return 0;
 }

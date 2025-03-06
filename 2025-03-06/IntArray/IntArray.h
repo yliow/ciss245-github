@@ -9,7 +9,8 @@ class IntArray
     IntArray() // function body here => this function is inlined
         : size_(0), capacity_(5)
     {}
-
+    int size() const;
+    int operator[](int) const;
   private:
     int x_[5];
     int size_;
