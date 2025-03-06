@@ -16,9 +16,9 @@ int main()
     std::cout << a << '\n'; // prints {3, 2, 4, 5}
     a.push_back(15);
     std::cout << a << '\n'; // prints {3, 2, 4, 5, 15}
+    a.push_back(16); // a <----> {3, 2, 4, 10, 15} ... 16 does NOT go into array
+    std::cout << a << '\n'; // prints {3, 2, 4, 5, 15}
     
-    // a.push_back(16); // a <----> {3, 2, 4, 10, 15} ... 16 does NOT go into array
-
     std::cout << a[0] << '\n'; // print 3
                                // a[0] same as a.operator[](0)
     // a[0] = 42; // a <-----> {42, 2, 4, 10, 15}

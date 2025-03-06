@@ -38,6 +38,13 @@ std::ostream & operator<<(std::ostream & cout,
 
 void IntArray::push_back(int e)
 {
-    x_[size_] = e;
-    ++size_;
+    if (size_ < capacity_)
+    {
+        x_[size_] = e;
+        ++size_;
+    }
+    else
+    {
+        // indicate an error ... throw exception (later chap)
+    }
 }
