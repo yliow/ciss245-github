@@ -1,6 +1,20 @@
 #include <iostream>
 #include "IntPointer.h"
 
+void f()
+{
+    IntPointer p;
+    //std::cout << p.dereference() << '\n';
+    std::cout << (*p) // *p same as p.operator*
+              << '\n';
+    
+    //*p = 42;
+    //std::cout << (*p) << '\n';
+    *p = 42;
+    std::cout << (*p) << '\n';
+    IntPointer q;
+}
+
 int main()
 {
     // REVIEW
@@ -14,15 +28,7 @@ int main()
     // delete p; // usually forget to deallocate ... leak!
     // // ...
 
-    IntPointer p;
-    //std::cout << p.dereference() << '\n';
-    std::cout << (*p) // *p same as p.operator*
-              << '\n';
-    
-    //*p = 42;
-    //std::cout << (*p) << '\n';
-    *p = 42;
-    std::cout << (*p) << '\n';
+    f();
 
     return 0;
 }

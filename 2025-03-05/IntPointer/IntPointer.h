@@ -5,9 +5,10 @@ class IntPointer
 {
   public:
     IntPointer();
+    ~IntPointer(); // destructor
     //int dereference() const;
     int operator*() const;
-    int & operator*() const;
+    int & operator*();
   private:
     int * p_;
 };

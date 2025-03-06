@@ -21,3 +21,10 @@ int & IntPointer::operator*()
 {
     return *p_;
 }
+
+IntPointer::~IntPointer()
+{
+    delete p_;
+    std::cout << "IntPointer::~IntPointer() ... deallocatd\n";
+}
+
