@@ -9,8 +9,8 @@ int main()
     a.push_back(3); // a <----> {3}
     std::cout << a << '\n'; // prints {3}
 
-    // a.push_back(2); // a <----> {3, 2}
-    // std::cout << a << '\n'; // prints {3, 2}
+    a.push_back(2); // a <----> {3, 2}
+    std::cout << a << '\n'; // prints {3, 2}
 
     // a.push_back(4);
     // a.push_back(10);
