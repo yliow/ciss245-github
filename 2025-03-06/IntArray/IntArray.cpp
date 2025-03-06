@@ -28,8 +28,9 @@ std::ostream & operator<<(std::ostream & cout,
     cout << '{';
     for (int i = 0; i < a.size(); ++i)
     {
-        cout << a[i] // a[i] same as a.operator[](i)
-             << ", ";
+        cout << a[i]; // a[i] same as a.operator[](i)
+        if (i < a.size() - 1)
+             cout << ", ";
     }
     cout << '}';
     return cout;

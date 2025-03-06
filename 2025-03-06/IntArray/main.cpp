@@ -8,13 +8,15 @@ int main()
 
     a.push_back(3); // a <----> {3}
     std::cout << a << '\n'; // prints {3}
-
     a.push_back(2); // a <----> {3, 2}
     std::cout << a << '\n'; // prints {3, 2}
-
-    // a.push_back(4);
-    // a.push_back(10);
-    // a.push_back(15);
+    a.push_back(4);
+    std::cout << a << '\n'; // prints {3, 2, 4}
+    a.push_back(10);
+    std::cout << a << '\n'; // prints {3, 2, 4, 5}
+    a.push_back(15);
+    std::cout << a << '\n'; // prints {3, 2, 4, 5, 15}
+    
     // a.push_back(16); // a <----> {3, 2, 4, 10, 15} ... 16 does NOT go into array
 
     std::cout << a[0] << '\n'; // print 3
