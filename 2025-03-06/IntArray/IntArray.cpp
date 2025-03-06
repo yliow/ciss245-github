@@ -34,3 +34,9 @@ std::ostream & operator<<(std::ostream & cout,
     cout << '}';
     return cout;
 }
+
+void IntArray::push_back(int e)
+{
+    x_[size_] = e;
+    ++size_;
+}

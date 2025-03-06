@@ -11,6 +11,7 @@ class IntArray
     {}
     int size() const;
     int operator[](int) const;
+    void push_back(int);
   private:
     int x_[5];
     int size_;
