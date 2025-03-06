@@ -22,7 +22,7 @@ int main()
     // a[0] = 42; // a <-----> {42, 2, 4, 10, 15}
 
     // a.pop_back(); // a <-----> {42, 2, 4, 10}
-    std::cout << a.size() // prints 4
+    std::cout << a.size(); // prints 4
     
     return 0;
 }
