@@ -24,7 +24,8 @@ int main()
     a[0] = 42; // a <-----> {42, 2, 4, 10, 15}
     std::cout << a << '\n'; // prints {42, 2, 4, 5, 15}
     
-    // a.pop_back(); // a <-----> {42, 2, 4, 10}
+    a.pop_back(); // a <-----> {42, 2, 4, 10}
+    std::cout << a << '\n'; // prints {42, 2, 4, 5}
     std::cout << a.size() << '\n'; // prints 4
     
     return 0;

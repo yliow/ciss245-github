@@ -13,6 +13,7 @@ class IntArray
     int operator[](int) const;
     int & operator[](int);
     void push_back(int);
+    void pop_back();
   private:
     int x_[5];
     int size_;

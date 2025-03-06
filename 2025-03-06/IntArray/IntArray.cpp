@@ -53,3 +53,8 @@ void IntArray::push_back(int e)
         // indicate an error ... throw exception (later chap)
     }
 }
+
+void IntArray::pop_back()
+{
+    --size_;
+}
