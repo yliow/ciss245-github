@@ -6,7 +6,7 @@
 class IntArray
 {
   public:
-    IntArray()
+    IntArray() // function body here => this function is inlined
         : size_(0), capacity_(5)
     {}
 
@@ -15,5 +15,7 @@ class IntArray
     int size_;
     int capacity_;
 };
+
+std::ostream & operator<<(std::ostream &, const IntArray &);
 
 #endif

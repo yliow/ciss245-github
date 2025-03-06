@@ -4,7 +4,7 @@
 int main()
 {
     IntArray a; // a models an int array of size 5
-    // std::cout << a << '\n'; // prints {}
+    std::cout << a << '\n'; // prints {}
 
     // a.push_back(3); // a <----> {3}
     // std::cout << a << '\n'; // prints {3}
