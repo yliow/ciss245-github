@@ -22,6 +22,11 @@ int IntArray::operator[](int i) const
     }
 }
 
+int & IntArray::operator[](int i)
+{
+    return x_[i];
+}
+
 std::ostream & operator<<(std::ostream & cout,
                           const IntArray & a)
 {

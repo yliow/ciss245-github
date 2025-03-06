@@ -21,8 +21,9 @@ int main()
     
     std::cout << a[0] << '\n'; // print 3
                                // a[0] same as a.operator[](0)
-    // a[0] = 42; // a <-----> {42, 2, 4, 10, 15}
-
+    a[0] = 42; // a <-----> {42, 2, 4, 10, 15}
+    std::cout << a << '\n'; // prints {42, 2, 4, 5, 15}
+    
     // a.pop_back(); // a <-----> {42, 2, 4, 10}
     std::cout << a.size() << '\n'; // prints 4
     
