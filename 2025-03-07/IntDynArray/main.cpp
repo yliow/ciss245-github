@@ -11,8 +11,10 @@ int main()
     a[1] = -1;
     std::cout << "a:" << a << '\n'; // print {}
     
-    // a.resize(5);                    // a <----> {0,0,0,0,0}, size_=5, capacity_=5
-    // a[4] = 99;                      // a <----> {0,0,0,0,99}, size_=5, capacity_=5
+    a.resize(5);                    // a <----> {0,0,0,0,0}, size_=5, capacity_=5
+    std::cout << a << '\n';
+    
+// a[4] = 99;                      // a <----> {0,0,0,0,99}, size_=5, capacity_=5
     // std::cout << "a:" << a << '\n'; // print {0,0,0,0,99}
     // std::cout << a[4] << '\n';
     // a[1] = 42;                      // a <----> {42,0,0,0,99}, size_=5, capacity_=5
