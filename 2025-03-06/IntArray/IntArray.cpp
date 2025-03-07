@@ -45,8 +45,7 @@ void IntArray::push_back(int e)
 {
     if (size_ < capacity_)
     {
-        x_[size_] = e;
-        ++size_;
+        x_[size_++] = e;
     }
     else
     {
