@@ -33,6 +33,15 @@ void IntDynArray::resize(int size)
     }
     else // not enough case
     {
+        int * p = new int[size];
+        for (int i = 0; i < size_; ++i)
+        {
+            p[i] = p_[i];
+        }
+        delete[] p_;
+        p_ = p;
+        size_ = size;
+        capacity_ = size;
     }
 }
 
@@ -42,7 +51,8 @@ std::ostream& operator<<(std::ostream & cout,
     cout << '{';
     for (int i = 0; i < a.size(); ++i)
     {
-        cout << a[i] << ", ";
+        cout << a[i];
+        if (i < a.size() - 1) cout << ", ";
     }
     cout << '}';
     return cout;
