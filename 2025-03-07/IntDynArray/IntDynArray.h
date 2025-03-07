@@ -10,6 +10,8 @@ class IntDynArray
     ~IntDynArray();
     int size() const;
     int operator[](int) const;
+    int & operator[](int);
+    void resize(int);
   private:
     int * p_;
     int size_;

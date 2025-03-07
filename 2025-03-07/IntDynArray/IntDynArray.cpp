@@ -20,6 +20,21 @@ int IntDynArray::operator[](int i) const
     return p_[i];
 }
 
+int & IntDynArray::operator[](int i)
+{
+    return p_[i];
+}
+
+void IntDynArray::resize(int size)
+{
+    if (size <= capacity_)
+    {
+        size_ = size;
+    }
+    else // not enough case
+    {
+    }
+}
 
 std::ostream& operator<<(std::ostream & cout,
                          const IntDynArray & a)
