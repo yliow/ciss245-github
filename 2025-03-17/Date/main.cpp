@@ -88,19 +88,66 @@ int main()
     std::cout << p << ' ' << (*p) << '\n';
 
     //
-    Date date[10];
+    Date date[10]; // every date object goes through the
+                   // defaut constructor
     for (int i = 0; i < 10; ++i)
     {
         std::cout << i << ": " << date[i] << '\n';
     }
-    date.set_year(2025);
-    date.set_month(3);
-    date.set_day(17);
+    for (int i = 0; i < 10; ++i)
+    {
+        date[i].set_year(2025);
+        date[i].set_month(3);
+        date[i].set_day(17);
+    }
     for (int i = 0; i < 10; ++i)
     {
         std::cout << i << ": " << date[i] << '\n';
     }
+
+    Date * date0[10];
+    for (int i = 0; i < 10; ++i)
+    {
+        date0[i] = new Date(2025, 3, 17);
+    }
+    for (int i = 0; i < 10; ++i)
+    {
+        std::cout << i << ": " << (*date0[i]) << '\n';
+    }
+
+    // control size and control constructor
+    Date ** p;
+    std::cin >> s;
+    p = new Date*[s];
+    for (int i = 0; i < s; ++i)
+    {
+        p[i] = new Date(2025, 3, 17);
+    }
+    // use the dates in the heap
+
+    for (int i = 0; i < s; ++i)
+    {
+        delete p[i];
+    }
+    delete[] p;
     
-    
+
+    // 2d array of dates where control
+    // number of rows
+    // number of cols
+    // the constructor call
+    int nrows = 5;
+    int ncols = 8;
+    Date *** q;
+    q = new Date**[nrows];
+    for (int r = 0; r < nrows; ++r)
+    {
+        q[r] = new Date*[ncols];
+    }
+    for (int c = 0; c < ncols; ++c)
+    {
+        q[r][c] = new Date(2025, 3, 17);
+    }
+   
     return 0;
 }
