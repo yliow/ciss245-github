@@ -1,71 +1,52 @@
 #include <iostream>
+#include <string>
+#include <vector>
+#include "vec2.h"
 
-class IndexOutOfBound
-{};
+// template < typename T >
+// class vector
+// {
+// private:
+//     T * p_;
+//     int size_;
+//     int capacity_;
+// };
 
-class vec2i
+std::ostream & operator<<(std::ostream & cout,
+                          const std::vector< int > & v)
 {
-public:
-    vec2i(int x, int y)
-        : x_(x), y_(y)
-    {}
-    int operator[](int i) const
+    cout << '{';
+    std::string delim;
+    for (int i = 0; i < v.size(); ++i)
     {
-        if (i < 0 || i > 1) throw IndexOutOfBound();
-        if (i == 0) return x_;
-        else return y_;
+        cout << delim << v[i];
+        delim = ", ";
     }
-    int & operator[](int i)
-    {
-        if (i < 0 || i > 1) throw IndexOutOfBound();
-        if (i == 0) return x_;
-        else return y_;
-    }
-
-private:
-    int x_, y_;
-};
-std::ostream & operator<<(std::ostream & cout, const vec2i & v)
-{
-    cout << '<' << v[0] << ", " << v[1] << '>';
+    cout << '}';
     return cout;
 }
-
-class vec2d
-{
-public:
-    vec2d(double x, double y)
-        : x_(x), y_(y)
-    {}
-    double operator[](int i) const
-    {
-        if (i < 0 || i > 1) throw IndexOutOfBound();
-        if (i == 0) return x_;
-        else return y_;
-    }
-    double & operator[](int i)
-    {
-        if (i < 0 || i > 1) throw IndexOutOfBound();
-        if (i == 0) return x_;
-        else return y_;
-    }
-
-private:
-    double x_, y_;
-};
-std::ostream & operator<<(std::ostream & cout, const vec2d & v)
-{
-    cout << '<' << v[0] << ", " << v[1] << '>';
-    return cout;
-}
-
 int main()
 {
-    vec2i v(1, 2);
+    vec2< int > v(1, 2);
     std::cout << "v:" << v << '\n';
 
-    vec2d u(1.1, 2.2);
+    vec2< double > u(1.1, 2.2);
     std::cout << "u:" << u << '\n';
-    
+
+    std::vector< int > x;
+    std::cout << "x:" << x << '\n';
+    x.push_back(5);
+    x.push_back(3);
+    x.push_back(7);
+    std::cout << "x:" << x << '\n';
+    x.resize(1);
+    std::cout << "x:" << x << '\n';
+    x.push_back(99);
+    x.push_back(100);
+    std::cout << "x:" << x << '\n';
+    x.pop_back();
+    std::cout << "x:" << x << '\n';
+    std::cout << x.front() << '\n';
+    std::cout << x.back() << '\n';
     return 0;
 }
