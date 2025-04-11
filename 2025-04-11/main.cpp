@@ -52,7 +52,7 @@ private:
 std::ostream & operator<<(std::ostream & cout, const Dog & dog)
 {
     cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
-         << ' ' << (*dog.get_powner())
+         << ", " << (*dog.get_powner())
          << '>';
     return cout;
 };
