@@ -28,7 +28,7 @@ std::ostream & operator<<(std::ostream & cout, const Man & man)
 class Dog
 {
 public:
-    Dog(std::string name, int )
+    Dog(std::string name, int x)
         : name_(name), x_(x)
     {}
     std::string get_name() const
@@ -56,7 +56,7 @@ int main()
     Dog rex("Rex", 8);
 
     std::cout << john << '\n';
-    std::Cout << rex << '\n';
+    std::cout << rex << '\n';
     return 0;
     
 }
