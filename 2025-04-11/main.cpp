@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 
-class Man
+class LivingThing
 {
 public:
-    Man(std::string name, int x)
-        : name_(name), x_(x)
+    LivingThing(std::string name, int x)
+        :name_(name), x_(x)
     {}
     std::string get_name() const
     {
@@ -15,9 +15,19 @@ public:
     {
         return x_;
     }
+
 private:
     std::string name_;
     int x_;
+};
+
+class Man: public LivingThing
+{
+public:
+    Man(std::string name, int x)
+        : LivingThing(name, x)
+    {}
+private:
 };
 std::ostream & operator<<(std::ostream & cout, const Man & man)
 {
