@@ -41,6 +41,7 @@ int main()
     Man john("John", 5);
     //Dog rex(...);
 
+    std::cout << john << '\n';
     return 0;
     
 }
