@@ -28,7 +28,7 @@ std::ostream & operator<<(std::ostream & cout, const Man & man)
 class Dog
 {
 public:
-    Dog(std::string name, int x, Man * powner)
+    Dog(std::string name, int x, Man * powner=NULL)
         : name_(name), x_(x), powner_(powner)
     {}
     std::string get_name() const
@@ -51,9 +51,18 @@ private:
 
 std::ostream & operator<<(std::ostream & cout, const Dog & dog)
 {
-    cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
-         << ", " << (*dog.get_powner())
-         << '>';
+    if (dog.get_powner() == NULL)
+    {
+        cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
+             << ", " << "[NO OWNER]"
+             << '>';
+    }
+    else
+    {
+        cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
+             << ", " << (*dog.get_powner())
+             << '>';
+    }
     return cout;
 };
 
@@ -61,9 +70,11 @@ int main()
 {
     Man john("John", 5);
     Dog rex("Rex", 8, &john);
+    Dog goldie("Goldie", 10);
 
     std::cout << john << '\n';
     std::cout << rex << '\n';
+    std::cout << goldie << '\n';
     return 0;
     
 }
