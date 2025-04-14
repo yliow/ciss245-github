@@ -35,56 +35,47 @@ std::ostream & operator<<(std::ostream & cout, const Man & man)
     return cout;
 };
 
-// class Dog
-// {
-// public:
-//     Dog(std::string name, int x, Man * powner=NULL)
-//         : name_(name), x_(x), powner_(powner)
-//     {}
-//     std::string get_name() const
-//     {
-//         return name_;
-//     }
-//     int get_x() const
-//     {
-//         return x_;
-//     }
-//     Man * get_powner() const
-//     {
-//         return powner_;
-//     }
-// private:
-//     std::string name_;
-//     int x_;
-//     Man * powner_;
-// };
+class Dog: public LivingThing
+{
+public:
+    Dog(std::string name, int x, Man * powner=NULL)
+        : LivingThing(name, x), powner_(powner)
+    {}
+    Man * get_powner() const
+    {
+        return powner_;
+    }
+private:
+    Man * powner_;
+};
 
-// std::ostream & operator<<(std::ostream & cout, const Dog & dog)
-// {
-//     if (dog.get_powner() == NULL)
-//     {
-//         cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
-//              << ", " << "[NO OWNER]"
-//              << '>';
-//     }
-//     else
-//     {
-//         cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
-//              << ", " << (*dog.get_powner())
-//              << '>';
-//     }
-//     return cout;
-// };
+std::ostream & operator<<(std::ostream & cout, const Dog & dog)
+{
+    if (dog.get_powner() == NULL)
+    {
+        cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
+             << ", " << "[NO OWNER]"
+             << '>';
+    }
+    else
+    {
+        cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
+             << ", " << (*dog.get_powner())
+             << '>';
+    }
+    return cout;
+};
 
 int main()
 {
     Man john("John", 5);
-    // Dog rex("Rex", 8, &john);
-    // Dog goldie("Goldie", 10);
+    Dog rex("Rex", 8, &john);
+    Dog goldie("Goldie", 10);
 
     std::cout << john << '\n';
-    // std::cout << rex << '\n';
-    // std::cout << goldie << '\n';
+    std::cout << rex << '\n';
+    std::cout << goldie << '\n';
+    
     return 0;
     
 }
