@@ -35,46 +35,46 @@ std::ostream & operator<<(std::ostream & cout, const Man & man)
     return cout;
 };
 
-class Dog
-{
-public:
-    Dog(std::string name, int x, Man * powner=NULL)
-        : name_(name), x_(x), powner_(powner)
-    {}
-    std::string get_name() const
-    {
-        return name_;
-    }
-    int get_x() const
-    {
-        return x_;
-    }
-    Man * get_powner() const
-    {
-        return powner_;
-    }
-private:
-    std::string name_;
-    int x_;
-    Man * powner_;
-};
+// class Dog
+// {
+// public:
+//     Dog(std::string name, int x, Man * powner=NULL)
+//         : name_(name), x_(x), powner_(powner)
+//     {}
+//     std::string get_name() const
+//     {
+//         return name_;
+//     }
+//     int get_x() const
+//     {
+//         return x_;
+//     }
+//     Man * get_powner() const
+//     {
+//         return powner_;
+//     }
+// private:
+//     std::string name_;
+//     int x_;
+//     Man * powner_;
+// };
 
-std::ostream & operator<<(std::ostream & cout, const Dog & dog)
-{
-    if (dog.get_powner() == NULL)
-    {
-        cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
-             << ", " << "[NO OWNER]"
-             << '>';
-    }
-    else
-    {
-        cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
-             << ", " << (*dog.get_powner())
-             << '>';
-    }
-    return cout;
-};
+// std::ostream & operator<<(std::ostream & cout, const Dog & dog)
+// {
+//     if (dog.get_powner() == NULL)
+//     {
+//         cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
+//              << ", " << "[NO OWNER]"
+//              << '>';
+//     }
+//     else
+//     {
+//         cout << "<Dog " << dog.get_name() << ", " << dog.get_x()
+//              << ", " << (*dog.get_powner())
+//              << '>';
+//     }
+//     return cout;
+// };
 
 int main()
 {
