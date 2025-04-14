@@ -79,12 +79,12 @@ std::ostream & operator<<(std::ostream & cout, const Man & man)
 int main()
 {
     Man john("John", 5);
-    Dog rex("Rex", 8, &john);
-    Dog goldie("Goldie", 10);
+    // Dog rex("Rex", 8, &john);
+    // Dog goldie("Goldie", 10);
 
     std::cout << john << '\n';
-    std::cout << rex << '\n';
-    std::cout << goldie << '\n';
+    // std::cout << rex << '\n';
+    // std::cout << goldie << '\n';
     return 0;
     
 }
