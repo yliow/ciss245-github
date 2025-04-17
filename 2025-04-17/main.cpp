@@ -21,7 +21,7 @@ public:
     // {
     //     std::cout << get_name() << ": ???\n";
     // }
-    virtual void talk() = 0;
+    virtual void talk() = 0; // <--- abstract class
 private:
     std::string name_;
     int x_;
