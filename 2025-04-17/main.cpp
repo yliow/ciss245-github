@@ -35,7 +35,7 @@ public:
     {}
     void talk()
     {
-        std::cout << get_name() << ": hi\n";
+        std::cout << get_name() << ": Hi, my name is " << get_name << "\n";
     }
 private:
 };
@@ -116,11 +116,12 @@ int main()
     thing[0] = new Man("John", 8);
     thing[1] = new Man("Tom", 10);
     thing[2] = new Dog("Rex", 9);
-    // or use std::vector< LivingThing * > like this
-    std::vector< LivingThing * > thing;
-    thing.push_back(new Man("John", 8));
-    thing.push_back(new Man("Tom", 10));
-    thing.push_back(new Rex("Rex", 9));
+    // or use std::vector< LivingThing * > like this:
+    //
+    // std::vector< LivingThing * > thing; <--- probably best
+    // thing.push_back(new Man("John", 8));
+    // thing.push_back(new Man("Tom", 10));
+    // thing.push_back(new Rex("Rex", 9));
     
     while (1)
     {
