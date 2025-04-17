@@ -66,6 +66,24 @@ std::ostream & operator<<(std::ostream & cout, const Dog & dog)
     return cout;
 };
 
+
+class P
+{
+public:
+    virtual void f()
+    {
+        std::cout << "P::f()\n";
+    }
+};
+
+class C: public P
+{
+    virtual void f()
+    {
+        std::cout << "C::f()\n";
+    }
+};
+
 int main()
 {
     Man john("John", 5);
@@ -75,6 +93,11 @@ int main()
     std::cout << john << '\n';
     std::cout << rex << '\n';
     std::cout << goldie << '\n';
+
+    P * p = new C();
+    p->f();
+
+    delete p;
     
     return 0;
     
