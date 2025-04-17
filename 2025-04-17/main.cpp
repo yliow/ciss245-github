@@ -35,7 +35,7 @@ public:
     {}
     void talk()
     {
-        std::cout << get_name() << ": Hi, my name is " << get_name() << "\n";
+        std::cout << get_name() << ": Hi, my name is " << get_name() << ".\n";
     }
 private:
 };
