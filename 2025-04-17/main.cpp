@@ -7,6 +7,8 @@ public:
     LivingThing(std::string name, int x)
         :name_(name), x_(x)
     {}
+    virtual ~LivingThing()
+    {}
     std::string get_name() const
     {
         return name_;
@@ -15,6 +17,11 @@ public:
     {
         return x_;
     }
+    // virtual void talk()
+    // {
+    //     std::cout << get_name() << ": ???\n";
+    // }
+    virtual void talk() = 0;
 private:
     std::string name_;
     int x_;
@@ -26,6 +33,10 @@ public:
     Man(std::string name, int x)
         : LivingThing(name, x)
     {}
+    void talk()
+    {
+        std::cout << get_name() << ": hi\n";
+    }
 private:
 };
 std::ostream & operator<<(std::ostream & cout, const Man & man)
@@ -43,6 +54,10 @@ public:
     Man * get_powner() const
     {
         return powner_;
+    }
+    void talk()
+    {
+        std::cout << get_name() << ": bow wow\n";
     }
 private:
     Man * powner_;
@@ -94,11 +109,28 @@ int main()
     std::cout << rex << '\n';
     std::cout << goldie << '\n';
 
+    john.talk();
+    rex.talk();
+
+    LivingThing * thing[3];
+    thing[0] = new Man("John", 8);
+    thing[1] = new Man("Tom", 10);
+    thing[2] = new Dog("Rex", 9);
+    
+    while (1)
+    {
+        for (int i = 0; i < 3; ++i)
+        {
+            thing[i]->talk();
+        }
+        break;
+    }
+    
     // example: virtual method
     // P * p = new C();
     // p->f();
     // delete p;
 
-    return 0;
     
+    return 0;
 }
