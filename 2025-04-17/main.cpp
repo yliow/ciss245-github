@@ -125,12 +125,14 @@ int main()
         }
         break;
     }
+
+
+    for (int i = 0; i < 3; ++i) delete thing[i];
     
     // example: virtual method
     // P * p = new C();
     // p->f();
     // delete p;
-
     
     return 0;
 }
