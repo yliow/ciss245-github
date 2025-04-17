@@ -15,7 +15,6 @@ public:
     {
         return x_;
     }
-
 private:
     std::string name_;
     int x_;
@@ -96,9 +95,9 @@ int main()
 
     P * p = new C();
     p->f();
-
-    delete p;
     
+    delete p;
+
     return 0;
     
 }
