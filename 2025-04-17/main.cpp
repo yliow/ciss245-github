@@ -19,7 +19,7 @@ public:
     }
     // virtual void talk()
     // {
-    //     std::cout << get_name() << ": ???\n";
+    //     std::cout << get_name() << ": ???\n"; // <--- no point
     // }
     virtual void talk() = 0; // <--- abstract class
 private:
@@ -112,6 +112,11 @@ int main()
     john.talk();
     rex.talk();
 
+    // example: virtual method
+    // P * p = new C();
+    // p->f();
+    // delete p;
+
     LivingThing * thing[3];
     thing[0] = new Man("John", 8);
     thing[1] = new Man("Tom", 10);
@@ -129,15 +134,20 @@ int main()
         {
             thing[i]->talk();
         }
+
+        // alternative with std::vector< LivingThing * >:
+        // for (int i = 0; i < thing.size(); ++i)
+        // {
+        //     thing[i]->talk();
+        // }
+        
         break;
     }
 
     for (int i = 0; i < 3; ++i) delete thing[i];
-    
-    // example: virtual method
-    // P * p = new C();
-    // p->f();
-    // delete p;
+
+    // WRONG:
+    //LivingThing a("a", 5);
     
     return 0;
 }
