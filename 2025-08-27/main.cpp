@@ -6,6 +6,7 @@
 int dieroll();
 char cointoss();
 
+
 int main()
 {
     srand((unsigned int) time(NULL));
@@ -38,6 +39,7 @@ char cointoss()
         return 'T';
     }
 }
+
 
 int dieroll()
 {
