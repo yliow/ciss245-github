@@ -2,7 +2,9 @@
 #include <cmath>
 
 bool isprime(int n);
-
+add_fraction(int n0, int d0,
+             int n1, int d1,
+             int & n2, int & d2);
 
 int min(int x, int y)
 {
@@ -22,14 +24,12 @@ int main()
 
     // now compute GCD of n2,d2. store it in g.
     int g = 1;
-    for (int i = 1; i <= min(n2, d2); ++i)
+    for (int i = min(n2, d2); i >= 1; --i)
     {
-        if (n2 % i == 0 && d2 & i == 0)
+        if (n2 % i == 0 && d2 % i == 0)
         {
-            if (i > g)
-            {
-                g = i; 
-            }
+            g = i;
+            break;
         }
     }
 
