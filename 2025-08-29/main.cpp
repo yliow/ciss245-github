@@ -33,6 +33,10 @@ int main()
         }
     }
 
+    // simplify the fraction n2/d2
+    n2 /= g;
+    d2 /= g;
+
     std::cout << n0 << '/' << d0
               << " + "
               << n1 << '/' << d1
