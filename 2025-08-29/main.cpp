@@ -1,15 +1,86 @@
 #include <iostream>
 #include <cmath>
+#include "array.h"
 
 bool isprime(int n);
 void add_fraction(int n0, int d0,
                   int n1, int d1,
                   int & n2, int & d2);
 
+// int main()
+// {
+//     int n0, d0; // models fraction n0/d0
+//     int n1, d1; // models fraction n1/d1
+//     std::cin >> n0 >> d0 >> n1 >> d1;
+
+//     int n2, d2;
+//     add_fraction(n0, d0, n1, d1, n2, d2);
+
+//     std::cout << n0 << '/' << d0
+//               << " + "
+//               << n1 << '/' << d1
+//               << " = "
+//               << n2 << '/' << d2
+//               << '\n';
+    
+//     return 0;
+    // double x;
+    // std::cin >> x;
+    // for (int n = 2; n <= x; ++n)
+    // {
+    //     if (isprime(n))
+    //     {
+    //         std::cout << n << ' ';
+    //     }
+    // }
+    // std::cout << '\n';
+
+    // return 0;
+//}
+
+int main()
+{
+    // int n0, d0; // models fraction n0/d0
+    // int n1, d1; // models fraction n1/d1
+    // std::cin >> n0 >> d0 >> n1 >> d1;
+
+    // int n2, d2;
+    // add_fraction(n0, d0, n1, d1, n2, d2);
+
+    // std::cout << n0 << '/' << d0
+    //           << " + "
+    //           << n1 << '/' << d1
+    //           << " = "
+    //           << n2 << '/' << d2
+    //           << '\n';
+    
+    // return 0;
+    // double x;
+    // std::cin >> x;
+    // for (int n = 2; n <= x; ++n)
+    // {
+    //     if (isprime(n))
+    //     {
+    //         std::cout << n << ' ';
+    //     }
+    // }
+    // std::cout << '\n';
+
+    // return 0;
+
+    int x[] = {5, 3, 1, 2, 4, 6};
+    print(x, 0, 6);
+    println(x, 2, 5);
+
+    return 0;
+}
+
+
 int min(int x, int y)
 {
     return (x <= y ? x : y);
 }
+
 
 int GCD(int m, int n)
 {
@@ -26,43 +97,18 @@ int GCD(int m, int n)
     return g;
 }
 
-int main()
+void add_fraction(int n0, int d0,
+                  int n1, int d1,
+                  int & n2, int & d2)
 {
-    int n0, d0; // models fraction n0/d0
-    int n1, d1; // models fraction n1/d1
-    std::cin >> n0 >> d0 >> n1 >> d1;
-
-    int n2, d2;
     // compute n2/d2 as n0/d0 + n1/d1.
     n2 = n0 *d1 + d0 * n1;
     d2 = d0 * d1;
 
-    int g = GCD(n2, d2);
-
     // simplify the fraction n2/d2
+    int g = GCD(n2, d2);
     n2 /= g;
     d2 /= g;
-
-    std::cout << n0 << '/' << d0
-              << " + "
-              << n1 << '/' << d1
-              << " = "
-              << n2 << '/' << d2
-              << '\n';
-    
-    return 0;
-    // double x;
-    // std::cin >> x;
-    // for (int n = 2; n <= x; ++n)
-    // {
-    //     if (isprime(n))
-    //     {
-    //         std::cout << n << ' ';
-    //     }
-    // }
-    // std::cout << '\n';
-
-    // return 0;
 }
 
 
