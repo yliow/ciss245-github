@@ -2,13 +2,28 @@
 #include <cmath>
 
 bool isprime(int n);
-add_fraction(int n0, int d0,
-             int n1, int d1,
-             int & n2, int & d2);
+void add_fraction(int n0, int d0,
+                  int n1, int d1,
+                  int & n2, int & d2);
 
 int min(int x, int y)
 {
     return (x <= y ? x : y);
+}
+
+int GCD(int m, int n)
+{
+    // now compute GCD of m,n. store it in g.
+    int g = 1;
+    for (int i = min(m, n); i >= 1; --i)
+    {
+        if (m % i == 0 && n % i == 0)
+        {
+            g = i;
+            break;
+        }
+    }
+    return g;
 }
 
 int main()
@@ -22,16 +37,7 @@ int main()
     n2 = n0 *d1 + d0 * n1;
     d2 = d0 * d1;
 
-    // now compute GCD of n2,d2. store it in g.
-    int g = 1;
-    for (int i = min(n2, d2); i >= 1; --i)
-    {
-        if (n2 % i == 0 && d2 % i == 0)
-        {
-            g = i;
-            break;
-        }
-    }
+    int g = GCD(n2, d2);
 
     // simplify the fraction n2/d2
     n2 /= g;
