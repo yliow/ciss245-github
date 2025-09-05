@@ -93,7 +93,7 @@ void push_back(int y[], int & y_size, int y_capacity, int v)
 {
     if (y_size < y_capacity)
     {
-        y[y_len] = v;
-        ++y_len;
+        y[y_size] = v;
+        ++y_size;
     }
 }
