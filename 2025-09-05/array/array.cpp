@@ -89,8 +89,11 @@ void println(int x[], int start, int end)
 }
 
 
-void push_back(int y[], int & y_len, int v)
+void push_back(int y[], int & y_size, int y_capacity, int v)
 {
-    y[y_len] = v;
-    ++y_len;
+    if (y_size < y_capacity)
+    {
+        y[y_len] = v;
+        ++y_len;
+    }
 }

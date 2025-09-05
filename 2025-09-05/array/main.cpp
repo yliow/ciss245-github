@@ -77,14 +77,15 @@ int main()
 
     std::cout << "testing push_back ...\n";
     int y[10];
-    int y_len = 0;
-    for (int i = 10; i < 15; ++i)
+    int y_size = 0;
+    int y_capacity = 10;
+    for (int i = 10; i < 25; ++i)
     {
         std::cout << '\n';
         std::cout << "top ...\n";
-        println(y, 0, y_len);
-        push_back(y, y_len, i);
-        println(y, 0, y_len);
+        println(y, 0, y_size);
+        push_back(y, y_size, y_capacity, i);
+        println(y, 0, y_size);
         std::cout << "bottom ...\n";
     }
     
