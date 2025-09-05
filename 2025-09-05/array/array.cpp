@@ -88,12 +88,17 @@ void println(int x[], int start, int end)
     std::cout << '\n';
 }
 
-
-void push_back(int y[], int & y_size, int y_capacity, int v)
+// return is error code. 0 = no error. 1 = overflow error.
+int push_back(int y[], int & y_size, int y_capacity, int v)
 {
     if (y_size < y_capacity)
     {
         y[y_size] = v;
         ++y_size;
+        return 0;
+    }
+    else
+    {
+        return 1;
     }
 }
