@@ -41,14 +41,14 @@ void bubblesort(int x[], int start, int end)
  */
 int binarysrch(int x[], int start, int end, int target)
 {
-    lower = start;
-    upper = end - 1;
+    int lower = start;
+    int upper = end - 1;
     while (lower <= upper)
     {
-        mid = lower + (upper - lower) / 2;
+        int mid = lower + (upper - lower) / 2;
         if (x[mid] == target)
             return mid;
-        else if (target < x[mid]):
+        else if (target < x[mid])
             upper = mid - 1;
         else
             lower = mid + 1;

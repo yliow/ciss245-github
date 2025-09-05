@@ -78,13 +78,16 @@ int main()
     std::cout << "testing push_back ...\n";
     int y[10];
     int y_len = 0;
-    println(y, 0, y_len);
-    push_back(y, y_len, 7);
-    println(y, 0, y_len);
-    push_back(y, y_len, 11);
-    println(y, 0, y_len);
-    push_back(y, y_len, 13);
-    println(y, 0, y_len);
+    for (int i = 10; i < 15; ++i)
+    {
+        std::cout << '\n';
+        std::cout << "top ...\n";
+        println(y, 0, y_len);
+        push_back(y, y_len, i);
+        println(y, 0, y_len);
+        std::cout << "bottom ...\n";
+    }
+    
     
     return 0;
 }

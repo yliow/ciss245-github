@@ -17,6 +17,6 @@ void insert(int x[], int index, int y[], int y_len);
 // array x becomes {1, 9999, 8888, 7777, 3, 4, 2}
 void bubblesort(int x[], int start, int end);
 int binarysrch(int x[], int start, int end, int target);
-void push_back(int y[], int y_len, int v);
+void push_back(int y[], int & y_len, int v);
 
 #endif
