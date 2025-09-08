@@ -37,5 +37,5 @@ int GCD(int m, int n)
 
 void print_fraction(int n, int d)
 {
-    std::cout << n0 << '/' << d0;
+    std::cout << n << '/' << d;
 }
