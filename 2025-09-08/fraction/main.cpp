@@ -18,6 +18,18 @@ int main()
     std::cout << " = ";
     print_fraction(n2, d2);
     std::cout << '\n';
+
+    /*
+      Fraction f(1, 7);
+      Fraction g(2, 3);
+      Fraction h;
+      h = f + g;
+      std::cout << h << '\n';
+
+      Array x(10);
+      x[10] = 42;
+      
+     */
     return 0;
 }
 

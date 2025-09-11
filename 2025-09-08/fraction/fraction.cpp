@@ -1,3 +1,4 @@
+#include <iostream>
 #include "fraction.h"
 
 void add_fraction(int n0, int d0,
