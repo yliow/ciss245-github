@@ -27,6 +27,10 @@ void nextprime(int & x)
     return;
 }
 
+void nextprime(int * p)
+{
+    ++(*p);
+}
     
 int main()
 {
