@@ -20,16 +20,14 @@ bool isprime(int n)
 void nextprime(int & x)
 {
     ++x;
-    while (!isprime(x))
-    {
-        ++x;
-    }
-    return;
+    while (!isprime(x++)) {}
 }
 
 void nextprime(int * p)
 {
     ++(*p);
+    //while (!isprime(*p++)) {}
+    while (!isprime(*p)) { ++(*p); }
 }
     
 int main()
