@@ -12,6 +12,11 @@ int main()
     std::cout << r0.get_n() << '\n';
 
     std::cout << r0.n() << '\n';
+    r0.n() = 54321;
+    std::cout << r0 << '\n';
+
+    std::cin >> r0; // operator>>(std::cin , r0)
+    std::cout << r0 << '\n';
     
     return 0;
 }
