@@ -17,6 +17,6 @@ int main()
 
     std::cin >> r0; // operator>>(std::cin , r0)
     std::cout << r0 << '\n';
-    
+
     return 0;
 }
