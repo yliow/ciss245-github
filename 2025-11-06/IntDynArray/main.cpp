@@ -1,4 +1,5 @@
 #include <iostream>
+#include "IntDynArray.h"
 
 int main()
 {
