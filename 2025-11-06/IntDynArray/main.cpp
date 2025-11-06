@@ -5,6 +5,9 @@ int main()
 {
     IntDynArray a(5); // a models array size 0 within an array of capacity 5;
     std::cout << "a:" << a << '\n';
+
+    IntDynArray c(a);
+    std::cout << "c:" << c << '\n';
     
     // IntDynArray b(1000); // b.capacity_ is 1000, b.size_ = 0
     // a.resize(3);
