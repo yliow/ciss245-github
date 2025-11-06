@@ -11,6 +11,14 @@ int main()
     std::cout << "a:" << a << '\n';
     IntDynArray c(a);
     std::cout << "c:" << c << '\n';
+
+    IntDynArray b(10);
+    b.resize(10);
+    b[0] = 5;
+    std::cout << "b:" << b << '\n';
+
+    b = a;
+    std::cout << "b:" << b << '\n';
     
     // IntDynArray b(1000); // b.capacity_ is 1000, b.size_ = 0
     // a.resize(3);

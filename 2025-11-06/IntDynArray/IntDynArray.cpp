@@ -22,6 +22,20 @@ IntDynArray::IntDynArray(const IntDynArray & a)
 }
 
 
+IntDynArray & IntDynArray::operator=(const IntDynArray & a)
+{
+    delete[] p_;
+    p_ = new int[a.size_];
+    size_ = a.size_;
+    capacity_ = a.size_;
+    for (int i = 0; i < a.size_; ++i)
+    {
+        p_[i] = a.p_[i];
+    }
+    return (*this);
+}
+
+
 int IntDynArray::size() const
 {
     return size_;
