@@ -14,13 +14,13 @@ int IntDynArray::size() const
 
 int IntDynArray::operator[](int i) const
 {
-    return a.p_[i];
+    return p_[i];
 }
 
 
 int & IntDynArray::operator[](int i)
 {
-    return a.p_[i];
+    return p_[i];
 }
 
 
