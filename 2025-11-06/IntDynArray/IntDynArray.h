@@ -7,7 +7,7 @@ class IntDynArray
     IntDynArray(int); // input is capacity request
     ~IntDynArray();
     IntDynArray(const IntDynArray &);
-    IntDynArray & operator(const IntDynArray &);
+    IntDynArray & operator=(const IntDynArray &);
     int size() const;
     int operator[](int) const;
     int & operator[](int);
