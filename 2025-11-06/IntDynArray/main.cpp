@@ -8,6 +8,7 @@ int main()
     a.resize(2);
     a[0] = 99;
     a[1] = -3;
+    std::cout << "a:" << a << '\n';
     IntDynArray c(a);
     std::cout << "c:" << c << '\n';
     
