@@ -9,6 +9,7 @@ class IntDynArray
     IntDynArray(const IntDynArray &);
     IntDynArray & operator=(const IntDynArray &);
     int size() const;
+    void resize(int);
     int operator[](int) const;
     int & operator[](int);
   private:

@@ -27,6 +27,10 @@ int IntDynArray::size() const
     return size_;
 }
 
+void IntDynArray::resize(int size)
+{
+    size_ = size;
+}
 
 int IntDynArray::operator[](int i) const
 {
