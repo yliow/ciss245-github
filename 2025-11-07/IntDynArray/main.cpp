@@ -1,0 +1,35 @@
+#include <iostream>
+#include "IntDynArray.h"
+
+int main()
+{
+    IntDynArray a(5); // a models array size 0 within an array of capacity 5;
+    std::cout << "a:" << a << '\n';
+    a.resize(2);
+    a[0] = 99;
+    a[1] = -3;
+    std::cout << "a:" << a << '\n';
+    IntDynArray c(a);
+    std::cout << "c:" << c << '\n';
+
+    IntDynArray b(10);
+    b.resize(10);
+    b[0] = 5;
+    std::cout << "b:" << b << '\n';
+
+    b = a;
+    std::cout << "b:" << b << '\n';
+    
+    // IntDynArray b(1000); // b.capacity_ is 1000, b.size_ = 0
+    // a.resize(3);
+    // a[0] = 1;
+    // a[1] = 2;
+    // a[2] = 10;
+    // std::cout << a << '\n'; // prints {1, 2, 10}
+    // a = b; // everything in b transferred to a
+    // a.push_back(8); // add 8 to "back" of array, expanded automaticaly if nec.
+
+    // a has a.p_ pointer to an array on the heap
+    // a has a.size_
+    // a has a.capacity_
+}
