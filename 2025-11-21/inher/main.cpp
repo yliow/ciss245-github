@@ -23,10 +23,10 @@ private:
     int points_;
 };
 
-class Spaceship
+class Spaceship: public GameObject
 {
     Spaceship(int x, int y)
-        : x_(x), y_(y)
+        : GameObject(x, y)
     {}
 private:
 };
