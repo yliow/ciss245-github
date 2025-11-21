@@ -25,6 +25,7 @@ private:
 
 class Spaceship: public GameObject
 {
+public:
     Spaceship(int x, int y)
         : GameObject(x, y)
     {}
