@@ -3,10 +3,7 @@
 class Shape
 {
 public:
-    double area()
-    {
-        return 0.0;
-    }
+    virtual double area() = 0;
 };
 
 class Rect: public Shape
@@ -39,5 +36,14 @@ int main()
     Circle c;
     c.r = 5;
     std::cout << c.area() << '\n';
+
+    Shape * shape[2];
+    shape[0] = &r;
+    shape[1] = &c;
+
+    for (int i = 0; i < 2; ++i)
+    {
+        std::cout << shape[i]->area() << '\n';
+    }
     return 0;
 }
