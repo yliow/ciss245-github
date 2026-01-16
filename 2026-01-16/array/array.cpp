@@ -37,8 +37,28 @@ void array_assign(int y[], int & y_size, int y_capacity,
     y_size = x_size;
 }
 
+void swap(int & x, int & y)
+{
+    int t = x;
+    x = y;
+    y = t;
+}
+
 void bubblesort(int x[], int x_size, int x_capacity)
-{}
+{
+    for (int i = x_size - 2; i >= 0; --i)
+    {
+        for (int j = 0; j <= i; ++j)
+        {
+            if (x[j] > x[j + 1])
+            {
+                swap(x[j], x[j + 1]);
+            }
+        }
+    }
+}
 
 int binarysrch(int x[], int x_size, int x_capacity, int target)
-{}
+{
+    return 0;
+}
