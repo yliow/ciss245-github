@@ -26,3 +26,13 @@ void push_back(int x[], int & x_size, int x_capacity, int e)
         ++x_size;
     }
 }
+
+void array_assign(int y[], int & y_size, int y_capacity,
+                  int x[], int x_size, int x_capacity)
+{
+    for (int i = 0; i < x_size; ++i)
+    {
+        y[i] = x[i];
+    }
+    y_size = x_size;
+}

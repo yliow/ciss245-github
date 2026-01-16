@@ -21,6 +21,12 @@ int main()
     int y_capacity = 10;
     std::cout << "y: ";
     array_println(y, y_size, y_capacity);
-    
+
+    array_assign(y, y_size, y_capacity, x, x_size, x_capacity);
+    std::cout << "x: ";
+    array_println(x, x_size, x_capacity);
+    std::cout << "y: ";
+    array_println(y, y_size, y_capacity);
+
     return 0;
 }
