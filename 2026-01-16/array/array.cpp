@@ -36,3 +36,9 @@ void array_assign(int y[], int & y_size, int y_capacity,
     }
     y_size = x_size;
 }
+
+void bubblesort(int x[], int x_size, int x_capacity)
+{}
+
+int binarysrch(int x[], int x_size, int x_capacity, int target)
+{}
