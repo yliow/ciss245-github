@@ -3,13 +3,15 @@
 
 void array_print(int x[], int x_size, int x_capacity)
 {
-    std::cout << '{';
+    //std::cout << '{';
+    std::cout << '|';
     for (int i = 0; i < x_size; ++i)
     {
-        std::cout << x[i];
-        if (i < x_size - 1) std::cout << ", ";
+        std::cout << (x[i] == 1 ? 'X' : ' ');
+        //if (i < x_size - 1) std::cout << ", ";
     }
-    std::cout << '}';
+    std::cout << '|';
+    //std::cout << '}';
 }
 
 void array_println(int x[], int x_size, int x_capacity)
@@ -60,5 +62,14 @@ void bubblesort(int x[], int x_size, int x_capacity)
 
 int binarysrch(int x[], int x_size, int x_capacity, int target)
 {
-    return 0;
+    int lower = 0;
+    int upper = x_size - 1;
+    while (lower <= upper)
+    {
+        int mid = lower + (upper - lower) / 2;
+        if (x[mid] == target) return mid;
+        else if (target < x[mid]) upper = mid - 1;
+        else lower = mid + 1;
+    }
+    return -1;
 }
