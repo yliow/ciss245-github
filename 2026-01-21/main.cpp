@@ -40,9 +40,7 @@ void update(int x[], int n)
 int main()
 {
     int x[2 * 500 + 1] = {0}; // cellular automata
-    //x[3] = 1;
-    //x[4] = 1;
-    int n; // max of 500 .. the cellular automata is x[0 .. 2 * n + 1]
+    int n; // max of 500 .. the cellular automata is x[0 .. 2 * n]
     std::cin >> n;
     x[n] = 1;
     
