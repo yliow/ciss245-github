@@ -54,7 +54,5 @@ int main()
         std::cout << '\n';
     }
 
-    std::cout << 2 * 2 * 2 << '\n';
-    std::cout << (1 << 3) << '\n';
     return 0;
 }
