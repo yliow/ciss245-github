@@ -21,3 +21,13 @@ void Time_add_one_sec(Time & t)
 {
     ++t.sec;
 }
+
+bool operator==(const Time & t0, const Time & t1)
+{
+    return (t0.hour == t1.hour && t0.min == t1.min && t0.sec == t1.sec);
+}
+
+bool operator!=(const Time & t0, const Time & t1)
+{
+    return !(t0 == t1);
+}
