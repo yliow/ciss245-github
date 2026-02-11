@@ -9,3 +9,4 @@ int main()
     std::cout << f1 << '\n';
     return 0;
 }
+
