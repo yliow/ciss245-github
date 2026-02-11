@@ -19,6 +19,7 @@ bool isprime(int n)
     }
     return true;
 }
+
 void nextprime(int * p)
 {
     while (!isprime(*p))
@@ -29,17 +30,23 @@ void nextprime(int * p)
 
 void nextprime(int & x)
 {
+    while (!isprime(x))
+    {
+        ++x;
+    }
 }
 
 // x = nextprime(x)
-int nextprime(int x)
-{
-}
+// int nextprime(int x)
+// {
+// }
 
 int main()
 {
     int x = 7;
-    nextprime(&x);
+    nextprime(&x); // use first function
     std::cout << x << '\n';
-    
+    nextprime(x); // the second function
+    //nextprime(x);
+    return 0;
 }
