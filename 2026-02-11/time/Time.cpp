@@ -31,3 +31,20 @@ bool operator!=(const Time & t0, const Time & t1)
 {
     return !(t0 == t1);
 }
+
+void operator+=(Time & t0, const Time & t1)
+{
+    t0.hour += t1.hour;
+    t0.min += t1.min;
+    t0.sec += t1.sec;
+}
+
+std::ostream & operator<<(std::ostream & cout, const Time & t0)
+{
+    cout << std::setw(2) << std::setfill('0') << t0.hour
+         << ':'
+         << std::setw(2) << std::setfill('0') << t0.min
+         << ':'
+         << std::setw(2) << std::setfill('0') << t0.sec;
+    return cout;
+}
