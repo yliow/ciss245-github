@@ -111,8 +111,8 @@ void bubblesort(int * start, int * end)
         {
             if (*j > *(j + 1))
             {
-                int t = *i;
-                *i = *(i + 1);
+                int t = *j;
+                *j = *(j + 1);
                 *(j + 1) = t;
             }
         }
@@ -147,6 +147,10 @@ int main()
     {
         std::cout << *p[i] << ' ';
     }
+
+    int c[] = {5, 3, 1, 2, 4, 8, 7, 6};
+    bubblesort(c, c + 8);
+    println(c, c + 8);
     
     return 0;
 }
