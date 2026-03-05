@@ -1,17 +1,21 @@
 #include <iostream>
-
-struct Date
-{
-    int yyyy_, mm_, dd_;
-};
-
-void init(Date &, int, int, int);
-void print(const Date &);
-void add_y(Date &, int);
-void add_m(Date &, int);
-void add_d(Date &, int);
+#include "Date.h"
 
 int main()
 {
+    Date today;
+    today.init(2026, 3, 4);
+    today.print();
+    today.add_y(1);
+    today.print();
+    today.add_m(1);
+    today.print();
+    today.add_d(1);
+    today.print();
+
+    Date yesterday;
+    yesterday.init(2026, 3, 3);
+    yesterday.print();
+    
     return 0;
 }
