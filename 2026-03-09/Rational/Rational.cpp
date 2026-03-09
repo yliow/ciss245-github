@@ -5,6 +5,11 @@ Rational::Rational(int n, int d)
     : n_(n), d_(d)
 {}
 
+
+Rational::Rational(const Rational & r)
+    : n_(r.n_), d_(r.d_)
+{}
+
 std::ostream & operator<<(std::ostream & cout,
                           const Rational & r)
 {
