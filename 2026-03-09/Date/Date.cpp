@@ -27,15 +27,17 @@ void Date::add_date(const Date & date)
     dd_ += date.dd_;
 }
 
-void Date::operator+=(const Date & date)
+Date & Date::operator+=(const Date & date)
 {
     yyyy_ += date.yyyy_;
     mm_ += date.mm_;
     dd_ += date.dd_;
+    return (*this);
 }
 
 int Date::year() const
 {
+    //std::cout << "Date::year() ... this: " << this << '\n';
     return yyyy_;
 }
 
