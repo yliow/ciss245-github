@@ -21,7 +21,8 @@ int main()
     std::cout << "today: " << today << "\n";
     //today.print();
     Date inc_date(2, 3, 5);
-    today.add_date(inc_date);
+    //today.add_date(inc_date);
+    today += inc_date; // today.operator+=(inc_date)
     std::cout << "today: " << today << "\n";
 
     Date copy_of_today(today.year(), today.month(), today.day());

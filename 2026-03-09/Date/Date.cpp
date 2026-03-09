@@ -27,6 +27,13 @@ void Date::add_date(const Date & date)
     dd_ += date.dd_;
 }
 
+void Date::operator+=(const Date & date)
+{
+    yyyy_ += date.yyyy_;
+    mm_ += date.mm_;
+    dd_ += date.dd_;
+}
+
 int Date::year() const
 {
     return yyyy_;
