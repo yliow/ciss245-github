@@ -20,6 +20,13 @@ Date::Date()
     std::cout << "Date::Date()\n";
 }
 
+void Date::add_date(const Date & date)
+{
+    yyyy_ += date.yyyy_;
+    mm_ += date.mm_;
+    dd_ += date.dd_;
+}
+
 int Date::year() const
 {
     return yyyy_;

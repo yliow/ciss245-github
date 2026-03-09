@@ -15,6 +15,7 @@ class Date
     void add_m(int);
     void add_d(int);
     void add_y_m_d(int, int, int);
+    void add_date(const Date &);
     int year() const;
     int month() const;
     int day() const;

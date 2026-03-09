@@ -20,6 +20,9 @@ int main()
     today.add_y_m_d(2, 3, 5);
     std::cout << "today: " << today << "\n";
     //today.print();
+    Date inc_date(2, 3, 5);
+    today.add_date(inc_date);
+    std::cout << "today: " << today << "\n";
 
     Date copy_of_today(today.year(), today.month(), today.day());
     copy_of_today.print();
