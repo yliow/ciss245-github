@@ -7,6 +7,7 @@ class Rational
 {
   public:
     Rational(int, int);
+    Rational(const Rational &);
     //private:
     int n_, d_;
 };
