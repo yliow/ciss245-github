@@ -33,5 +33,10 @@ int main()
                              //          OR
                              //          operator==(r3, r4)
                << '\n';
+    r3.n() = 0;
+    std::cout << (r3 == r4) //  same as r3.operator==(r4)
+                             //          OR
+                             //          operator==(r3, r4)
+               << '\n';
     return 0;
 }
