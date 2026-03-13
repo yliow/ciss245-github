@@ -48,11 +48,13 @@ void Rational::set_n(int n)
     n_ = n;
 }
 
-
-
 int Rational::d() const
 {
     return d_;
+}
+void Rational::set_d(int d)
+{
+    d_ = d;
 }
 
 

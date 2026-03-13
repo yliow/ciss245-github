@@ -19,6 +19,7 @@ public:
     void set_n(int);
     int & n();
     int d() const;
+    void set_d(int);
     int & d();
 private:
     int n_, d_;
