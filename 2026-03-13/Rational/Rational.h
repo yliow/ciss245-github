@@ -16,6 +16,7 @@ public:
     Rational operator-(const Rational &) const;
     int n() const;
     int get_n() const;
+    void set_n(int);
     int & n();
     int d() const;
     int & d();

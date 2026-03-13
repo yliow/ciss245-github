@@ -21,6 +21,8 @@ int main()
     std::cout << "r2: " << r2 << '\n';
 
     std::cout << r2.get_n() << '\n';
+    r2.set_n(1000);
+    std::cout << r2 << '\n';
     
     return 0;
 }

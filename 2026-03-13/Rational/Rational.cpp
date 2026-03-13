@@ -43,6 +43,11 @@ int Rational::get_n() const
 {
     return n_;
 }
+void Rational::set_n(int n)
+{
+    n_ = n;
+}
+
 
 
 int Rational::d() const
