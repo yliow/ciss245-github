@@ -38,23 +38,29 @@ int Rational::n() const
 {
     return n_;
 }
+int & Rational::n() 
+{
+    return n_;
+}
 
 int Rational::get_n() const
 {
     return n_;
 }
-void Rational::set_n(int n)
+Rational & Rational::set_n(int n)
 {
     n_ = n;
+    return (*this);
 }
 
 int Rational::d() const
 {
     return d_;
 }
-void Rational::set_d(int d)
+Rational &  Rational::set_d(int d)
 {
     d_ = d;
+    return (*this);
 }
 
 
@@ -63,4 +69,12 @@ std::ostream & operator<<(std::ostream & cout,
 {
     cout << r.n() << '/' << r.d();
     return cout;
+}
+
+// a/b == c/d
+// same as
+// a * d == c * b
+bool Rational::operator==(const Rational & r) const
+{
+    return (n_ * r.d_ == d_ * r.n_);
 }

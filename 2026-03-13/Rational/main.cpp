@@ -21,8 +21,17 @@ int main()
     std::cout << "r2: " << r2 << '\n';
 
     std::cout << r2.get_n() << '\n';
-    r2.set_n(1000);
+    (r2.set_n(1000)).set_d(8000);
     std::cout << r2 << '\n';
-    
+
+    std::cout << r2.n() << '\n';
+    r2.n() = 42;
+
+    Rational r3(1, 2);
+    Rational r4(10, 20);
+    std::cout << (r3 == r4) //  same as r3.operator==(r4)
+                             //          OR
+                             //          operator==(r3, r4)
+               << '\n';
     return 0;
 }

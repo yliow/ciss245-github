@@ -15,12 +15,13 @@ public:
     Rational & operator-=(const Rational &);
     Rational operator-(const Rational &) const;
     int n() const;
-    int get_n() const;
-    void set_n(int);
     int & n();
+    int get_n() const;
+    Rational & set_n(int);
     int d() const;
-    void set_d(int);
+    Rational & set_d(int);
     int & d();
+    bool operator==(const Rational & r) const;
 private:
     int n_, d_;
 };
