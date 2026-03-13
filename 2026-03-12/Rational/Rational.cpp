@@ -10,12 +10,29 @@ Rational::Rational(const Rational & r)
     : n_(r.n_), d_(r.d_)
 {}
 
-Rational & Rational::operator+=(const Rational &)
+Rational & Rational::operator+=(const Rational & r)
 {
-    // delay
+    n_ = n_ * r.d_ + d_ * r.n_;
+    d_ = d_ * r.d_;
     return (*this);
 }
 
+Rational Rational::operator+(const Rational & r1) const
+{
+    return (Rational(*this) += r1);
+}
+
+Rational & Rational::operator-=(const Rational & r)
+{
+    n_ = n_ * r.d_ - d_ * r.n_;
+    d_ = d_ * r.d_;
+    return (*this);
+}
+
+Rational Rational::operator-(const Rational & r1) const
+{
+    return (Rational(*this) -= r1);
+}
 
 int Rational::n() const
 {

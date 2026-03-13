@@ -11,8 +11,13 @@ public:
     Rational(int, int);
     Rational(const Rational &);
     Rational & operator+=(const Rational &);
+    Rational & operator+(const Rational &) const;
+    Rational & operator-=(const Rational &);
+    Rational & operator-(const Rational &) const;
     int n() const;
+    int & n();
     int d() const;
+    int & d();
 private:
     int n_, d_;
 };
