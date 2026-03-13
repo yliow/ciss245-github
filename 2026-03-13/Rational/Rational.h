@@ -9,6 +9,7 @@ public:
     // Rational() -- g++ does not give u the default is any ctor is defined
     // Rational(const Rational &) -- g++ does not give u if u defined a copy ctor
     Rational(int, int);
+    Rational(int);
     Rational(const Rational &);
     Rational & operator+=(const Rational &);
     Rational operator+(const Rational &) const;

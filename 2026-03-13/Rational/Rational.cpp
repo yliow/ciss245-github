@@ -78,3 +78,8 @@ bool Rational::operator==(const Rational & r) const
 {
     return (n_ * r.d_ == d_ * r.n_);
 }
+
+
+Rational::Rational(int n)
+    : n_(n), d_(1)
+{}

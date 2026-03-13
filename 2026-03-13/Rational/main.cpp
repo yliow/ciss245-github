@@ -38,5 +38,8 @@ int main()
                              //          OR
                              //          operator==(r3, r4)
                << '\n';
+
+    Rational r5(5);
+    std::cout << r5 << '\n';
     return 0;
 }
