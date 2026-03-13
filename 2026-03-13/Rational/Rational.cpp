@@ -83,3 +83,8 @@ bool Rational::operator==(const Rational & r) const
 Rational::Rational(int n)
     : n_(n), d_(1)
 {}
+
+Rational::Rational()
+    : n_(0), d_(1)
+{}
+    

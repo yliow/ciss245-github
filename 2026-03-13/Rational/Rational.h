@@ -8,6 +8,7 @@ class Rational
 public:
     // Rational() -- g++ does not give u the default is any ctor is defined
     // Rational(const Rational &) -- g++ does not give u if u defined a copy ctor
+    Rational();
     Rational(int, int);
     Rational(int);
     Rational(const Rational &);

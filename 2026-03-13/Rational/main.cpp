@@ -41,5 +41,9 @@ int main()
 
     Rational r5(5);
     std::cout << r5 << '\n';
+
+    Rational r6;
+    std::cout << r6 << '\n';
+    
     return 0;
 }
