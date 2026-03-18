@@ -9,11 +9,16 @@ int main()
     // delete p;
 
     IntPointer p(42); // p.p_ auto allocate
-    std::cout << p.dereference() << '\n';
-    p.dereference() = -999;
-    std::cout << p.dereference() << '\n';
+    // std::cout << p.dereference() << '\n';
+    // p.dereference() = -999;
+    // std::cout << p.dereference() << '\n';
+
+    std::cout << *p << '\n';
+    *p = -999;
+    std::cout << *p << '\n';
     
     //std::cout << (*p) << '\n';
     //deallocate p.p_
+    
     return 0;
-}
+} // p out of scope ... p.~IntPointer() exec

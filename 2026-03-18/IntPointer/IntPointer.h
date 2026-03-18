@@ -7,8 +7,11 @@ class IntPointer
 {
   public:
     IntPointer(int);
+    ~IntPointer();
     int dereference() const;
     int & dereference();
+    int operator*() const;
+    int & operator*();
   private:
     int * p_;
 };
