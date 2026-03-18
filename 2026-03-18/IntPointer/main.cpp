@@ -19,6 +19,9 @@ int main()
     
     //std::cout << (*p) << '\n';
     //deallocate p.p_
+
+    IntPointer q(p); // fx copy ctor
+    q = p; // fix assign operator
     
     return 0;
 } // p out of scope ... p.~IntPointer() exec

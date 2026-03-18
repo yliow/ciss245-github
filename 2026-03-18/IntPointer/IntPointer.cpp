@@ -6,6 +6,10 @@ IntPointer::IntPointer(int i)
     : p_(new int)
 {
     *p_ = i;
+
+    // FIX
+    // 1. destructor
+    // 2. copy constructor -- pointer aliasing problem
 }
 
 IntPointer::~IntPointer()
