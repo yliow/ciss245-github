@@ -16,11 +16,11 @@ IntPointer::IntPointer(int i)
     // 2. copy constructor -- pointer aliasing problem
 }
 
-// IntPointer::~IntPointer()
-// {
-//     delete p_;
-//     std::cout << "IntPointer::~IntPointer() ...\n";
-// }
+IntPointer::~IntPointer()
+{
+    delete p_;
+    std::cout << "IntPointer::~IntPointer() ...\n";
+}
 
 int IntPointer::dereference() const
 {

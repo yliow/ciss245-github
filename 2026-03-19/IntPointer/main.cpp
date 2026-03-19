@@ -29,6 +29,9 @@ int main()
     // IntPointer * P = new IntPointer(41);
 
     // delete P;
+
+    IntPointer q(0);
+    IntPointer r(1000);
     
     return 0;
 } // p out of scope ... p.~IntPointer() exec

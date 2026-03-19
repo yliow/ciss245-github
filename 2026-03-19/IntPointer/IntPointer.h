@@ -8,7 +8,7 @@ class IntPointer
   public:
     IntPointer();
     IntPointer(int);
-    //~IntPointer();
+    ~IntPointer();
     int dereference() const;
     int & dereference();
     int operator*() const;
