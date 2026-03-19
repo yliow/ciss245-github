@@ -22,6 +22,13 @@ IntPointer::~IntPointer()
     std::cout << "IntPointer::~IntPointer() ...\n";
 }
 
+IntPointer::IntPointer(const IntPointer & p)
+    : p_(new int)
+{
+    *p_ = *(p.p_);
+}
+
+
 int IntPointer::dereference() const
 {
     return *p_;

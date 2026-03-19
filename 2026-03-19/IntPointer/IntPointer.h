@@ -8,6 +8,7 @@ class IntPointer
   public:
     IntPointer();
     IntPointer(int);
+    IntPointer(const IntPointer &);
     ~IntPointer();
     int dereference() const;
     int & dereference();
