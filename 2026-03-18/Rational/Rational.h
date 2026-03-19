@@ -29,5 +29,6 @@ private:
 };
 
 std::ostream & operator<<(std::ostream &, const Rational &);
+Rational operator+(int, const Rational &);
 
 #endif

@@ -88,3 +88,7 @@ Rational::Rational()
     : n_(0), d_(1)
 {}
     
+Rational operator+(int i, const Rational & r)
+{
+    return r + i;
+}

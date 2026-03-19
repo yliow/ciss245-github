@@ -44,6 +44,21 @@ int main()
 
     Rational r6;
     std::cout << r6 << '\n';
-    
+
+    Rational r7 = r5 + 1; // r5.operator+(1)
+                          // if fails tries to typecast
+                         // tries r5.operator+(Rational(1))
+    std::cout << r7 << '\n';
+    r7 = 1 + r5;
+    std::cout << r7 << '\n';
+
+    Rational * p = new Rational; // default constrcutro
+    Rational * p1 = new Rational(5);
+    Rational * p2 = new Rational(5, 2);
+
+    std::cout << p->n() << '\n';
+    delete p;
+    delete p1;
+    delete p2;
     return 0;
 }
