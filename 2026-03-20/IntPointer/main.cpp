@@ -28,7 +28,9 @@ int main()
     std::cout << *p << '\n';
     std::cout << *q << '\n';
 
-    q = p; // same as q.operator=(p)
+    IntPointer r;
+    
+    r = q = p; // same as q.operator=(p)
     
     // IntPointer * P = new IntPointer(41);
 

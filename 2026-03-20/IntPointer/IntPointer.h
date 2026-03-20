@@ -14,7 +14,7 @@ class IntPointer
     int & dereference();
     int operator*() const;
     int & operator*();
-    void operator=(const IntPointer &);
+    IntPointer & operator=(const IntPointer &);
   private:
     int * p_;
 };

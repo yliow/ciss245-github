@@ -28,9 +28,10 @@ IntPointer::IntPointer(const IntPointer & p)
     *p_ = *(p.p_);
 }
 
-void IntPointer::operator=(const IntPointer & p)
+IntPointer & IntPointer::operator=(const IntPointer & p)
 {
     *p_ = *(p.p_);
+    return (*this);
 }
 
 int IntPointer::dereference() const
