@@ -31,6 +31,7 @@ std::ostream & operator<<(std::ostream& cout, const IntDynArray & a)
         if (i < a.size() - 1) cout << ", ";
     }
     cout << '}';
+    return cout;
 }
 
 int IntDynArray::capacity() const

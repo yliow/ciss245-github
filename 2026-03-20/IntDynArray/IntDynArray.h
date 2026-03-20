@@ -12,6 +12,7 @@ class IntDynArray
     int operator[](int) const;
     int & operator[](int);
     int size() const;
+    int capacity() const;
   private:
     int * p_;
     int size_;
