@@ -25,7 +25,9 @@ int main()
 
     IntPointer q(p); // fx copy ctor
     // q = p; // fix assign operator
-
+    std::cout << *p << '\n';
+    std::cout << *q << '\n';
+    
     // IntPointer * P = new IntPointer(41);
 
     // delete P;
