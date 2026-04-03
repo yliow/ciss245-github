@@ -55,9 +55,18 @@ int main()
 
     // want to initialize ARRAY of objects ONCE
     Date * pdate = new Date[10];
+    delete[] pdate;
+    
     Date * pdate2 = new Date;
+    delete pdate2;
+    
     Date * pdate3 = new Date(2026, 4, 2);
+    delete pdate3;
+    
     Date ** pdate4 = new Date*[10];
-    *pdate4[0] = new Date(2025, 1, 2);
+    pdate4[0] = new Date(2025, 1, 2);
+
+    delete[] pdate4;
+    
     return 0;
 }

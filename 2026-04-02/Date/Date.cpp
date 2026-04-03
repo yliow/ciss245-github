@@ -27,7 +27,7 @@ void Date::add_date(const Date & date)
     dd_ += date.dd_;
 }
 
-Date & Date::operator+=(const Date & date) const
+Date & Date::operator+=(const Date & date)
 {
     yyyy_ += date.yyyy_;
     mm_ += date.mm_;
