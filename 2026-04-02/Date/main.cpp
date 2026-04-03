@@ -29,16 +29,12 @@ int main()
     // std::cout << today.year() << '\n';
     // std::cout << &today << '\n';
 
-    return 0;
-
     Date copy_of_today(today.year(), today.month(), today.day());
     copy_of_today.print();
 
     Date copy2_of_today(today);
     copy_of_today.print();
-    
-    return 0;
-    
+
     Date today2 = Date(2020, 2, 2);
     
     Date yesterday;
@@ -55,18 +51,28 @@ int main()
 
     // want to initialize ARRAY of objects ONCE
     Date * pdate = new Date[10];
+    // ...
     delete[] pdate;
     
     Date * pdate2 = new Date;
+    // ...
     delete pdate2;
     
     Date * pdate3 = new Date(2026, 4, 2);
+    // ...
     delete pdate3;
     
     Date ** pdate4 = new Date*[10];
-    pdate4[0] = new Date(2025, 1, 2);
-
+    for (int i = 0; i < 10; ++i)
+    {
+        pdate4[i] = new Date(2025, 1, 2);
+    }
+    // ...
+    for (int i = 0; i < 10; ++i)
+    {
+        delete pdate4[i];
+    }
     delete[] pdate4;
-    
+
     return 0;
 }
