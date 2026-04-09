@@ -25,8 +25,6 @@ void hanoi(int n, char from, char helper, char to)
 
 // recursive version of above println
 
-
-
 // void println(int x[], int start, int end)
 // {
 //     for (int i = start; i < end; ++i)
