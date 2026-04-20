@@ -7,6 +7,7 @@ public:
     LivingThing(const std::string & fname, int num_legs, int x)
         : fname_(fname), num_legs_(num_legs), x_(x)
     {}
+    virtual void talk() = 0;
     std::string get_fname() const
     {
         return fname_;
@@ -36,6 +37,10 @@ public:
     {
         return lname_;
     }
+    void talk() const
+    {
+        std::cout << "Hi I'm " << get_fname() << '\n';
+    }
 private:
     std::string lname_;
 };
@@ -54,7 +59,12 @@ public:
     Dog(const std::string & fname, int num_legs, int x)
         : LivingThing(fname, num_legs, x)
     {}
+    void talk() const
+    {
+        std::cout << "Bark bark bark!\n";
+    }
 private:
+    //Man * owner_;
 };
 std::ostream & operator<<(std::ostream & cout, const Dog & dog)
 {
@@ -66,10 +76,27 @@ std::ostream & operator<<(std::ostream & cout, const Dog & dog)
 
 int main()
 {
-    Man jdoe("John", "Doe", 2, 5);
-    Dog rex("Rex", 4, 7);
+    //Man jdoe("John", "Doe", 2, 5);
+    //Man tsmith("Tom", "Smith", 2, 6);
+    // Simplify: create an array of Man[2]
+    // Dog rex("Rex", 4, 7);
 
-    std::cout << jdoe << '\n';
-    std::cout << rex << '\n';
+    //std::cout << jdoe << '\n';
+    //std::cout << rex << '\n';
+
+    LivingThing * livingthing[3];
+    livingthing[0] = new Man("John", "Doe", 2, 5);
+    livingthing[1] = new Man("Tom", "Smith", 2, 6);
+    livingthing[2] = new Dog("Rex", 4, 7);
+    while (1)
+    {
+        // jdoe.talk();
+        // tsmith.talk();
+        for (int i = 0; i < 2; ++i)
+        {
+            livingthing[i]->talk();
+        }
+        //      rex.talk();
+    }
     return 0;
 }
