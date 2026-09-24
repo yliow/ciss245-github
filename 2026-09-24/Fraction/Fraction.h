@@ -14,8 +14,9 @@ Fraction Fraction_sum(const Fraction & f,
 Fraction get_Fraction(int n, int d);
 Fraction operator+(const Fraction &, const Fraction &);
 std::ostream & operator<<(std::ostream &, const Fraction &);
-void operator+=(?, ?);
-bool operator==(?, ?);
-bool operator!=(?, ?);
+void operator+=(Fraction &, const Fraction &);
+bool operator==(const Fraction &, const Fraction &);
+bool operator!=(const Fraction &, const Fraction &);
+bool operator<(const Fraction &, const Fraction &);
 
 #endif

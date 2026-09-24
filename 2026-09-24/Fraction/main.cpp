@@ -36,12 +36,28 @@ int main()
     //Fraction a = {1, 2};
     Fraction a = get_Fraction(1, 2); // implement function get_Fraction
     Fraction b = get_Fraction(1, 3);
-    b += a;                          // implement function operator+=(b, a)
+    b += a; // left += right         // implement function operator+=(b, a)
     // think about re-implementing operator+ by using operator+=
     Fraction c = get_Fraction(1, 2);
     std::cout << (a == c) << '\n';   // implement function operator==(a, c)
     std::cout << (a != c) << '\n';   // implement function operator!=(a, c)
                                      // this should use opeartor==(a, c)
     std::cout << (a < c) << '\n';    // implement function operator<(a, c)
+
+    std::cout << a.get_n() << '\n';
+    std::cout << a.get_d() << '\n';
+
+    a.set_n(5);
+    a.set_d(7); // set a to 5/7
+    
+    Fraction * p = new Fraction;
+    std::cout << (*p).n << '\n';
+    std::cout << p->n << '\n'; // -> is also called "re-referencing op"
+    (*p) = get_Fraction(2, 3);
+    std::cout << (*p) << '\n';
+    
+    delete p;
+    p = NULL;
+    
     return 0;
 }
