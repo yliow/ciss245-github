@@ -7,7 +7,7 @@ int main()
     Date yesterday = Date(2026, 10, 4);
     Date * lastyear = new Date(2025, 10, 5);
     //today.init(2025, 10, 5);
-    today.print();
+    //today.print();
     std::cout << today // operator<<(std::cout, today)
               << '\n';  
     //yesterday.init(2025, 10, 4);

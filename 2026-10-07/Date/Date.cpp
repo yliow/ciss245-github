@@ -52,17 +52,17 @@ void Date::add_m_d(int i, int j)
     add_d(j);
 }
 
-int Date::year()
+int Date::year() const
 {
     return yyyy_;
 }
 
-int Date::month()
+int Date::month() const
 {
     return mm_;
 }
 
-int Date::day()
+int Date::day() const
 {
     return dd_;
 }
