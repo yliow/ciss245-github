@@ -23,5 +23,7 @@ class Date
     int yyyy_, mm_, dd_;
 };
 
+std::ostream & operator<<(std::ostream &, const Date &);
+
 #endif
 

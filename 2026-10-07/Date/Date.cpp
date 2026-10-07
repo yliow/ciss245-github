@@ -66,3 +66,11 @@ int Date::day()
 {
     return dd_;
 }
+
+std::ostream & operator<<(std::ostream & cout, const Date & date)
+{
+    cout << date.year() << '-'
+         << date.month() << '-'
+         << date.day();
+    return cout;
+}
