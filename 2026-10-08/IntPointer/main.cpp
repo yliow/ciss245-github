@@ -1,4 +1,5 @@
 #include <iostream>
+#include "IntPointer.h"
 
 int main()
 {
@@ -9,14 +10,16 @@ int main()
     // i = *p
     // delete p;
 
-    Intpointer p(42);
+    IntPointer p(42); // want IntPointer p;
     std::cout << p.dereference() // prints 42 ... lvalue access i.e. READ access
               << '\n';
     p.deallocate(); // pointer inside p has release the int
-    p.allocate();
+    // p.allocate();
 
-    std::cout << p.dereference() << '\n';
+    // std::cout << p.dereference() << '\n';
 
     // idea: in object p, point a pointer.
     // p.p_ is an int*
+
+    return 0;
 }

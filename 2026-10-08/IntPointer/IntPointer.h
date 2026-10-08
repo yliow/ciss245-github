@@ -10,7 +10,7 @@ class IntPointer
     void deallocate();
     void allocate();
   private:
-    int * p_
+    int * p_;
 };
 
 #endif
