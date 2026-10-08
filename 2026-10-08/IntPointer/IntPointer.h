@@ -5,7 +5,10 @@ class IntPointer
 {
   public:
     IntPointer(int);
+    IntPointer();
+    ~IntPointer(); // dtor
     int dereference() const;
+    int operator*() const;
     // dereference() //
     void deallocate();
     void allocate();

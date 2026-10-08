@@ -10,16 +10,29 @@ int main()
     // i = *p
     // delete p;
 
-    IntPointer p(42); // want IntPointer p;
-    std::cout << p.dereference() // prints 42 ... lvalue access i.e. READ access
-              << '\n';
-    p.deallocate(); // pointer inside p has release the int
-    // p.allocate();
+    // p = new int;
+    //
+    // Usualy we don't forget to "new". We usually forget to "delete".
 
-    // std::cout << p.dereference() << '\n';
+    IntPointer p(42); // want IntPointer p;
+    //std::cout << p.dereference() // prints 42 ... lvalue access i.e. READ access
+    //          << '\n';
+    std::cout << *p // *p ----> p.operator*()
+              << '\n';
+    
+    p.deallocate(); // pointer inside p has release the int
+    // std::cout << p.dereference()
+    //           << '\n';
+    
+    p.allocate();
+    //std::cout << p.dereference() << '\n';
+    std::cout << *p << '\n';
 
     // idea: in object p, point a pointer.
     // p.p_ is an int*
 
+    p.allocate();
+
+    IntPointer q; 
     return 0;
-}
+} // p calls p.~IntPointer(). Objects CANNOT call its destructor. g++ call. 
