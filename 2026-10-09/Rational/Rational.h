@@ -8,7 +8,9 @@ class Rational
   public:
     Rational(int, int);
     int n() const;
+    int & n();
     int d() const;
+    int & d();
   private:
     int n_, d_;
 };

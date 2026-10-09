@@ -9,8 +9,16 @@ int Rational::n() const
 {
     return n_;
 }
+int & Rational::n()
+{
+    return n_;
+}
 
 int Rational::d() const
+{
+    return d_;
+}
+int & Rational::d()
 {
     return d_;
 }
