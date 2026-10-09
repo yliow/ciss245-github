@@ -39,6 +39,23 @@ int main()
 
     Date * pdate = new Date(3000, 1, 1);
     delete pdate;
+
+    Date d(2026, 10, 9);
+    std::cout << d << '\n';
+    std::cout << d.get_year() << '\n';
+    d.set_year(4000);
+    std::cout << d.get_year() << '\n';
+
+    std::cout << d.year() << '\n';
+    d.year() = 5000; // same as d.yyyy_ = 5000
+
+    Date d1(123, 234, 345);
+    d1.m();
+    std::cout << &d1 << '\n';
     
     return 0;
 } // today called today.~Date(), etc.
+
+
+
+

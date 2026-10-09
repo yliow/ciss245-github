@@ -64,6 +64,19 @@ int Date::year() const
 {
     return yyyy_;
 }
+int & Date::year()
+{
+    return yyyy_;
+}
+
+int Date::get_year() const
+{
+    return yyyy_;
+}
+void Date::set_year(int yyyy)
+{
+    yyyy_ = yyyy;
+}
 
 int Date::month() const
 {
@@ -81,4 +94,13 @@ std::ostream & operator<<(std::ostream & cout, const Date & date)
          << date.month() << '-'
          << date.day();
     return cout;
+}
+
+void Date::m()
+{
+    std::cout << "Date::m() ... "
+              << yyyy_ << ' '
+              << mm_ << ' '
+              << dd_ << ' '
+              << this << '\n';
 }
