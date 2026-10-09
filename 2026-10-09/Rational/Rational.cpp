@@ -5,6 +5,10 @@ Rational::Rational(int n, int d)
     : n_(n), d_(d)
 {}
 
+Rational::Rational(int n)
+    : n_(n), d_(1)
+{}
+
 int Rational::n() const
 {
     return n_;
