@@ -6,12 +6,15 @@
 class Rational
 {
   public:
-    Rational(int, int);
-    Rational(int);
+    Rational();
+    Rational(int, int=1);
+    Rational(const Rational &);
     int n() const;
     int & n();
     int d() const;
     int & d();
+    Rational & operator+=(const Rational &);
+    Rational operator+(const Rational &) const;
   private:
     int n_, d_;
 };
