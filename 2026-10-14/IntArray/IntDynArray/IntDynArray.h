@@ -7,7 +7,11 @@ class IntDynArray
 {
   public:
     IntDynArray(int); // int is the size and capacity
+    IntDynArray(const IntDynArray &);
+    ~IntDynArray();
     int size() const;
+    void resize(int);
+    int capacity() const;
     int operator[](int) const;
     int & operator[](int);
   private:
